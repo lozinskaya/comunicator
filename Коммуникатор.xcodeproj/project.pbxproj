@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C62A5996258DED1F00A45AAB /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62A5995258DED1F00A45AAB /* Global.swift */; };
+		C62A599B258DF06300A45AAB /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62A599A258DF06300A45AAB /* SessionController.swift */; };
+		C62A59A0258DF43700A45AAB /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62A599F258DF43700A45AAB /* ProfileController.swift */; };
+		C69E348D257C0D51003114F3 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69E348C257C0D51003114F3 /* MainController.swift */; };
+		C69E3492257C177A003114F3 /* RegController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69E3491257C177A003114F3 /* RegController.swift */; };
+		C69E3497257C1ADD003114F3 /* ConfirmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69E3496257C1ADD003114F3 /* ConfirmController.swift */; };
+		C69E349C257C1BD3003114F3 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69E349B257C1BD3003114F3 /* Settings.swift */; };
+		C6C53058257BC79F00CF983C /* WebFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C53057257BC79F00CF983C /* WebFuncs.swift */; };
+		C6D48396257BF29200A031EC /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D48395257BF29200A031EC /* LoginController.swift */; };
 		C6D79912255868CA00E6F1DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D79911255868CA00E6F1DF /* AppDelegate.swift */; };
 		C6D79914255868CA00E6F1DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D79913255868CA00E6F1DF /* SceneDelegate.swift */; };
 		C6D79916255868CA00E6F1DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D79915255868CA00E6F1DF /* ViewController.swift */; };
@@ -35,6 +44,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C62A5995258DED1F00A45AAB /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		C62A599A258DF06300A45AAB /* SessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionController.swift; sourceTree = "<group>"; };
+		C62A599F258DF43700A45AAB /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		C69E348C257C0D51003114F3 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		C69E3491257C177A003114F3 /* RegController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegController.swift; sourceTree = "<group>"; };
+		C69E3496257C1ADD003114F3 /* ConfirmController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmController.swift; sourceTree = "<group>"; };
+		C69E349B257C1BD3003114F3 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		C6C53057257BC79F00CF983C /* WebFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebFuncs.swift; sourceTree = "<group>"; };
+		C6D48395257BF29200A031EC /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		C6D7990E255868CA00E6F1DF /* Коммуникатор.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Коммуникатор.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6D79911255868CA00E6F1DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6D79913255868CA00E6F1DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +124,15 @@
 				C6D7991A255868CE00E6F1DF /* Assets.xcassets */,
 				C6D7991C255868CE00E6F1DF /* LaunchScreen.storyboard */,
 				C6D7991F255868CE00E6F1DF /* Info.plist */,
+				C6C53057257BC79F00CF983C /* WebFuncs.swift */,
+				C6D48395257BF29200A031EC /* LoginController.swift */,
+				C69E348C257C0D51003114F3 /* MainController.swift */,
+				C69E3491257C177A003114F3 /* RegController.swift */,
+				C69E3496257C1ADD003114F3 /* ConfirmController.swift */,
+				C69E349B257C1BD3003114F3 /* Settings.swift */,
+				C62A5995258DED1F00A45AAB /* Global.swift */,
+				C62A599A258DF06300A45AAB /* SessionController.swift */,
+				C62A599F258DF43700A45AAB /* ProfileController.swift */,
 			);
 			path = "Коммуникатор";
 			sourceTree = "<group>";
@@ -195,6 +222,7 @@
 				TargetAttributes = {
 					C6D7990D255868CA00E6F1DF = {
 						CreatedOnToolsVersion = 12.1;
+						LastSwiftMigration = 1210;
 					};
 					C6D79923255868CE00E6F1DF = {
 						CreatedOnToolsVersion = 12.1;
@@ -258,9 +286,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C69E3492257C177A003114F3 /* RegController.swift in Sources */,
+				C69E3497257C1ADD003114F3 /* ConfirmController.swift in Sources */,
+				C6C53058257BC79F00CF983C /* WebFuncs.swift in Sources */,
+				C69E348D257C0D51003114F3 /* MainController.swift in Sources */,
+				C69E349C257C1BD3003114F3 /* Settings.swift in Sources */,
+				C62A59A0258DF43700A45AAB /* ProfileController.swift in Sources */,
+				C6D48396257BF29200A031EC /* LoginController.swift in Sources */,
+				C62A5996258DED1F00A45AAB /* Global.swift in Sources */,
 				C6D79916255868CA00E6F1DF /* ViewController.swift in Sources */,
 				C6D79912255868CA00E6F1DF /* AppDelegate.swift in Sources */,
 				C6D79914255868CA00E6F1DF /* SceneDelegate.swift in Sources */,
+				C62A599B258DF06300A45AAB /* SessionController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +473,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Коммуникатор/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -444,6 +482,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.urfu.------------";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -454,6 +493,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Коммуникатор/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
