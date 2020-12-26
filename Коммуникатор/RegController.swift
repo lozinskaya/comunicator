@@ -12,16 +12,14 @@ class RegController: UIViewController {
     var gender : Settings.Gender = Settings.Gender.no;
     let unselectedColor = UIColor(named: "InputBackColor");
     let selectedColor = UIColor(named: "highlightButton");
-    
     @IBOutlet weak var firstnameField: UITextField!
     @IBOutlet weak var lastnameField: UITextField!
     @IBOutlet weak var birthdayField: UITextField!
-    
     @IBOutlet weak var menButton: UIButton!
     @IBOutlet weak var womanButton: UIButton!
     @IBOutlet weak var nosexButton: UIButton!
-    
     @IBOutlet weak var passField: UITextField!
+
     @IBOutlet weak var rpassField: UITextField!
     
     override func viewDidLoad() {
