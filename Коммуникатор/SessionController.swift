@@ -36,6 +36,7 @@ class SessionController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         qrView.load(url: WebFuncs.ActionUrl(action: "qrcode", params: ["code":Global.userinfo["code"] as! String]));
+        timerAction()
         timer = Timer.scheduledTimer(timeInterval: 30,target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
     }
     
@@ -46,7 +47,15 @@ class SessionController: UIViewController {
                 DispatchQueue.main.async {
                     Global.sessioninfo = result;
                     Global.balance = Global.sessioninfo["balance"] as? String ?? "0"
+                    Global.is_active = Global.sessioninfo["is_active"] as? Int ?? 0
+                    Global.activesession = Global.sessioninfo["active"]
                     self.balanceLabel.text = Global.balance + " ₽"
+                    if(Global.is_active == 1) {
+                        self.timeLabel.text = (Global.sessioninfo["duration_min"] as? String ?? "0") + " мин"
+                        let session_count = Global.activesession["count"] as? Int ?? 1
+                        self.countLabel.text = session_count == 1 ? "Я" : ("Я и еще " + session_count)
+                        self.tariffLabel = "1 мин = " + (Global.activesession["tariff_sum"] as? String ?? "1") + " ₽"
+                    }
                 }
             }
         }

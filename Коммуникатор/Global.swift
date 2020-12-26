@@ -10,6 +10,8 @@ import Foundation
 class Global {
     static var userinfo: [String: AnyObject] = [:]
     static var sessioninfo: [String: AnyObject] = [:]
+    static var activesession: [String: AnyObject] = [:]
+    static var is_active: Int = 0
     static var balance : String = "0"
     static var sessionkey: String = ""
 }
