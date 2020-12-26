@@ -106,7 +106,7 @@ class WebFuncs {
         }
     }
     
-    static func Reg(params: [String: String], completion: @escaping (Answer?) ->()) {
+    static func Reg(params: [String: String], completion: @escaping ([String:AnyObject]?) ->()) {
         JSONRequest(action: "reg", params: params) { data in
             if let result = data {
                 print(result);
