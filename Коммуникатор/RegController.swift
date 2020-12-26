@@ -58,19 +58,21 @@ class RegController: UIViewController {
             "birthday": birthdayField.text!,
             "gender": gender.rawValue,
             "pass": passField.text!,
-            "rpass": rpassField.text!
+            "r_pass": rpassField.text!
         ]) { result in
-            debugPrint(result);
-            DispatchQueue.main.async {
-                if result["result"] as? String == WebFuncs.Answer.SUCCESS.rawValue {
-                    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                    let confirmController = storyBoard.instantiateViewController(withIdentifier: "confirmController") as! ConfirmController;
-                    confirmController.modalPresentationStyle = .fullScreen;
-                    self.present(confirmController, animated: true, completion: nil)
-                } else {
-                    let alert = UIAlertController(title: "Ошибка регистрации", message: "Произошла ошибка при регистрации.\nПроверьте данные и повторите попытку.", preferredStyle: UIAlertController.Style.alert)
-                    alert.addAction(UIAlertAction(title: "Повторить попытку", style: UIAlertAction.Style.default, handler: nil))
-                    self.present(alert, animated: true, completion: nil)
+            if let result = result {
+                debugPrint(result);
+                DispatchQueue.main.async {
+                    if result["result"] as? String == WebFuncs.Answer.SUCCESS.rawValue {
+                        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                        let confirmController = storyBoard.instantiateViewController(withIdentifier: "confirmController") as! ConfirmController;
+                        confirmController.modalPresentationStyle = .fullScreen;
+                        self.present(confirmController, animated: true, completion: nil)
+                    } else {
+                        let alert = UIAlertController(title: "Ошибка регистрации", message: "Произошла ошибка при регистрации.\nПроверьте данные и повторите попытку.", preferredStyle: UIAlertController.Style.alert)
+                        alert.addAction(UIAlertAction(title: "Повторить попытку", style: UIAlertAction.Style.default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+                    }
                 }
             }
         }
