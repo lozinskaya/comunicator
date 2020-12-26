@@ -7,6 +7,22 @@
 
 import Foundation
 
+extension String {
+ func getCleanedURL() -> URL? {
+    guard self.isEmpty == false else {
+        return nil
+    }
+    if let url = URL(string: self) {
+        return url
+    } else {
+        if let urlEscapedString = self.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) , let escapedURL = URL(string: urlEscapedString){
+            return escapedURL
+        }
+    }
+    return nil
+ }
+}
+
 class WebFuncs {
     static func convertStringToDictionary(text: String) -> [String:AnyObject]? {
         if let data = text.data(using: .utf8) {
@@ -45,7 +61,7 @@ class WebFuncs {
         print("Request url: " + urlPath);
         
         
-        let url = URL(string: urlPath)!
+        let url = urlPath.getCleanedURL()!;
         return url;
     }
     
