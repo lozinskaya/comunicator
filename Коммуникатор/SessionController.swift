@@ -39,11 +39,11 @@ class SessionController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         qrView.load(url: WebFuncs.ActionUrl(action: "qrcode", params: ["code":Global.userinfo["code"] as! String]));
-        timerAction()
-        timer = Timer.scheduledTimer(timeInterval: 30,target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
+       /* timerAction()
+        timer = Timer.scheduledTimer(timeInterval: 30,target: self, selector: #selector(timerAction), userInfo: nil, repeats: true) */
     }
     
-    @objc func timerAction() {
+    /* @objc func timerAction() {
        WebFuncs.JSONRequest(action: "session", params: ["sessionkey": Global.sessionkey]) { result in
             debugPrint(result);
             if let result = result {
@@ -62,5 +62,5 @@ class SessionController: UIViewController {
                 }
             }
         }
-    }
+    } */
 }
