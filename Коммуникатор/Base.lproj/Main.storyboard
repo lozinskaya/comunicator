@@ -263,7 +263,7 @@
                                 <color key="backgroundColor" name="InputBackColor"/>
                                 <color key="textColor" name="InputText"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                                <textInputTraits key="textInputTraits" textContentType="email"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="14"/>
@@ -277,7 +277,7 @@
                                 <color key="backgroundColor" name="InputBackColor"/>
                                 <color key="textColor" name="InputText"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="14"/>
@@ -311,14 +311,14 @@
             <objects>
                 <viewController storyboardIdentifier="regController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kUG-jJ-k5U" customClass="RegController" customModule="Коммуникатор" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1qv-Xf-xaU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1259"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1326"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lOB-lI-zrf">
-                                <rect key="frame" x="0.0" y="44" width="414" height="1181"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="1248"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Rc-Pl-CaG">
-                                        <rect key="frame" x="136" y="829" width="145" height="51"/>
+                                        <rect key="frame" x="136" y="883" width="145" height="51"/>
                                         <color key="backgroundColor" name="InputBackColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="145" id="C04-Yr-H04"/>
@@ -339,7 +339,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Мужчина" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kX8-Rf-1w4">
-                                        <rect key="frame" x="72.5" y="789" width="74" height="21"/>
+                                        <rect key="frame" x="72.5" y="843" width="74" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -348,13 +348,13 @@
                                         <rect key="frame" x="136.5" y="55" width="138" height="111"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Кто вы?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mb8-V9-rKl">
-                                        <rect key="frame" x="37" y="664" width="93" height="27"/>
+                                        <rect key="frame" x="37" y="718" width="93" height="27"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите пол" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIt-zG-Yd6">
-                                        <rect key="frame" x="37" y="697" width="113" height="22"/>
+                                        <rect key="frame" x="37" y="751" width="113" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="Mml-aB-lKv"/>
                                         </constraints>
@@ -362,15 +362,14 @@
                                         <color key="textColor" name="InputText"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Имя" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fhk-AV-qAX">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="   Имя" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fhk-AV-qAX">
                                         <rect key="frame" x="35.5" y="428" width="331" height="50"/>
                                         <color key="backgroundColor" name="InputBackColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="swa-hx-UNX"/>
                                         </constraints>
-                                        <color key="textColor" name="InputText"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="given-name"/>
+                                        <attributedString key="attributedText"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="name"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="14"/>
@@ -386,7 +385,7 @@
                                         </constraints>
                                         <color key="textColor" name="InputText"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="name"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="14"/>
@@ -395,14 +394,14 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Пароль еще раз" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dcd-Ta-QV5">
-                                        <rect key="frame" x="34" y="991" width="343" height="50"/>
+                                        <rect key="frame" x="34" y="1045" width="343" height="50"/>
                                         <color key="backgroundColor" name="InputBackColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="vTs-Yf-zUU"/>
                                         </constraints>
                                         <color key="textColor" name="InputText"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" secureTextEntry="YES" textContentType="email"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="14"/>
@@ -414,19 +413,19 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Я коммуникатор" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkA-ow-a16">
-                                        <rect key="frame" x="142" y="887" width="133" height="21"/>
+                                        <rect key="frame" x="142" y="941" width="133" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Женщина" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="40b-gN-3XP">
-                                        <rect key="frame" x="267.5" y="788" width="79" height="21"/>
+                                        <rect key="frame" x="267.5" y="842" width="79" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mke-wQ-LZY">
-                                        <rect key="frame" x="234" y="731" width="146" height="51"/>
+                                        <rect key="frame" x="234" y="785" width="146" height="51"/>
                                         <color key="backgroundColor" name="InputBackColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="146" id="Lxj-c4-9VD"/>
@@ -446,7 +445,7 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Дата рождения" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9AJ-8u-2fw">
-                                        <rect key="frame" x="35.5" y="582" width="331" height="50"/>
+                                        <rect key="frame" x="35.5" y="650" width="331" height="50"/>
                                         <color key="backgroundColor" name="InputBackColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Ala-0O-AF1"/>
@@ -468,14 +467,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YTH-V5-Vtm">
-                                        <rect key="frame" x="34" y="919" width="343" height="50"/>
+                                        <rect key="frame" x="34" y="973" width="343" height="50"/>
                                         <color key="backgroundColor" name="InputBackColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="JAg-WV-lkC"/>
                                         </constraints>
                                         <color key="textColor" name="InputText"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="14"/>
@@ -484,7 +483,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eef-RR-EKF">
-                                        <rect key="frame" x="37" y="731" width="145" height="51"/>
+                                        <rect key="frame" x="37" y="785" width="145" height="51"/>
                                         <color key="backgroundColor" name="InputBackColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="51" id="5uu-66-nS2"/>
@@ -513,7 +512,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U9u-1i-lRr">
-                                        <rect key="frame" x="33.5" y="1080" width="343.5" height="49"/>
+                                        <rect key="frame" x="33.5" y="1134" width="343.5" height="49"/>
                                         <color key="backgroundColor" name="Color"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Создать аккаунт"/>
@@ -527,6 +526,22 @@
                                             <action selector="regClick:" destination="kUG-jJ-k5U" eventType="touchUpInside" id="ePa-yX-VHq"/>
                                         </connections>
                                     </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eHG-GB-we7">
+                                        <rect key="frame" x="34" y="576" width="333" height="50"/>
+                                        <color key="backgroundColor" name="InputBackColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="cqz-Eu-9Jg"/>
+                                        </constraints>
+                                        <color key="textColor" name="InputText"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="14"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="Mb8-V9-rKl" firstAttribute="leading" secondItem="gPY-rI-nQx" secondAttribute="leading" constant="37" id="2JK-o9-ag3"/>
@@ -540,10 +555,11 @@
                                     <constraint firstItem="YTH-V5-Vtm" firstAttribute="top" secondItem="gkA-ow-a16" secondAttribute="bottom" constant="11" id="C5n-zP-0er"/>
                                     <constraint firstItem="YTH-V5-Vtm" firstAttribute="leading" secondItem="gPY-rI-nQx" secondAttribute="leading" constant="33.946268675746751" id="CB1-gV-Mqa"/>
                                     <constraint firstItem="fhk-AV-qAX" firstAttribute="leading" secondItem="gPY-rI-nQx" secondAttribute="leading" constant="35.738095238094957" id="ESW-qV-6jk"/>
-                                    <constraint firstItem="Mke-wQ-LZY" firstAttribute="top" secondItem="9AJ-8u-2fw" secondAttribute="bottom" constant="99" id="Eak-cF-j8C"/>
+                                    <constraint firstItem="Mke-wQ-LZY" firstAttribute="top" secondItem="9AJ-8u-2fw" secondAttribute="bottom" constant="85" id="Eak-cF-j8C"/>
                                     <constraint firstItem="fhk-AV-qAX" firstAttribute="leading" secondItem="rFU-qv-abW" secondAttribute="leading" id="FKi-TF-LCE"/>
                                     <constraint firstAttribute="trailing" secondItem="2Rc-Pl-CaG" secondAttribute="trailing" constant="133" id="HNB-xT-Sfo"/>
                                     <constraint firstItem="rFU-qv-abW" firstAttribute="trailing" secondItem="9AJ-8u-2fw" secondAttribute="trailing" id="KMw-XQ-yO5"/>
+                                    <constraint firstItem="eHG-GB-we7" firstAttribute="top" secondItem="6Uk-cJ-9Qd" secondAttribute="bottom" constant="316" id="Kpk-nU-cpD"/>
                                     <constraint firstItem="2Rc-Pl-CaG" firstAttribute="leading" secondItem="gPY-rI-nQx" secondAttribute="leading" constant="136" id="LAL-0D-vvj"/>
                                     <constraint firstItem="eef-RR-EKF" firstAttribute="top" secondItem="Mke-wQ-LZY" secondAttribute="top" id="OtF-rT-4y0"/>
                                     <constraint firstItem="2Rc-Pl-CaG" firstAttribute="centerX" secondItem="gkA-ow-a16" secondAttribute="centerX" id="Q6e-PA-sYa"/>
@@ -566,16 +582,18 @@
                                     <constraint firstItem="YTH-V5-Vtm" firstAttribute="trailing" secondItem="dcd-Ta-QV5" secondAttribute="trailing" id="iiM-vY-dax"/>
                                     <constraint firstItem="eef-RR-EKF" firstAttribute="leading" secondItem="FIt-zG-Yd6" secondAttribute="leading" id="iis-ZC-wcS"/>
                                     <constraint firstItem="Mke-wQ-LZY" firstAttribute="leading" secondItem="eef-RR-EKF" secondAttribute="trailing" constant="52" id="imk-x4-R5Q"/>
+                                    <constraint firstItem="eHG-GB-we7" firstAttribute="leading" secondItem="Mb8-V9-rKl" secondAttribute="leading" constant="-3" id="nOz-Hi-XJj"/>
                                     <constraint firstItem="Mb8-V9-rKl" firstAttribute="leading" secondItem="FIt-zG-Yd6" secondAttribute="leading" id="oSB-RB-W8h"/>
                                     <constraint firstItem="gkA-ow-a16" firstAttribute="top" secondItem="2Rc-Pl-CaG" secondAttribute="bottom" constant="7" id="oyy-ce-Bhe"/>
-                                    <constraint firstItem="9AJ-8u-2fw" firstAttribute="top" secondItem="rFU-qv-abW" secondAttribute="bottom" constant="30.000000000000227" id="ppT-VN-dMq"/>
+                                    <constraint firstItem="9AJ-8u-2fw" firstAttribute="top" secondItem="rFU-qv-abW" secondAttribute="bottom" constant="98" id="ppT-VN-dMq"/>
                                     <constraint firstItem="U9u-1i-lRr" firstAttribute="leading" secondItem="gPY-rI-nQx" secondAttribute="leading" constant="33.738095238094957" id="prv-lX-ajZ"/>
-                                    <constraint firstItem="U9u-1i-lRr" firstAttribute="top" secondItem="9AJ-8u-2fw" secondAttribute="bottom" constant="448" id="s8H-ND-FLb"/>
+                                    <constraint firstItem="gPY-rI-nQx" firstAttribute="trailing" secondItem="eHG-GB-we7" secondAttribute="trailing" constant="47" id="qHM-wK-dMW"/>
+                                    <constraint firstItem="U9u-1i-lRr" firstAttribute="top" secondItem="9AJ-8u-2fw" secondAttribute="bottom" constant="434" id="s8H-ND-FLb"/>
                                     <constraint firstItem="U9u-1i-lRr" firstAttribute="centerY" secondItem="Mb8-V9-rKl" secondAttribute="centerY" constant="427" id="sgv-ps-lRg"/>
                                     <constraint firstItem="2Rc-Pl-CaG" firstAttribute="top" secondItem="40b-gN-3XP" secondAttribute="bottom" constant="20" id="xeo-iu-dYI"/>
                                     <constraint firstItem="fhk-AV-qAX" firstAttribute="trailing" secondItem="rFU-qv-abW" secondAttribute="trailing" id="xg8-Yc-Kn1"/>
-                                    <constraint firstItem="2Rc-Pl-CaG" firstAttribute="top" secondItem="lOB-lI-zrf" secondAttribute="top" constant="829" id="xhv-ZU-FHh"/>
-                                    <constraint firstAttribute="bottom" secondItem="2Rc-Pl-CaG" secondAttribute="bottom" constant="301" id="yql-Um-x4N"/>
+                                    <constraint firstItem="2Rc-Pl-CaG" firstAttribute="top" secondItem="lOB-lI-zrf" secondAttribute="top" constant="883" id="xhv-ZU-FHh"/>
+                                    <constraint firstAttribute="bottom" secondItem="2Rc-Pl-CaG" secondAttribute="bottom" constant="314" id="yql-Um-x4N"/>
                                     <constraint firstItem="eef-RR-EKF" firstAttribute="top" secondItem="FIt-zG-Yd6" secondAttribute="bottom" constant="12" id="zGb-bm-i3r"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="GkS-Ag-ErX"/>
@@ -591,9 +609,10 @@
                             <constraint firstItem="lOB-lI-zrf" firstAttribute="top" secondItem="77E-0b-LFz" secondAttribute="top" id="lwH-an-NOP"/>
                         </constraints>
                     </view>
-                    <size key="freeformSize" width="414" height="1259"/>
+                    <size key="freeformSize" width="414" height="1326"/>
                     <connections>
                         <outlet property="birthdayField" destination="9AJ-8u-2fw" id="jvm-OL-Ozc"/>
+                        <outlet property="emailField" destination="eHG-GB-we7" id="bJL-TB-wzz"/>
                         <outlet property="firstnameField" destination="fhk-AV-qAX" id="26R-fi-QwX"/>
                         <outlet property="lastnameField" destination="rFU-qv-abW" id="TXl-JJ-Y3E"/>
                         <outlet property="menButton" destination="eef-RR-EKF" id="ZKK-qd-DcW"/>
@@ -605,7 +624,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uFX-63-pQF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="989.85507246376824" y="-752.34375"/>
+            <point key="canvasLocation" x="1466.6666666666667" y="-805.58035714285711"/>
         </scene>
         <!--Confirm Controller-->
         <scene sceneID="q5k-lQ-hg9">
@@ -825,7 +844,7 @@
                         <viewLayoutGuide key="safeArea" id="tlA-v6-22d"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="NoActivAvatar" id="K4R-Vo-4Db"/>
+                    <tabBarItem key="tabBarItem" title="" image="activAvatar" id="K4R-Vo-4Db"/>
                     <connections>
                         <outlet property="balanceLabel" destination="hwE-en-1R3" id="x84-W0-FHu"/>
                         <outlet property="emailLabel" destination="V9V-kv-stV" id="0YS-NP-8tm"/>
@@ -841,7 +860,7 @@
             <objects>
                 <viewController id="fjw-Ys-rBS" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gOS-Yg-wub">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Введите старый пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e0Z-xv-uVx">
@@ -1024,7 +1043,7 @@
                         <viewLayoutGuide key="safeArea" id="7ZI-t7-Mgb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" image="logo" id="xOf-OC-E0r"/>
+                    <tabBarItem key="tabBarItem" image="navLogo" id="xOf-OC-E0r"/>
                     <connections>
                         <outlet property="activSessionView" destination="brA-ri-YAE" id="Xgi-hp-nIw"/>
                         <outlet property="balanceLabel" destination="mpR-nT-cor" id="SWa-Xd-JeR"/>
@@ -1046,6 +1065,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" name="Color"/>
                     </tabBar>
                     <connections>
                         <segue destination="L2M-2S-OaC" kind="relationship" relationship="viewControllers" id="aOi-TC-9zt"/>
@@ -1061,10 +1081,11 @@
         <segue reference="gpI-hz-ohd"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="NoActivAvatar" width="25" height="25"/>
+        <image name="activAvatar" width="25" height="25"/>
         <image name="card" width="34" height="27"/>
         <image name="i" width="18" height="18"/>
         <image name="logo" width="138" height="111"/>
+        <image name="navLogo" width="36" height="29"/>
         <image name="time" width="30" height="30"/>
         <namedColor name="Buttons">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

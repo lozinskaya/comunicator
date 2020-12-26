@@ -13,6 +13,9 @@ class RegController: UIViewController {
     let unselectedColor = UIColor(named: "InputBackColor");
     let selectedColor = UIColor(named: "highlightButton");
     
+    
+    
+    @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var firstnameField: UITextField!
     @IBOutlet weak var lastnameField: UITextField!
     @IBOutlet weak var birthdayField: UITextField!
@@ -26,8 +29,11 @@ class RegController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let paddingView : UIView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: 20))
+        emailField.leftView = paddingView
+        emailField.leftViewMode = .always
     }
+    
     
     @IBAction func maleClick(_ sender: Any) {
         gender = Settings.Gender.male;
