@@ -23,7 +23,10 @@ extension UIImageView {
 }
 
 class SessionController: UIViewController {
-
+    
+    
+    @IBOutlet weak var activSessionView: UIView!
+    
     @IBOutlet weak var balanceLabel: UILabel!
     @IBOutlet weak var qrView: UIImageView!
     @IBOutlet weak var tariffLabel: UILabel!

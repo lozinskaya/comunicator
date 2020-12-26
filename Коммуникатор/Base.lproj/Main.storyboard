@@ -1023,6 +1023,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" image="logo" id="xOf-OC-E0r"/>
                     <connections>
+                        <outlet property="activSessionView" destination="brA-ri-YAE" id="Xgi-hp-nIw"/>
                         <outlet property="balanceLabel" destination="mpR-nT-cor" id="SWa-Xd-JeR"/>
                         <outlet property="countLabel" destination="voz-rZ-DKZ" id="8eg-BF-bV6"/>
                         <outlet property="qrView" destination="s1h-jH-hX7" id="L85-eW-Kjf"/>
@@ -1032,7 +1033,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uXf-AB-ANk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2685.507246376812" y="77.678571428571431"/>
+            <point key="canvasLocation" x="2658" y="78"/>
         </scene>
         <!--Main Controller-->
         <scene sceneID="J3n-6g-3bX">
