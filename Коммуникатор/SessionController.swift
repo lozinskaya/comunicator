@@ -51,10 +51,11 @@ class SessionController: UIViewController {
                     Global.sessioninfo = result;
                     Global.balance = Global.sessioninfo["balance"] as? String ?? "0"
                     Global.is_active = Global.sessioninfo["is_active"] as? Int ?? 0
-                    Global.activesession = Global.sessioninfo["active"] as? [String : AnyObject] ?? [:]
                     self.balanceLabel.text = Global.balance + " ₽"
                     self.activSessionView.isHidden = Global.is_active != 1
                     if(Global.is_active == 1) {
+                        Global.activesession = Global.sessioninfo["active"] as! [String : AnyObject]
+                        debugPrint(Global.activesession)
                         self.timeLabel.text = (Global.activesession["duration_min"] as? String ?? "0") + " мин"
                         let extra_count = (Global.activesession["count"] as? Int ?? 1) - 1
                         self.countLabel.text = extra_count == 0 ? "Я" : ("Я и еще " + (extra_count as? String ?? "1"))
