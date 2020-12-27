@@ -1088,6 +1088,7 @@
                     <tabBarItem key="tabBarItem" image="navLogo" id="xOf-OC-E0r"/>
                     <connections>
                         <outlet property="activSessionView" destination="brA-ri-YAE" id="Xgi-hp-nIw"/>
+                        <outlet property="adviceLabel" destination="usB-rZ-0va" id="sm9-PT-ApG"/>
                         <outlet property="balanceLabel" destination="mpR-nT-cor" id="SWa-Xd-JeR"/>
                         <outlet property="countLabel" destination="voz-rZ-DKZ" id="8eg-BF-bV6"/>
                         <outlet property="qrView" destination="s1h-jH-hX7" id="L85-eW-Kjf"/>
