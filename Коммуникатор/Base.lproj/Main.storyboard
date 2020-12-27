@@ -893,7 +893,7 @@
             <objects>
                 <viewController id="fjw-Ys-rBS" customClass="ChangePass" customModule="Коммуникатор" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gOS-Yg-wub">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="Введите старый пароль" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e0Z-xv-uVx">
