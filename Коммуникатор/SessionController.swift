@@ -55,7 +55,7 @@ class SessionController: UIViewController {
                     self.balanceLabel.text = Global.balance + " ₽"
                     self.activSessionView.isHidden = Global.is_active != 1
                     if(Global.is_active == 1) {
-                        self.timeLabel.text = (Global.sessioninfo["duration_min"] as? String ?? "0") + " мин"
+                        self.timeLabel.text = (Global.activesession["duration_min"] as? String ?? "0") + " мин"
                         let session_count = Global.activesession["count"] as? String ?? "1"
                         self.countLabel.text = session_count == "1" ? "Я" : ("Я и еще " + session_count)
                         self.tariffLabel.text = "1 мин = " + (Global.activesession["tariff_sum"] as? String ?? "1") + " ₽"
