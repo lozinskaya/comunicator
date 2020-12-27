@@ -57,7 +57,7 @@ class SessionController: UIViewController {
                     if(Global.is_active == 1) {
                         self.timeLabel.text = (Global.activesession["duration_min"] as? String ?? "0") + " мин"
                         let extra_count = Global.activesession["count"] as? Int ?? 1
-                        extra_count--
+                        extra_count -= 1
                         self.countLabel.text = extra_count == 0 ? "Я" : ("Я и еще " + (session_count as? String ?? "1"))
                         self.tariffLabel.text = "1 мин = " + (Global.activesession["tariff_sum"] as? String ?? "1") + " ₽"
                     }
