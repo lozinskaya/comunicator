@@ -40,7 +40,7 @@ class SessionController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        qrView.load(url: WebFuncs.ActionUrl(action: "qrcode", params: ["code": "\(Global.userinfo["code"].description)"]));
+        qrView.load(url: WebFuncs.ActionUrl(action: "qrcode", params: ["code":Global.userinfo["code"] as! String]));
         timerAction()
         timer = Timer.scheduledTimer(timeInterval: 30,target: self, selector: #selector(timerAction), userInfo: nil, repeats: true) 
     }
@@ -51,18 +51,18 @@ class SessionController: UIViewController {
             if let result = result {
                 DispatchQueue.main.async {
                     Global.sessioninfo = result;
-                    Global.balance = "\(Global.sessioninfo["balance"].description)"
-                    Global.is_active = Int(Global.sessioninfo["is_active"]) ?? 0
+                    Global.balance = Global.sessioninfo["balance"] as? String ?? "0"
+                    Global.is_active = Global.sessioninfo["is_active"] as? Int ?? 0
                     self.balanceLabel.text = Global.balance + " ₽"
                     self.activSessionView.isHidden = Global.is_active != 1
                     self.adviceLabel.text = Global.is_active == 1 ? "Чтобы завершить сеанс покажите QR-код администратору" : "Чтобы начать сеанс покажите QR-код администратору";
                     if(Global.is_active == 1) {
                         Global.activesession = Global.sessioninfo["active"] as! [String : AnyObject]
                         debugPrint(Global.activesession)
-                        self.timeLabel.text = "\(Global.activesession["duration_min"].description)" + " мин"
-                        let extra_count = (Int(Global.activesession["count"]) ?? 1) - 1
-                        self.countLabel.text = extra_count == 0 ? "Я" : ("Я и еще " + "\(extra_count.description)")
-                        self.tariffLabel.text = "1 мин = " + "\(Global.activesession["tariff_sum"].description)" + " ₽"
+                        self.timeLabel.text = (Global.activesession["duration_min"] as? String ?? "0") + " мин"
+                        let extra_count = (Int(Global.activesession?["count"]) ?? 0) - 1
+                        self.countLabel.text = extra_count == 0 ? "Я" : ("Я и еще " + (extra_count as? String ?? "1"))
+                        self.tariffLabel.text = "1 мин = " + (Global.activesession["tariff_sum"] as? String ?? "1") + " ₽"
                     }
                 }
             }
