@@ -52,7 +52,7 @@ class SessionController: UIViewController {
                 DispatchQueue.main.async {
                     Global.sessioninfo = result;
                     Global.balance = "\(Global.sessioninfo["balance"].description)"
-                    Global.is_active = Global.sessioninfo["is_active"] as? Int ?? 0
+                    Global.is_active = Int(Global.sessioninfo["is_active"]) ?? 0
                     self.balanceLabel.text = Global.balance + " ₽"
                     self.activSessionView.isHidden = Global.is_active != 1
                     self.adviceLabel.text = Global.is_active == 1 ? "Чтобы завершить сеанс покажите QR-код администратору" : "Чтобы начать сеанс покажите QR-код администратору";
@@ -60,7 +60,7 @@ class SessionController: UIViewController {
                         Global.activesession = Global.sessioninfo["active"] as! [String : AnyObject]
                         debugPrint(Global.activesession)
                         self.timeLabel.text = "\(Global.activesession["duration_min"].description)" + " мин"
-                        let extra_count = (Global.activesession["count"] as? Int ?? 1) - 1
+                        let extra_count = (Int(Global.activesession["count"]) ?? 1) - 1
                         self.countLabel.text = extra_count == 0 ? "Я" : ("Я и еще " + "\(extra_count.description)")
                         self.tariffLabel.text = "1 мин = " + "\(Global.activesession["tariff_sum"].description)" + " ₽"
                     }
