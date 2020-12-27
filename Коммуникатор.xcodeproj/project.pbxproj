@@ -14,6 +14,7 @@
 		C69E3492257C177A003114F3 /* RegController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69E3491257C177A003114F3 /* RegController.swift */; };
 		C69E3497257C1ADD003114F3 /* ConfirmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69E3496257C1ADD003114F3 /* ConfirmController.swift */; };
 		C69E349C257C1BD3003114F3 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69E349B257C1BD3003114F3 /* Settings.swift */; };
+		C6B465602598C3D200144C85 /* ChangePass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B4655F2598C3D200144C85 /* ChangePass.swift */; };
 		C6C53058257BC79F00CF983C /* WebFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C53057257BC79F00CF983C /* WebFuncs.swift */; };
 		C6D48396257BF29200A031EC /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D48395257BF29200A031EC /* LoginController.swift */; };
 		C6D79912255868CA00E6F1DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D79911255868CA00E6F1DF /* AppDelegate.swift */; };
@@ -51,6 +52,7 @@
 		C69E3491257C177A003114F3 /* RegController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegController.swift; sourceTree = "<group>"; };
 		C69E3496257C1ADD003114F3 /* ConfirmController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmController.swift; sourceTree = "<group>"; };
 		C69E349B257C1BD3003114F3 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		C6B4655F2598C3D200144C85 /* ChangePass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePass.swift; sourceTree = "<group>"; };
 		C6C53057257BC79F00CF983C /* WebFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebFuncs.swift; sourceTree = "<group>"; };
 		C6D48395257BF29200A031EC /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		C6D7990E255868CA00E6F1DF /* Коммуникатор.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Коммуникатор.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,6 +135,7 @@
 				C62A5995258DED1F00A45AAB /* Global.swift */,
 				C62A599A258DF06300A45AAB /* SessionController.swift */,
 				C62A599F258DF43700A45AAB /* ProfileController.swift */,
+				C6B4655F2598C3D200144C85 /* ChangePass.swift */,
 			);
 			path = "Коммуникатор";
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				C6D48396257BF29200A031EC /* LoginController.swift in Sources */,
 				C62A5996258DED1F00A45AAB /* Global.swift in Sources */,
 				C6D79916255868CA00E6F1DF /* ViewController.swift in Sources */,
+				C6B465602598C3D200144C85 /* ChangePass.swift in Sources */,
 				C6D79912255868CA00E6F1DF /* AppDelegate.swift in Sources */,
 				C6D79914255868CA00E6F1DF /* SceneDelegate.swift in Sources */,
 				C62A599B258DF06300A45AAB /* SessionController.swift in Sources */,
