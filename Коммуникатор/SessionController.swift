@@ -60,6 +60,7 @@ class SessionController: UIViewController {
                         Global.activesession = Global.sessioninfo["active"] as! [String : AnyObject]
                         debugPrint(Global.activesession)
                         debugPrint(Global.activesession["duration_min"] as! String)
+                        debugPrint(Global.activesession["duration_min"] as? String ?? "0")
                         self.timeLabel.text = (Global.activesession["duration_min"] as? String ?? "0") + " мин"
                         let extra_count = (Global.activesession["count"] as? Int ?? 1) - 1
                         self.countLabel.text = extra_count == 0 ? "Я" : ("Я и еще " + (extra_count as? String ?? "1"))
