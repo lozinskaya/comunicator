@@ -55,7 +55,7 @@ class SessionController: UIViewController {
                     Global.is_active = Global.sessioninfo["is_active"] as? Int ?? 0
                     self.balanceLabel.text = Global.balance + " ₽"
                     self.activSessionView.isHidden = Global.is_active != 1
-                    adviceLabel.text = Global.is_active == 1 ? "Чтобы завершить сеанс покажите QR-код администратору" : "Чтобы начать сеанс покажите QR-код администратору";
+                    self.adviceLabel.text = Global.is_active == 1 ? "Чтобы завершить сеанс покажите QR-код администратору" : "Чтобы начать сеанс покажите QR-код администратору";
                     if(Global.is_active == 1) {
                         Global.activesession = Global.sessioninfo["active"] as! [String : AnyObject]
                         debugPrint(Global.activesession)
