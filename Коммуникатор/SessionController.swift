@@ -39,11 +39,11 @@ class SessionController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         qrView.load(url: WebFuncs.ActionUrl(action: "qrcode", params: ["code":Global.userinfo["code"] as! String]));
-       /* timerAction()
-        timer = Timer.scheduledTimer(timeInterval: 30,target: self, selector: #selector(timerAction), userInfo: nil, repeats: true) */
+        timerAction()
+        timer = Timer.scheduledTimer(timeInterval: 30,target: self, selector: #selector(timerAction), userInfo: nil, repeats: true) 
     }
     
-    /* @objc func timerAction() {
+    @objc func timerAction() {
        WebFuncs.JSONRequest(action: "session", params: ["sessionkey": Global.sessionkey]) { result in
             debugPrint(result);
             if let result = result {
@@ -51,16 +51,17 @@ class SessionController: UIViewController {
                     Global.sessioninfo = result;
                     Global.balance = Global.sessioninfo["balance"] as? String ?? "0"
                     Global.is_active = Global.sessioninfo["is_active"] as? Int ?? 0
-                    Global.activesession = Global.sessioninfo["active"]
+                    Global.activesession = Global.sessioninfo["active"] as? [String : AnyObject] ?? [:]
                     self.balanceLabel.text = Global.balance + " ₽"
+                    self.activSessionView.isHidden = Global.is_active != 1
                     if(Global.is_active == 1) {
                         self.timeLabel.text = (Global.sessioninfo["duration_min"] as? String ?? "0") + " мин"
-                        let session_count = Global.activesession["count"] as? Int ?? 1
+                        let session_count = Global.activesession["count"] as? String ?? "1"
                         self.countLabel.text = session_count == 1 ? "Я" : ("Я и еще " + session_count)
                         self.tariffLabel = "1 мин = " + (Global.activesession["tariff_sum"] as? String ?? "1") + " ₽"
                     }
                 }
             }
         }
-    } */
+    } 
 }
