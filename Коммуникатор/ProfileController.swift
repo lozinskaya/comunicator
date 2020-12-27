@@ -22,6 +22,11 @@ class ProfileController: UIViewController {
         alert.addAction(UIAlertAction(title: "Так и сделаю", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
+    @IBAction func ClikRules(_ sender: Any) {
+    }
+    @IBAction func ClikConnectUs(_ sender: Any) {
+    }
+    
     @IBOutlet weak var balanceLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
