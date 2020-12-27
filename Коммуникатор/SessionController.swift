@@ -40,7 +40,7 @@ class SessionController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        qrView.load(url: WebFuncs.ActionUrl(action: "qrcode", params: ["code":Global.userinfo["code"] as! String]));
+        qrView.load(url: WebFuncs.ActionUrl(action: "qrcode", params: ["code": "\(Global.userinfo["code"])"]));
         timerAction()
         timer = Timer.scheduledTimer(timeInterval: 30,target: self, selector: #selector(timerAction), userInfo: nil, repeats: true) 
     }
@@ -51,7 +51,7 @@ class SessionController: UIViewController {
             if let result = result {
                 DispatchQueue.main.async {
                     Global.sessioninfo = result;
-                    Global.balance = Global.sessioninfo["balance"] as? String ?? "0"
+                    Global.balance = "\(Global.sessioninfo["balance"])"
                     Global.is_active = Global.sessioninfo["is_active"] as? Int ?? 0
                     self.balanceLabel.text = Global.balance + " ₽"
                     self.activSessionView.isHidden = Global.is_active != 1
@@ -59,11 +59,10 @@ class SessionController: UIViewController {
                     if(Global.is_active == 1) {
                         Global.activesession = Global.sessioninfo["active"] as! [String : AnyObject]
                         debugPrint(Global.activesession)
-                        debugPrint(Global.activesession["duration_min"] as? String ?? "0")
-                        self.timeLabel.text = (Global.activesession["duration_min"] as? String ?? "0") + " мин"
+                        self.timeLabel.text = "\(Global.activesession["duration_min"])" + " мин"
                         let extra_count = (Global.activesession["count"] as? Int ?? 1) - 1
-                        self.countLabel.text = extra_count == 0 ? "Я" : ("Я и еще " + (extra_count as? String ?? "1"))
-                        self.tariffLabel.text = "1 мин = " + (Global.activesession["tariff_sum"] as? String ?? "1") + " ₽"
+                        self.countLabel.text = extra_count == 0 ? "Я" : ("Я и еще " + "\(extra_count)")
+                        self.tariffLabel.text = "1 мин = " + "\(Global.activesession["tariff_sum"])" + " ₽"
                     }
                 }
             }
