@@ -32,6 +32,26 @@ class RegController: UIViewController {
         let paddingView : UIView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: 20))
         emailField.leftView = paddingView
         emailField.leftViewMode = .always
+        
+        let paddingView2 : UIView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: 20))
+        firstnameField.leftView = paddingView2
+        firstnameField.leftViewMode = .always
+
+        let paddingView3 : UIView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: 20))
+        lastnameField.leftView = paddingView3
+        lastnameField.leftViewMode = .always
+        
+        let paddingView4 : UIView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: 20))
+        birthdayField.leftView = paddingView4
+        birthdayField.leftViewMode = .always
+        
+        let paddingView5 : UIView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: 20))
+        passField.leftView = paddingView5
+        passField.leftViewMode = .always
+        
+        let paddingView6 : UIView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: 20))
+        rpassField.leftView = paddingView6
+        rpassField.leftViewMode = .always
     }
     
     

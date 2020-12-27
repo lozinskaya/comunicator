@@ -16,6 +16,13 @@ class LoginController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let paddingView : UIView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: 20))
+        emailField.leftView = paddingView
+        emailField.leftViewMode = .always
+        
+        let paddingView2 : UIView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: 20))
+        passField.leftView = paddingView2
+        passField.leftViewMode = .always
     }
     
 
