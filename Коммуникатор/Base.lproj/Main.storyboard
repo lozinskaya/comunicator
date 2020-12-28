@@ -819,6 +819,9 @@
                                 <state key="normal" title="Выйти">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="ClikExit:" destination="01s-Db-jbo" eventType="touchUpInside" id="3tC-b2-U0j"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="info" translatesAutoresizingMaskIntoConstraints="NO" id="Jpu-NF-hQ7">
                                 <rect key="frame" x="382" y="314" width="12" height="22"/>

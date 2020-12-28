@@ -12,6 +12,8 @@ class ProfileController: UIViewController {
     static var current : ProfileController = ProfileController();
     static var showed = false;
     
+    @IBAction func ClikExit(_ sender: Any) {
+    }
     @IBAction func ClikName(_ sender: Any) {
         let alert = UIAlertController(title: "Изменение имени", message: "Необходимо обратиться к администратору “Коммуникатора”", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Так и сделаю", style: UIAlertAction.Style.default, handler: nil))
