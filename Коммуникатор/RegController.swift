@@ -118,7 +118,7 @@ class RegController: UIViewController {
                 debugPrint(result);
                 DispatchQueue.main.async {
                     if result["result"] as? String == WebFuncs.Answer.SUCCESS.rawValue {
-                        WebFuncs.Login(email: emailField.text ?? "", pass: passField.text ?? "") { result in
+                        WebFuncs.Login(email: self.emailField.text ?? "", pass: self.passField.text ?? "") { result in
                             debugPrint(result);
                             DispatchQueue.main.async {
                                 if result == true {
