@@ -118,10 +118,21 @@ class RegController: UIViewController {
                 debugPrint(result);
                 DispatchQueue.main.async {
                     if result["result"] as? String == WebFuncs.Answer.SUCCESS.rawValue {
-                        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                        let confirmController = storyBoard.instantiateViewController(withIdentifier: "confirmController") as! ConfirmController;
-                        confirmController.modalPresentationStyle = .fullScreen;
-                        self.present(confirmController, animated: true, completion: nil)
+                        WebFuncs.Login(email: emailField.text ?? "", pass: passField.text ?? "") { result in
+                            debugPrint(result);
+                            DispatchQueue.main.async {
+                                if result == true {
+                                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                                let mainController = storyBoard.instantiateViewController(withIdentifier: "mainController") as! MainController;
+                                mainController.modalPresentationStyle = .fullScreen;
+                                        self.present(mainController, animated: true, completion: nil)
+                                } else {
+                                let alert = UIAlertController(title: "Ошибка входа", message: "Неверный логин или пароль", preferredStyle: UIAlertController.Style.alert)
+                                alert.addAction(UIAlertAction(title: "Повторить попытку", style: UIAlertAction.Style.default, handler: nil))
+                                self.present(alert, animated: true, completion: nil)
+                                }
+                            }
+                    }
                     } else {
                         let alert = UIAlertController(title: "Ошибка регистрации", message: "Произошла ошибка при регистрации.\nПроверьте данные и повторите попытку.", preferredStyle: UIAlertController.Style.alert)
                         alert.addAction(UIAlertAction(title: "Повторить попытку", style: UIAlertAction.Style.default, handler: nil))
