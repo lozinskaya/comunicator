@@ -55,6 +55,14 @@ class RegController: UIViewController {
     @IBOutlet weak var passField: UITextField!
     @IBOutlet weak var rpassField: UITextField!
     
+    @IBOutlet weak var firstnameLabelError: UILabel!
+    @IBOutlet weak var lastnameLabelError: UILabel!
+    @IBOutlet weak var emailLabelError: UILabel!
+    @IBOutlet weak var birthdayLabelError: UILabel!
+    @IBOutlet weak var sexLabelError: UILabel!
+    @IBOutlet weak var passEmpty: UILabel!
+    @IBOutlet weak var passNotEqual: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let paddingView : UIView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: 20))
@@ -137,6 +145,55 @@ class RegController: UIViewController {
                         let alert = UIAlertController(title: "Ошибка регистрации", message: "Произошла ошибка при регистрации.\nПроверьте данные и повторите попытку.", preferredStyle: UIAlertController.Style.alert)
                         alert.addAction(UIAlertAction(title: "Повторить попытку", style: UIAlertAction.Style.default, handler: nil))
                         self.present(alert, animated: true, completion: nil)
+                        
+                        if self.firstnameField.text == "" {
+                            self.firstnameLabelError.isHidden = false
+                        }
+                        else {
+                            self.firstnameLabelError.isHidden = true
+                        }
+                        
+                        if self.lastnameField.text == "" {
+                            self.lastnameLabelError.isHidden = false
+                        }
+                        else {
+                            self.lastnameLabelError.isHidden = true
+                        }
+                        
+                        if self.birthdayField.text == "" {
+                            self.birthdayLabelError.isHidden = false
+                        }
+                        else {
+                            self.birthdayLabelError.isHidden = true
+                        }
+                        
+                        if self.emailField.text == "" {
+                            self.emailLabelError.isHidden = false
+                        }
+                        else {
+                            self.emailLabelError.isHidden = true
+                        }
+                        
+                        if self.passField.text == "" {
+                            self.passEmpty.isHidden = false
+                        }
+                        else {
+                            self.passEmpty.isHidden = true
+                        }
+                        
+                        if self.rpassField.text != self.passField.text {
+                            self.passNotEqual.isHidden = false
+                        }
+                        else {
+                            self.passNotEqual.isHidden = true
+                        }
+                        
+                        if self.gender.rawValue == "no" {
+                            self.sexLabelError.textColor = UIColor.red
+                        }
+                        else {
+                            self.sexLabelError.textColor = UIColor(named: "InputText")
+                        }
                     }
                 }
             }

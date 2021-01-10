@@ -211,6 +211,9 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="kUG-jJ-k5U" kind="presentation" id="qPB-eJ-hK6"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sEw-JK-x9S"/>
@@ -503,7 +506,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="E-mail" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eHG-GB-we7">
-                                        <rect key="frame" x="34" y="576" width="333" height="50"/>
+                                        <rect key="frame" x="36" y="576" width="331" height="50"/>
                                         <color key="backgroundColor" name="InputBackColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="cqz-Eu-9Jg"/>
@@ -544,6 +547,48 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title=" "/>
                                     </button>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Введите имя" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mnD-DX-XHh">
+                                        <rect key="frame" x="36" y="482" width="70" height="14"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Введите фамилию" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOz-sE-QSQ">
+                                        <rect key="frame" x="35.5" y="556" width="100" height="14"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Введите пароль" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8OF-lV-pHx">
+                                        <rect key="frame" x="35.5" y="1046" width="87" height="14"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Введите почту" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PcO-Rw-k0Z">
+                                        <rect key="frame" x="35.5" y="630" width="80" height="14"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Забыли ввести дату рождения" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wPQ-BA-aOS">
+                                        <rect key="frame" x="35.5" y="704" width="167" height="14"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Пароли не совпадают" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUt-Np-g68">
+                                        <rect key="frame" x="35.5" y="1118" width="120" height="14"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="Mb8-V9-rKl" firstAttribute="leading" secondItem="gPY-rI-nQx" secondAttribute="leading" constant="37" id="2JK-o9-ag3"/>
@@ -584,7 +629,7 @@
                                     <constraint firstItem="YTH-V5-Vtm" firstAttribute="trailing" secondItem="dcd-Ta-QV5" secondAttribute="trailing" id="iiM-vY-dax"/>
                                     <constraint firstItem="eef-RR-EKF" firstAttribute="leading" secondItem="FIt-zG-Yd6" secondAttribute="leading" id="iis-ZC-wcS"/>
                                     <constraint firstItem="Mke-wQ-LZY" firstAttribute="leading" secondItem="eef-RR-EKF" secondAttribute="trailing" constant="52" id="imk-x4-R5Q"/>
-                                    <constraint firstItem="eHG-GB-we7" firstAttribute="leading" secondItem="Mb8-V9-rKl" secondAttribute="leading" constant="-3" id="nOz-Hi-XJj"/>
+                                    <constraint firstItem="eHG-GB-we7" firstAttribute="leading" secondItem="Mb8-V9-rKl" secondAttribute="leading" constant="-1" id="nOz-Hi-XJj"/>
                                     <constraint firstItem="Mb8-V9-rKl" firstAttribute="leading" secondItem="FIt-zG-Yd6" secondAttribute="leading" id="oSB-RB-W8h"/>
                                     <constraint firstItem="gkA-ow-a16" firstAttribute="top" secondItem="2Rc-Pl-CaG" secondAttribute="bottom" constant="7" id="oyy-ce-Bhe"/>
                                     <constraint firstItem="9AJ-8u-2fw" firstAttribute="top" secondItem="rFU-qv-abW" secondAttribute="bottom" constant="98" id="ppT-VN-dMq"/>
@@ -614,13 +659,20 @@
                     <size key="freeformSize" width="414" height="1450"/>
                     <connections>
                         <outlet property="birthdayField" destination="9AJ-8u-2fw" id="jvm-OL-Ozc"/>
+                        <outlet property="birthdayLabelError" destination="wPQ-BA-aOS" id="cWR-Lc-GTp"/>
                         <outlet property="emailField" destination="eHG-GB-we7" id="bJL-TB-wzz"/>
+                        <outlet property="emailLabelError" destination="PcO-Rw-k0Z" id="MTF-mi-9kG"/>
                         <outlet property="firstnameField" destination="fhk-AV-qAX" id="26R-fi-QwX"/>
+                        <outlet property="firstnameLabelError" destination="mnD-DX-XHh" id="1of-eH-UJO"/>
                         <outlet property="lastnameField" destination="rFU-qv-abW" id="TXl-JJ-Y3E"/>
+                        <outlet property="lastnameLabelError" destination="MOz-sE-QSQ" id="x2e-IF-OTa"/>
                         <outlet property="menButton" destination="eef-RR-EKF" id="ZKK-qd-DcW"/>
                         <outlet property="nosexButton" destination="2Rc-Pl-CaG" id="5pm-KD-rAM"/>
+                        <outlet property="passEmpty" destination="8OF-lV-pHx" id="nMq-jA-Wgd"/>
                         <outlet property="passField" destination="YTH-V5-Vtm" id="td2-w8-ZeU"/>
+                        <outlet property="passNotEqual" destination="aUt-Np-g68" id="pZS-Wh-vEW"/>
                         <outlet property="rpassField" destination="dcd-Ta-QV5" id="m8Z-Hd-h4f"/>
+                        <outlet property="sexLabelError" destination="FIt-zG-Yd6" id="zhr-af-kKB"/>
                         <outlet property="womanButton" destination="Mke-wQ-LZY" id="HTl-3A-CZ3"/>
                     </connections>
                 </viewController>
@@ -661,7 +713,8 @@
                                 <rect key="frame" x="77" y="232" width="44" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="Color-1"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" name="inputCode"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -674,7 +727,8 @@
                                 <rect key="frame" x="149" y="232" width="44" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="Color-1"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" name="inputCode"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -687,7 +741,8 @@
                                 <rect key="frame" x="221" y="232" width="44" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="Color-1"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" name="inputCode"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -700,7 +755,8 @@
                                 <rect key="frame" x="293" y="232" width="44" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="Color-1"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" name="inputCode"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -1170,6 +1226,9 @@
             <point key="canvasLocation" x="2657.971014492754" y="817.63392857142856"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="qPB-eJ-hK6"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="activAvatar" width="25" height="25"/>
         <image name="card" width="34" height="27"/>
@@ -1198,8 +1257,14 @@
         <namedColor name="TextColor">
             <color red="0.55699998140335083" green="0.55699998140335083" blue="0.57599997520446777" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="inputCode">
+            <color red="0.57647058823529407" green="0.50196078431372548" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
