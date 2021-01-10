@@ -25,6 +25,9 @@ class ProfileController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     @IBAction func ClikRules(_ sender: Any) {
+        if let url = URL(string: "https://vk.com/page-37741483_44174457") {
+            UIApplication.shared.open(url)
+        }
     }
     @IBAction func ClikConnectUs(_ sender: Any) {
     }
