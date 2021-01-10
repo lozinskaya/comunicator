@@ -223,7 +223,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l2L-ZX-wZW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="989.85507246376824" y="77.678571428571431"/>
+            <point key="canvasLocation" x="1013" y="90"/>
         </scene>
         <!--Login Controller-->
         <scene sceneID="cvo-Jn-ajh">
@@ -723,6 +723,12 @@
                         <viewLayoutGuide key="safeArea" id="pXU-je-fU0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="otpbox1" destination="0qA-b0-I8R" id="MeY-2z-uiD"/>
+                        <outlet property="otpbox2" destination="RWn-rK-M3B" id="RK0-3n-9hG"/>
+                        <outlet property="otpbox3" destination="x4a-la-2Yx" id="6tp-bM-KF4"/>
+                        <outlet property="otpbox4" destination="Tl1-ms-sV6" id="0iO-n1-SRc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZND-ak-fwS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -821,6 +827,7 @@
                                 </state>
                                 <connections>
                                     <action selector="ClikExit:" destination="01s-Db-jbo" eventType="touchUpInside" id="3tC-b2-U0j"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="overCurrentContext" id="YLQ-LL-y1H"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="info" translatesAutoresizingMaskIntoConstraints="NO" id="Jpu-NF-hQ7">
