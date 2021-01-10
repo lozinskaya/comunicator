@@ -25,6 +25,7 @@
 		C6D7991E255868CE00E6F1DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6D7991C255868CE00E6F1DF /* LaunchScreen.storyboard */; };
 		C6D79929255868CE00E6F1DF /* ____________Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D79928255868CE00E6F1DF /* ____________Tests.swift */; };
 		C6D79934255868CE00E6F1DF /* ____________UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D79933255868CE00E6F1DF /* ____________UITests.swift */; };
+		C6E548C525AB5CCC000B04AF /* FinishController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E548C425AB5CCC000B04AF /* FinishController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		C6D7992F255868CE00E6F1DF /* КоммуникаторUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "КоммуникаторUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6D79933255868CE00E6F1DF /* ____________UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "____________UITests.swift"; sourceTree = "<group>"; };
 		C6D79935255868CE00E6F1DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6E548C425AB5CCC000B04AF /* FinishController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 				C62A599A258DF06300A45AAB /* SessionController.swift */,
 				C62A599F258DF43700A45AAB /* ProfileController.swift */,
 				C6B4655F2598C3D200144C85 /* ChangePass.swift */,
+				C6E548C425AB5CCC000B04AF /* FinishController.swift */,
 			);
 			path = "Коммуникатор";
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				C69E3497257C1ADD003114F3 /* ConfirmController.swift in Sources */,
 				C6C53058257BC79F00CF983C /* WebFuncs.swift in Sources */,
 				C69E348D257C0D51003114F3 /* MainController.swift in Sources */,
+				C6E548C525AB5CCC000B04AF /* FinishController.swift in Sources */,
 				C69E349C257C1BD3003114F3 /* Settings.swift in Sources */,
 				C62A59A0258DF43700A45AAB /* ProfileController.swift in Sources */,
 				C6D48396257BF29200A031EC /* LoginController.swift in Sources */,
