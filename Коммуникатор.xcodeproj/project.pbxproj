@@ -26,7 +26,10 @@
 		C6D79929255868CE00E6F1DF /* ____________Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D79928255868CE00E6F1DF /* ____________Tests.swift */; };
 		C6D79934255868CE00E6F1DF /* ____________UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D79933255868CE00E6F1DF /* ____________UITests.swift */; };
 		C6E548C525AB5CCC000B04AF /* FinishController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E548C425AB5CCC000B04AF /* FinishController.swift */; };
-		C6E548CA25AB8B47000B04AF /* EventsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E548C925AB8B47000B04AF /* EventsController.swift */; };
+		C6E548DA25AC7231000B04AF /* EventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E548D925AC7231000B04AF /* EventController.swift */; };
+		C6E548E025AC8469000B04AF /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E548DE25AC8468000B04AF /* MainTableViewCell.swift */; };
+		C6E548E125AC8469000B04AF /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6E548DF25AC8468000B04AF /* MainTableViewCell.xib */; };
+		C6E548E625ACD51B000B04AF /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E548E525ACD519000B04AF /* DetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +75,10 @@
 		C6D79933255868CE00E6F1DF /* ____________UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "____________UITests.swift"; sourceTree = "<group>"; };
 		C6D79935255868CE00E6F1DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6E548C425AB5CCC000B04AF /* FinishController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishController.swift; sourceTree = "<group>"; };
-		C6E548C925AB8B47000B04AF /* EventsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsController.swift; sourceTree = "<group>"; };
+		C6E548D925AC7231000B04AF /* EventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventController.swift; sourceTree = "<group>"; };
+		C6E548DE25AC8468000B04AF /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		C6E548DF25AC8468000B04AF /* MainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
+		C6E548E525ACD519000B04AF /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,7 +147,10 @@
 				C62A599F258DF43700A45AAB /* ProfileController.swift */,
 				C6B4655F2598C3D200144C85 /* ChangePass.swift */,
 				C6E548C425AB5CCC000B04AF /* FinishController.swift */,
-				C6E548C925AB8B47000B04AF /* EventsController.swift */,
+				C6E548D925AC7231000B04AF /* EventController.swift */,
+				C6E548DE25AC8468000B04AF /* MainTableViewCell.swift */,
+				C6E548DF25AC8468000B04AF /* MainTableViewCell.xib */,
+				C6E548E525ACD519000B04AF /* DetailVC.swift */,
 			);
 			path = "Коммуникатор";
 			sourceTree = "<group>";
@@ -270,6 +279,7 @@
 			files = (
 				C6D7991E255868CE00E6F1DF /* LaunchScreen.storyboard in Resources */,
 				C6D7991B255868CE00E6F1DF /* Assets.xcassets in Resources */,
+				C6E548E125AC8469000B04AF /* MainTableViewCell.xib in Resources */,
 				C6D79919255868CA00E6F1DF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,14 +307,16 @@
 			files = (
 				C69E3492257C177A003114F3 /* RegController.swift in Sources */,
 				C69E3497257C1ADD003114F3 /* ConfirmController.swift in Sources */,
+				C6E548DA25AC7231000B04AF /* EventController.swift in Sources */,
 				C6C53058257BC79F00CF983C /* WebFuncs.swift in Sources */,
+				C6E548E625ACD51B000B04AF /* DetailVC.swift in Sources */,
 				C69E348D257C0D51003114F3 /* MainController.swift in Sources */,
 				C6E548C525AB5CCC000B04AF /* FinishController.swift in Sources */,
 				C69E349C257C1BD3003114F3 /* Settings.swift in Sources */,
 				C62A59A0258DF43700A45AAB /* ProfileController.swift in Sources */,
 				C6D48396257BF29200A031EC /* LoginController.swift in Sources */,
 				C62A5996258DED1F00A45AAB /* Global.swift in Sources */,
-				C6E548CA25AB8B47000B04AF /* EventsController.swift in Sources */,
+				C6E548E025AC8469000B04AF /* MainTableViewCell.swift in Sources */,
 				C6D79916255868CA00E6F1DF /* ViewController.swift in Sources */,
 				C6B465602598C3D200144C85 /* ChangePass.swift in Sources */,
 				C6D79912255868CA00E6F1DF /* AppDelegate.swift in Sources */,

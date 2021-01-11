@@ -9,8 +9,7 @@ import UIKit
 
 class EventsController: UIViewController {
     
-   
-    
+    @IBOutlet weak var myTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
     }
