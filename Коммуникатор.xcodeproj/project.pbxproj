@@ -26,6 +26,7 @@
 		C6D79929255868CE00E6F1DF /* ____________Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D79928255868CE00E6F1DF /* ____________Tests.swift */; };
 		C6D79934255868CE00E6F1DF /* ____________UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D79933255868CE00E6F1DF /* ____________UITests.swift */; };
 		C6E548C525AB5CCC000B04AF /* FinishController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E548C425AB5CCC000B04AF /* FinishController.swift */; };
+		C6E548CA25AB8B47000B04AF /* EventsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E548C925AB8B47000B04AF /* EventsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		C6D79933255868CE00E6F1DF /* ____________UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "____________UITests.swift"; sourceTree = "<group>"; };
 		C6D79935255868CE00E6F1DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6E548C425AB5CCC000B04AF /* FinishController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishController.swift; sourceTree = "<group>"; };
+		C6E548C925AB8B47000B04AF /* EventsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 				C62A599F258DF43700A45AAB /* ProfileController.swift */,
 				C6B4655F2598C3D200144C85 /* ChangePass.swift */,
 				C6E548C425AB5CCC000B04AF /* FinishController.swift */,
+				C6E548C925AB8B47000B04AF /* EventsController.swift */,
 			);
 			path = "Коммуникатор";
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				C62A59A0258DF43700A45AAB /* ProfileController.swift in Sources */,
 				C6D48396257BF29200A031EC /* LoginController.swift in Sources */,
 				C62A5996258DED1F00A45AAB /* Global.swift in Sources */,
+				C6E548CA25AB8B47000B04AF /* EventsController.swift in Sources */,
 				C6D79916255868CA00E6F1DF /* ViewController.swift in Sources */,
 				C6B465602598C3D200144C85 /* ChangePass.swift in Sources */,
 				C6D79912255868CA00E6F1DF /* AppDelegate.swift in Sources */,

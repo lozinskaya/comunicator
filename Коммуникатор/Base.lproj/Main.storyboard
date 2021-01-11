@@ -9,6 +9,23 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Events Controller-->
+        <scene sceneID="dAB-ac-BRu">
+            <objects>
+                <viewController id="ePF-jr-a8U" customClass="EventsController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xnr-ls-xCQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="J90-uP-BAh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="events" id="40k-uh-Sf7"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xTe-nt-mQ8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4437.68115942029" y="77.678571428571431"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -96,7 +113,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="77.678571428571431"/>
+            <point key="canvasLocation" x="138" y="90"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="jAv-uR-oLv">
@@ -1044,7 +1061,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ftm-mv-gSS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4393" y="78"/>
+            <point key="canvasLocation" x="3516" y="818"/>
         </scene>
         <!--Session Controller-->
         <scene sceneID="JdS-UJ-2ME">
@@ -1176,6 +1193,7 @@
                     <connections>
                         <segue destination="L2M-2S-OaC" kind="relationship" relationship="viewControllers" id="aOi-TC-9zt"/>
                         <segue destination="01s-Db-jbo" kind="relationship" relationship="viewControllers" id="UMT-9Q-GKD"/>
+                        <segue destination="ePF-jr-a8U" kind="relationship" relationship="viewControllers" id="bLI-93-CL4"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hg1-qe-Kbp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1227,14 +1245,15 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="qPB-eJ-hK6"/>
+        <segue reference="gpI-hz-ohd"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="activAvatar" width="25" height="25"/>
         <image name="card" width="34" height="27"/>
+        <image name="events" width="24" height="23"/>
         <image name="i" width="18" height="18"/>
         <image name="info" width="9" height="16"/>
-        <image name="loader" width="36" height="36"/>
+        <image name="loader" width="95" height="95"/>
         <image name="logo" width="138" height="111"/>
         <image name="navLogo" width="36" height="29"/>
         <image name="phone" width="120" height="120"/>
