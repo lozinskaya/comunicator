@@ -25,17 +25,25 @@ extension UIImageView {
 class SessionController: UIViewController {
     
     
-    
+    //загруженность кафе
+    @IBOutlet weak var busyCafe: UILabel!
+    //Статус: начат/не начат сеанс
     @IBOutlet weak var statusSession: UILabel!
+    //Совет, что  делать пользователю для начала/завершения сеанса
     @IBOutlet weak var adviceLabel: UILabel!
+    //view со временем и количеством людей в сеансе
     @IBOutlet weak var activSessionView: UIView!
-    
+    //view с загруженность кафе (показывается, когда сеанс не начат
     @IBOutlet weak var noActivSessionView: UIView!
+    //баланс
     @IBOutlet weak var balanceLabel: UILabel!
     @IBOutlet weak var qrView: UIImageView!
+    //тарифф
     @IBOutlet weak var tariffLabel: UILabel!
     
+    //время сеанса
     @IBOutlet weak var timeLabel: UILabel!
+    //количество человек на сеансе
     @IBOutlet weak var countLabel: UILabel!
     
     var timer = Timer()
@@ -57,7 +65,7 @@ class SessionController: UIViewController {
                     Global.is_active = Global.sessioninfo["is_active"] as? Int ?? 0
                     self.balanceLabel.text = Global.balance + " ₽"
                     self.activSessionView.isHidden = Global.is_active != 1
-                    self.noActivSessionView .isHidden = Global.is_active != 1
+                    self.noActivSessionView .isHidden = Global.is_active == 1
                     self.statusSession.text = Global.is_active == 1 ? "Сеанс начат" : "Сеанс не начат";
                     self.adviceLabel.text = Global.is_active == 1 ? "Чтобы завершить сеанс покажите QR-код администратору" : "Чтобы начать сеанс покажите QR-код администратору";
                     if(Global.is_active == 1) {
@@ -65,8 +73,11 @@ class SessionController: UIViewController {
                         debugPrint(Global.activesession)
                         self.timeLabel.text = (Global.activesession["duration_min"] as? String ?? "0") + " мин"
                         let extra_count = (Int(Global.activesession["count"] as! String) ?? 0) - 1
-                        self.countLabel.text = extra_count == 0 ? "Я" : ("Я и еще " + (extra_count as? String ?? "1"))
+                        self.countLabel.text = extra_count == 0 ? "Я" : ("Я и еще " + String(extra_count))
                         self.tariffLabel.text = "1 мин = " + (Global.activesession["tariff_sum"] as? String ?? "1") + " ₽"
+                    }
+                    else {
+                        self.tariffLabel.text = "1 мин = 1 ₽"
                     }
                 }
             }
