@@ -107,7 +107,7 @@ class RegController: UIViewController {
     }
     
     @IBAction func nogenderClick(_ sender: Any) {
-        gender = Settings.Gender.nosex;
+        gender = Settings.Gender.other;
         menButton.backgroundColor = unselectedColor;
         womanButton.backgroundColor = unselectedColor;
         nosexButton.backgroundColor = selectedColor;
