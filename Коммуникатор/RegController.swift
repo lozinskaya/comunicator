@@ -88,6 +88,7 @@ class RegController: UIViewController {
         let paddingView6 : UIView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: 20))
         rpassField.leftView = paddingView6
         rpassField.leftViewMode = .always
+        
     }
     
     

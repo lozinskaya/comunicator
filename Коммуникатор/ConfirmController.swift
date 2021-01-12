@@ -15,6 +15,8 @@ class ConfirmController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var otpbox2: UITextField!
     @IBOutlet weak var otpbox3: UITextField!
     @IBOutlet weak var otpbox4: UITextField!
+    @IBOutlet weak var textUnderCod: UILabel!
+    @IBOutlet weak var userEmail: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -15,6 +15,7 @@
 		C69E3497257C1ADD003114F3 /* ConfirmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69E3496257C1ADD003114F3 /* ConfirmController.swift */; };
 		C69E349C257C1BD3003114F3 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69E349B257C1BD3003114F3 /* Settings.swift */; };
 		C6B465602598C3D200144C85 /* ChangePass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B4655F2598C3D200144C85 /* ChangePass.swift */; };
+		C6B8CABE25AD794E00D25E85 /* RegisterCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B8CABD25AD794E00D25E85 /* RegisterCardViewController.swift */; };
 		C6C53058257BC79F00CF983C /* WebFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C53057257BC79F00CF983C /* WebFuncs.swift */; };
 		C6D48396257BF29200A031EC /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D48395257BF29200A031EC /* LoginController.swift */; };
 		C6D79912255868CA00E6F1DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D79911255868CA00E6F1DF /* AppDelegate.swift */; };
@@ -58,6 +59,7 @@
 		C69E3496257C1ADD003114F3 /* ConfirmController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmController.swift; sourceTree = "<group>"; };
 		C69E349B257C1BD3003114F3 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		C6B4655F2598C3D200144C85 /* ChangePass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePass.swift; sourceTree = "<group>"; };
+		C6B8CABD25AD794E00D25E85 /* RegisterCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCardViewController.swift; sourceTree = "<group>"; };
 		C6C53057257BC79F00CF983C /* WebFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebFuncs.swift; sourceTree = "<group>"; };
 		C6D48395257BF29200A031EC /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		C6D7990E255868CA00E6F1DF /* Коммуникатор.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Коммуникатор.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,6 +153,7 @@
 				C6E548DE25AC8468000B04AF /* MainTableViewCell.swift */,
 				C6E548DF25AC8468000B04AF /* MainTableViewCell.xib */,
 				C6E548E525ACD519000B04AF /* DetailVC.swift */,
+				C6B8CABD25AD794E00D25E85 /* RegisterCardViewController.swift */,
 			);
 			path = "Коммуникатор";
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				C69E349C257C1BD3003114F3 /* Settings.swift in Sources */,
 				C62A59A0258DF43700A45AAB /* ProfileController.swift in Sources */,
 				C6D48396257BF29200A031EC /* LoginController.swift in Sources */,
+				C6B8CABE25AD794E00D25E85 /* RegisterCardViewController.swift in Sources */,
 				C62A5996258DED1F00A45AAB /* Global.swift in Sources */,
 				C6E548E025AC8469000B04AF /* MainTableViewCell.swift in Sources */,
 				C6D79916255868CA00E6F1DF /* ViewController.swift in Sources */,
