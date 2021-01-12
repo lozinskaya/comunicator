@@ -15,6 +15,11 @@ class DetailVC: UIViewController {
     @IBOutlet weak var timeCell: UILabel!
     @IBOutlet weak var personCell: UILabel!
     @IBOutlet weak var descriptionCell: UILabel!
+    @IBAction func registerOnEvent(_ sender: Any) {
+        let vc = registerOnEventViewController()
+            vc.modalPresentationStyle = .custom
+            present(vc, animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,7 +30,7 @@ class DetailVC: UIViewController {
         personCell.text = chooseCell?[4]
     }
     
-
+    
     /*
     // MARK: - Navigation
 

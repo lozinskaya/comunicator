@@ -10,6 +10,7 @@
 		C62A5996258DED1F00A45AAB /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62A5995258DED1F00A45AAB /* Global.swift */; };
 		C62A599B258DF06300A45AAB /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62A599A258DF06300A45AAB /* SessionController.swift */; };
 		C62A59A0258DF43700A45AAB /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62A599F258DF43700A45AAB /* ProfileController.swift */; };
+		C67A984D25AE26B900CF71C9 /* registerOnEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67A984C25AE26B900CF71C9 /* registerOnEventViewController.swift */; };
 		C69E348D257C0D51003114F3 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69E348C257C0D51003114F3 /* MainController.swift */; };
 		C69E3492257C177A003114F3 /* RegController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69E3491257C177A003114F3 /* RegController.swift */; };
 		C69E3497257C1ADD003114F3 /* ConfirmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69E3496257C1ADD003114F3 /* ConfirmController.swift */; };
@@ -57,6 +58,7 @@
 		C62A5995258DED1F00A45AAB /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		C62A599A258DF06300A45AAB /* SessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionController.swift; sourceTree = "<group>"; };
 		C62A599F258DF43700A45AAB /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		C67A984C25AE26B900CF71C9 /* registerOnEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerOnEventViewController.swift; sourceTree = "<group>"; };
 		C69E348C257C0D51003114F3 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		C69E3491257C177A003114F3 /* RegController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegController.swift; sourceTree = "<group>"; };
 		C69E3496257C1ADD003114F3 /* ConfirmController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmController.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				C6B8CACA25AD9BDD00D25E85 /* ForgetPassViewController.swift */,
 				C6B8CACF25ADA18F00D25E85 /* NewPassViewController.swift */,
 				C6B8CAD425ADA4C500D25E85 /* SuccessChangePassViewController.swift */,
+				C67A984C25AE26B900CF71C9 /* registerOnEventViewController.swift */,
 			);
 			path = "Коммуникатор";
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				C6E548E625ACD51B000B04AF /* DetailVC.swift in Sources */,
 				C69E348D257C0D51003114F3 /* MainController.swift in Sources */,
 				C6E548C525AB5CCC000B04AF /* FinishController.swift in Sources */,
+				C67A984D25AE26B900CF71C9 /* registerOnEventViewController.swift in Sources */,
 				C69E349C257C1BD3003114F3 /* Settings.swift in Sources */,
 				C62A59A0258DF43700A45AAB /* ProfileController.swift in Sources */,
 				C6D48396257BF29200A031EC /* LoginController.swift in Sources */,
