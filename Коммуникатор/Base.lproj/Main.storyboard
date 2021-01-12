@@ -312,13 +312,17 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Забыли пароль?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZqC-6M-8Vj">
-                                <rect key="frame" x="142" y="404" width="130" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejT-nZ-03Y">
+                                <rect key="frame" x="142" y="398" width="130" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" name="InputText"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <state key="normal" title="Забыли пароль?">
+                                    <color key="titleColor" name="InputText"/>
+                                </state>
+                                <connections>
+                                    <segue destination="XYQ-JP-fUo" kind="show" id="VEF-sL-C2w"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hfX-Nj-swJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -332,6 +336,98 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9vi-EW-PgN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="760.71428571428567"/>
+        </scene>
+        <!--Forget Pass View Controller-->
+        <scene sceneID="WYh-W3-6yT">
+            <objects>
+                <viewController id="XYQ-JP-fUo" customClass="ForgetPassViewController" customModule="Коммуникатор" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lhh-pQ-THo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="emailField" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="E-mail" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="48J-9l-JqS">
+                                <rect key="frame" x="16" y="290.5" width="382" height="50"/>
+                                <color key="backgroundColor" name="InputBackColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Djb-gC-lCR"/>
+                                </constraints>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Восстановление пароля" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ux-EK-kVo">
+                                <rect key="frame" x="50" y="180" width="314" height="26.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Укажите E-mail, введенный вами при регистрации. Мы вышлем на него код для восстановления" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ad0-nq-VeC">
+                                <rect key="frame" x="16" y="222.5" width="382" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" name="TextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="LoginButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VeX-Vg-7pI">
+                                <rect key="frame" x="16" y="782" width="382" height="50"/>
+                                <color key="backgroundColor" name="Color"/>
+                                <accessibility key="accessibilityConfiguration" identifier="LoginButton"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="bh7-Dw-Xpx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Отправить код подтверждения"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="SendNewPass:" destination="XYQ-JP-fUo" eventType="touchUpInside" id="rai-bM-Yed"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пользователь с таким E-mail не найден" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0z-e9-r1e">
+                                <rect key="frame" x="49.5" y="356.5" width="315" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xEO-os-FKB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xEO-os-FKB" firstAttribute="trailing" secondItem="Ad0-nq-VeC" secondAttribute="trailing" constant="16" id="1sa-E6-Uk4"/>
+                            <constraint firstItem="e0z-e9-r1e" firstAttribute="top" secondItem="48J-9l-JqS" secondAttribute="bottom" constant="16" id="5jm-t6-iTu"/>
+                            <constraint firstItem="xEO-os-FKB" firstAttribute="bottom" secondItem="VeX-Vg-7pI" secondAttribute="bottom" constant="30" id="9S1-2G-uYM"/>
+                            <constraint firstItem="Ad0-nq-VeC" firstAttribute="leading" secondItem="xEO-os-FKB" secondAttribute="leading" constant="16" id="9lU-nv-sf1"/>
+                            <constraint firstItem="48J-9l-JqS" firstAttribute="top" secondItem="Ad0-nq-VeC" secondAttribute="bottom" constant="32" id="IET-Jk-y8h"/>
+                            <constraint firstItem="e0z-e9-r1e" firstAttribute="centerX" secondItem="xEO-os-FKB" secondAttribute="centerX" id="KMJ-dF-ePn"/>
+                            <constraint firstItem="VeX-Vg-7pI" firstAttribute="leading" secondItem="xEO-os-FKB" secondAttribute="leading" constant="16" id="azb-SI-ToO"/>
+                            <constraint firstItem="Ad0-nq-VeC" firstAttribute="top" secondItem="7ux-EK-kVo" secondAttribute="bottom" constant="16" id="dmw-Ms-rnG"/>
+                            <constraint firstItem="xEO-os-FKB" firstAttribute="trailing" secondItem="7ux-EK-kVo" secondAttribute="trailing" constant="50" id="hHe-hT-M0G"/>
+                            <constraint firstItem="xEO-os-FKB" firstAttribute="trailing" secondItem="48J-9l-JqS" secondAttribute="trailing" constant="16" id="hsS-Ru-78l"/>
+                            <constraint firstItem="xEO-os-FKB" firstAttribute="trailing" secondItem="VeX-Vg-7pI" secondAttribute="trailing" constant="16" id="myQ-Vs-Td5"/>
+                            <constraint firstItem="48J-9l-JqS" firstAttribute="leading" secondItem="xEO-os-FKB" secondAttribute="leading" constant="16" id="oHZ-aW-Fr0"/>
+                            <constraint firstItem="7ux-EK-kVo" firstAttribute="leading" secondItem="xEO-os-FKB" secondAttribute="leading" constant="50" id="rLA-R3-DEr"/>
+                            <constraint firstItem="7ux-EK-kVo" firstAttribute="top" secondItem="xEO-os-FKB" secondAttribute="top" constant="92" id="wZL-VO-LeO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="RHu-tu-cnU">
+                        <barButtonItem key="backBarButtonItem" title="йццйццуй" id="NlC-m9-t4R"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="EmailForgetPass" destination="48J-9l-JqS" id="7cM-B0-G9O"/>
+                        <outlet property="error" destination="e0z-e9-r1e" id="brt-1Q-sYs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9rw-o3-8xA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="1513"/>
         </scene>
         <!--Reg Controller-->
         <scene sceneID="oOJ-pT-zlw">
@@ -822,7 +918,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZND-ak-fwS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1837.68115942029" y="77.678571428571431"/>
+            <point key="canvasLocation" x="1848" y="90"/>
         </scene>
         <!--Profile Controller-->
         <scene sceneID="GnN-Ld-Vl0">
@@ -1293,11 +1389,6 @@
                             <constraint firstItem="ONE-yb-vKh" firstAttribute="top" secondItem="xJE-ez-LbH" secondAttribute="top" constant="222" id="wQA-wC-0La"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="clickFinish" destination="82U-yN-jsl" id="Cyg-Mv-IbM"/>
-                        <outlet property="finishMoney" destination="G6J-89-7fu" id="bjr-m7-1JS"/>
-                        <outlet property="finishTime" destination="A6k-ua-FB6" id="hGb-rW-MJa"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aTG-cR-8c9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1484,9 +1575,169 @@
             </objects>
             <point key="canvasLocation" x="5267" y="57"/>
         </scene>
+        <!--New Pass View Controller-->
+        <scene sceneID="zVe-CX-cVE">
+            <objects>
+                <viewController id="BrA-gx-FZ8" customClass="NewPassViewController" customModule="Коммуникатор" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FRk-Ti-Ccs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="Введите новый пароль" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eo9-Am-OXr">
+                                <rect key="frame" x="16" y="269" width="382" height="50"/>
+                                <color key="backgroundColor" name="InputBackColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="yoi-d6-vAw"/>
+                                </constraints>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="Новый пароль еще раз" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ebw-YO-ysW">
+                                <rect key="frame" x="16" y="341" width="382" height="50"/>
+                                <color key="backgroundColor" name="InputBackColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="aYp-pK-klg"/>
+                                </constraints>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c05-D3-pPU">
+                                <rect key="frame" x="16" y="782" width="382" height="50"/>
+                                <color key="backgroundColor" name="Color"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Изменить пароль"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Создание нового пароля" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Js-c4-evx">
+                                <rect key="frame" x="46" y="136" width="322" height="26.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Придумайте новый пароль" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LtY-qg-Zk1">
+                                <rect key="frame" x="16" y="178.5" width="382" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" name="TextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пароли не совпадают" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUV-ns-sTP">
+                                <rect key="frame" x="16" y="395" width="175" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dm1-DX-mJb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ebw-YO-ysW" firstAttribute="leading" secondItem="dm1-DX-mJb" secondAttribute="leading" constant="16" id="0LX-AP-hNu"/>
+                            <constraint firstItem="eo9-Am-OXr" firstAttribute="top" secondItem="LtY-qg-Zk1" secondAttribute="bottom" constant="72.5" id="0wN-Ds-ri4"/>
+                            <constraint firstItem="eo9-Am-OXr" firstAttribute="leading" secondItem="LtY-qg-Zk1" secondAttribute="leading" id="1JD-iX-c2H"/>
+                            <constraint firstItem="9Js-c4-evx" firstAttribute="top" secondItem="dm1-DX-mJb" secondAttribute="top" constant="92" id="2Qv-z8-Dm8"/>
+                            <constraint firstItem="eo9-Am-OXr" firstAttribute="trailing" secondItem="LtY-qg-Zk1" secondAttribute="trailing" id="4D1-3O-lRY"/>
+                            <constraint firstItem="c05-D3-pPU" firstAttribute="top" secondItem="IUV-ns-sTP" secondAttribute="bottom" constant="366" id="4gv-rT-q97"/>
+                            <constraint firstItem="dm1-DX-mJb" firstAttribute="trailing" secondItem="eo9-Am-OXr" secondAttribute="trailing" constant="16" id="5Te-oX-ETH"/>
+                            <constraint firstItem="dm1-DX-mJb" firstAttribute="trailing" secondItem="ebw-YO-ysW" secondAttribute="trailing" constant="16" id="DCk-D5-jnM"/>
+                            <constraint firstItem="9Js-c4-evx" firstAttribute="leading" secondItem="dm1-DX-mJb" secondAttribute="leading" constant="46" id="Ear-5K-sSi"/>
+                            <constraint firstItem="dm1-DX-mJb" firstAttribute="bottom" secondItem="c05-D3-pPU" secondAttribute="bottom" constant="30" id="HXj-dY-d3E"/>
+                            <constraint firstItem="eo9-Am-OXr" firstAttribute="leading" secondItem="dm1-DX-mJb" secondAttribute="leading" constant="16" id="Hkm-yb-tqr"/>
+                            <constraint firstItem="IUV-ns-sTP" firstAttribute="top" secondItem="ebw-YO-ysW" secondAttribute="bottom" constant="4" id="P6g-n7-1hW"/>
+                            <constraint firstItem="LtY-qg-Zk1" firstAttribute="top" secondItem="9Js-c4-evx" secondAttribute="bottom" constant="16" id="Vvc-Nc-wlp"/>
+                            <constraint firstItem="dm1-DX-mJb" firstAttribute="trailing" secondItem="9Js-c4-evx" secondAttribute="trailing" constant="46" id="XDY-aC-0N6"/>
+                            <constraint firstItem="IUV-ns-sTP" firstAttribute="leading" secondItem="dm1-DX-mJb" secondAttribute="leading" constant="16" id="Zxx-UK-sQ8"/>
+                            <constraint firstItem="dm1-DX-mJb" firstAttribute="trailing" secondItem="c05-D3-pPU" secondAttribute="trailing" constant="16" id="c5C-Ta-gJd"/>
+                            <constraint firstItem="ebw-YO-ysW" firstAttribute="top" secondItem="eo9-Am-OXr" secondAttribute="bottom" constant="22" id="qDb-Sb-Gcd"/>
+                            <constraint firstItem="c05-D3-pPU" firstAttribute="leading" secondItem="dm1-DX-mJb" secondAttribute="leading" constant="16" id="vcz-EX-faL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="clikChangePass" destination="c05-D3-pPU" id="h9i-zn-Pir"/>
+                        <outlet property="error" destination="IUV-ns-sTP" id="vVi-Us-NHf"/>
+                        <outlet property="newPass" destination="eo9-Am-OXr" id="kFL-YN-UfZ"/>
+                        <outlet property="newPassField" destination="eo9-Am-OXr" id="38K-lv-s5P"/>
+                        <outlet property="reNewPassField" destination="ebw-YO-ysW" id="xhG-Db-nFY"/>
+                        <outlet property="rnewPass" destination="ebw-YO-ysW" id="Wr3-2s-hzf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BUv-PQ-9s6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="957" y="1513"/>
+        </scene>
+        <!--Success Change Pass View Controller-->
+        <scene sceneID="UMl-GX-pOr">
+            <objects>
+                <viewController id="CF4-Nh-UUc" customClass="SuccessChangePassViewController" customModule="Коммуникатор" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uKF-bO-QpK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="done" translatesAutoresizingMaskIntoConstraints="NO" id="q0i-vL-GZC">
+                                <rect key="frame" x="139" y="296" width="136" height="96"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пароль изменен" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZeU-SJ-ljW">
+                                <rect key="frame" x="122" y="412" width="170" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6jw-u9-iuM">
+                                <rect key="frame" x="16" y="761" width="382" height="50"/>
+                                <color key="backgroundColor" name="Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="mTf-xD-MdA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Отлично"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="ClikSuccessChangePass:" destination="CF4-Nh-UUc" eventType="touchUpInside" id="9oj-Z2-abB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Dhd-7C-gYH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Dhd-7C-gYH" firstAttribute="trailing" secondItem="q0i-vL-GZC" secondAttribute="trailing" constant="139" id="4GC-Se-3Cu"/>
+                            <constraint firstItem="Dhd-7C-gYH" firstAttribute="trailing" secondItem="ZeU-SJ-ljW" secondAttribute="trailing" constant="122" id="FJY-om-gFK"/>
+                            <constraint firstItem="Dhd-7C-gYH" firstAttribute="trailing" secondItem="6jw-u9-iuM" secondAttribute="trailing" constant="16" id="FNn-nF-dbe"/>
+                            <constraint firstItem="ZeU-SJ-ljW" firstAttribute="top" secondItem="q0i-vL-GZC" secondAttribute="bottom" constant="20" id="Kdk-NS-eoH"/>
+                            <constraint firstItem="ZeU-SJ-ljW" firstAttribute="leading" secondItem="Dhd-7C-gYH" secondAttribute="leading" constant="122" id="Lsf-8g-beI"/>
+                            <constraint firstItem="q0i-vL-GZC" firstAttribute="leading" secondItem="Dhd-7C-gYH" secondAttribute="leading" constant="139" id="asO-kG-yHI"/>
+                            <constraint firstItem="q0i-vL-GZC" firstAttribute="top" secondItem="Dhd-7C-gYH" secondAttribute="top" constant="252" id="o62-mD-myI"/>
+                            <constraint firstItem="6jw-u9-iuM" firstAttribute="leading" secondItem="Dhd-7C-gYH" secondAttribute="leading" constant="16" id="sSZ-I8-SPK"/>
+                            <constraint firstItem="6jw-u9-iuM" firstAttribute="top" secondItem="ZeU-SJ-ljW" secondAttribute="bottom" constant="328" id="xjH-VF-2c7"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZTm-bc-KVj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1796" y="1513"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gpI-hz-ohd"/>
+        <segue reference="qPB-eJ-hK6"/>
         <segue reference="fFg-X2-zuw"/>
     </inferredMetricsTieBreakers>
     <resources>
@@ -1495,6 +1746,7 @@
         <image name="card" width="34" height="27"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="count_persons" width="14" height="14"/>
+        <image name="done" width="97" height="96"/>
         <image name="events" width="24" height="23"/>
         <image name="i" width="18" height="18"/>
         <image name="info" width="9" height="16"/>
