@@ -58,7 +58,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="kUG-jJ-k5U" kind="presentation" destinationCreationSelector="Переход:" modalPresentationStyle="automatic" id="gpI-hz-ohd"/>
+                                    <segue destination="kUG-jJ-k5U" kind="show" destinationCreationSelector="Переход:" id="gpI-hz-ohd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfK-I8-bwn">
@@ -110,14 +110,14 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Fia-k1-Sw8" kind="presentation" id="kDf-zp-UdC"/>
+                                    <segue destination="Fia-k1-Sw8" kind="show" id="kDf-zp-UdC"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="9Tu-d6-ICZ">
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="9Tu-d6-ICZ">
                         <barButtonItem key="backBarButtonItem" title=" " id="KgU-ff-I0g"/>
                     </navigationItem>
                 </viewController>
@@ -246,7 +246,7 @@
                         <viewLayoutGuide key="safeArea" id="sEw-JK-x9S"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title=" " id="11Q-uh-jdp">
+                    <navigationItem key="navigationItem" title=" " largeTitleDisplayMode="never" id="11Q-uh-jdp">
                         <barButtonItem key="backBarButtonItem" title="      " id="BUZ-MS-j65"/>
                     </navigationItem>
                 </viewController>
@@ -259,7 +259,7 @@
             <objects>
                 <viewController id="Fia-k1-Sw8" customClass="LoginController" customModule="Коммуникатор" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Db6-Yi-dWX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="LoginButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3c2-bV-EJp">
@@ -323,7 +323,7 @@
                         <viewLayoutGuide key="safeArea" id="hfX-Nj-swJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="fuK-ea-OZX"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="fuK-ea-OZX"/>
                     <connections>
                         <outlet property="emailField" destination="Qwg-Wb-neh" id="6Vd-Ls-W7a"/>
                         <outlet property="passField" destination="Wdl-q5-sBb" id="jhg-Jk-QA5"/>
@@ -338,11 +338,11 @@
             <objects>
                 <viewController storyboardIdentifier="regController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kUG-jJ-k5U" customClass="RegController" customModule="Коммуникатор" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1qv-Xf-xaU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1396"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1450"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lOB-lI-zrf">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="1382"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="1348"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Rc-Pl-CaG">
                                         <rect key="frame" x="136" y="883" width="145" height="51"/>
@@ -686,7 +686,7 @@
                             <constraint firstItem="lOB-lI-zrf" firstAttribute="top" secondItem="77E-0b-LFz" secondAttribute="top" id="lwH-an-NOP"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="zEf-GO-lfs">
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="zEf-GO-lfs">
                         <barButtonItem key="backBarButtonItem" title=" " width="42" style="done" id="j3s-ZQ-8sj">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
@@ -1228,22 +1228,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="phone" translatesAutoresizingMaskIntoConstraints="NO" id="DQY-eK-zGi">
-                                <rect key="frame" x="87" y="346" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone" translatesAutoresizingMaskIntoConstraints="NO" id="DQY-eK-zGi">
+                                <rect key="frame" x="127" y="387" width="160" height="120"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQu-W5-IAh">
-                                <rect key="frame" x="61" y="514" width="293" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQu-W5-IAh">
+                                <rect key="frame" x="36" y="547" width="342" height="53"/>
                                 <string key="text">Сеанс завершен.
 До скорой коммуникации!</string>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="82U-yN-jsl">
-                                <rect key="frame" x="35" y="681" width="344" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="82U-yN-jsl">
+                                <rect key="frame" x="16" y="701" width="382" height="62"/>
                                 <color key="backgroundColor" name="Color"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Я обязательно вернусь!"/>
@@ -1254,10 +1251,53 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card" translatesAutoresizingMaskIntoConstraints="NO" id="ONE-yb-vKh">
+                                <rect key="frame" x="30" y="266" width="34" height="27"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3376 ₽" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G6J-89-7fu">
+                                <rect key="frame" x="76" y="266" width="74" height="27"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="time" translatesAutoresizingMaskIntoConstraints="NO" id="Kda-4Q-De8">
+                                <rect key="frame" x="255" y="266" width="30" height="30"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120 мин" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6k-ua-FB6">
+                                <rect key="frame" x="297" y="266" width="87" height="27"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xJE-ez-LbH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="G6J-89-7fu" firstAttribute="top" secondItem="xJE-ez-LbH" secondAttribute="top" constant="222" id="07J-W6-XyL"/>
+                            <constraint firstItem="xJE-ez-LbH" firstAttribute="trailing" secondItem="82U-yN-jsl" secondAttribute="trailing" constant="16" id="8rU-D6-RuB"/>
+                            <constraint firstItem="xJE-ez-LbH" firstAttribute="trailing" secondItem="YQu-W5-IAh" secondAttribute="trailing" constant="36" id="AS0-SX-lon"/>
+                            <constraint firstItem="A6k-ua-FB6" firstAttribute="top" secondItem="xJE-ez-LbH" secondAttribute="top" constant="222" id="Bh7-no-cjL"/>
+                            <constraint firstItem="DQY-eK-zGi" firstAttribute="top" secondItem="Kda-4Q-De8" secondAttribute="bottom" constant="91" id="DIX-ea-Xfo"/>
+                            <constraint firstItem="G6J-89-7fu" firstAttribute="leading" secondItem="ONE-yb-vKh" secondAttribute="trailing" constant="12" id="G8t-Iv-ScG"/>
+                            <constraint firstItem="xJE-ez-LbH" firstAttribute="trailing" secondItem="DQY-eK-zGi" secondAttribute="trailing" constant="127" id="KKX-p5-AQY"/>
+                            <constraint firstItem="A6k-ua-FB6" firstAttribute="leading" secondItem="Kda-4Q-De8" secondAttribute="trailing" constant="12" id="W33-fz-qVh"/>
+                            <constraint firstItem="YQu-W5-IAh" firstAttribute="leading" secondItem="xJE-ez-LbH" secondAttribute="leading" constant="36" id="Z5D-M8-NxE"/>
+                            <constraint firstItem="Kda-4Q-De8" firstAttribute="top" secondItem="xJE-ez-LbH" secondAttribute="top" constant="222" id="ZTz-uz-r93"/>
+                            <constraint firstItem="ONE-yb-vKh" firstAttribute="leading" secondItem="xJE-ez-LbH" secondAttribute="leading" constant="30" id="aKu-zw-Oj6"/>
+                            <constraint firstItem="82U-yN-jsl" firstAttribute="leading" secondItem="xJE-ez-LbH" secondAttribute="leading" constant="16" id="aRi-JN-aOZ"/>
+                            <constraint firstItem="DQY-eK-zGi" firstAttribute="leading" secondItem="xJE-ez-LbH" secondAttribute="leading" constant="127" id="f7q-Sa-Hdq"/>
+                            <constraint firstItem="xJE-ez-LbH" firstAttribute="trailing" secondItem="A6k-ua-FB6" secondAttribute="trailing" constant="30" id="fSt-8f-g44"/>
+                            <constraint firstItem="xJE-ez-LbH" firstAttribute="bottom" secondItem="82U-yN-jsl" secondAttribute="bottom" constant="99" id="jF6-u7-Lcc"/>
+                            <constraint firstItem="82U-yN-jsl" firstAttribute="top" secondItem="YQu-W5-IAh" secondAttribute="bottom" constant="101" id="mYL-yt-Hk8"/>
+                            <constraint firstItem="YQu-W5-IAh" firstAttribute="top" secondItem="DQY-eK-zGi" secondAttribute="bottom" constant="40" id="rpe-E3-czd"/>
+                            <constraint firstItem="ONE-yb-vKh" firstAttribute="top" secondItem="xJE-ez-LbH" secondAttribute="top" constant="222" id="wQA-wC-0La"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="clickFinish" destination="82U-yN-jsl" id="Cyg-Mv-IbM"/>
+                        <outlet property="finishMoney" destination="G6J-89-7fu" id="bjr-m7-1JS"/>
+                        <outlet property="finishTime" destination="A6k-ua-FB6" id="hGb-rW-MJa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aTG-cR-8c9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
