@@ -19,6 +19,8 @@ class EventController: UIViewController {
         tableEvents.dataSource = self
         tableEvents.delegate = self
         
+        self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         tableEvents.register(UINib(nibName: "MainTableViewCell", bundle: nil ), forCellReuseIdentifier: idCell)
     }
 }
