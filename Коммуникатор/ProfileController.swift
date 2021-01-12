@@ -43,6 +43,8 @@ class ProfileController: UIViewController {
         ProfileController.current = self;
         ProfileController.showed = true;
         super.viewDidLoad()
+        self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         nameLabel.text = (Global.userinfo["firstname"] as? String ?? "") + " " + (Global.userinfo["surname"] as? String ?? "");
         reloadBalance();
         emailLabel.text = Global.userinfo["email"] as? String;

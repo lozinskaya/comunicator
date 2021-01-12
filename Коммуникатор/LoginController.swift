@@ -23,6 +23,9 @@ class LoginController: UIViewController {
         let paddingView2 : UIView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: 20))
         passField.leftView = paddingView2
         passField.leftViewMode = .always
+        
+        self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
 

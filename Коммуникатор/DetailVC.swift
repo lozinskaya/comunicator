@@ -18,11 +18,11 @@ class DetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        labelCell.text = chooseCell?[0]
+        labelCell.text = chooseCell?[1]
         imgCell.image = UIImage(named: "eventImg")
-        descriptionCell.text = chooseCell?[1]
-        timeCell.text = chooseCell?[2]
-        personCell.text = chooseCell?[3]
+        descriptionCell.text = chooseCell?[2]
+        timeCell.text = chooseCell?[3]
+        personCell.text = chooseCell?[4]
     }
     
 
