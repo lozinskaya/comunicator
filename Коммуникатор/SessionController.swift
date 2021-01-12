@@ -26,9 +26,11 @@ class SessionController: UIViewController {
     
     
     
+    @IBOutlet weak var statusSession: UILabel!
     @IBOutlet weak var adviceLabel: UILabel!
     @IBOutlet weak var activSessionView: UIView!
     
+    @IBOutlet weak var noActivSessionView: UIView!
     @IBOutlet weak var balanceLabel: UILabel!
     @IBOutlet weak var qrView: UIImageView!
     @IBOutlet weak var tariffLabel: UILabel!
@@ -55,6 +57,8 @@ class SessionController: UIViewController {
                     Global.is_active = Global.sessioninfo["is_active"] as? Int ?? 0
                     self.balanceLabel.text = Global.balance + " ₽"
                     self.activSessionView.isHidden = Global.is_active != 1
+                    self.noActivSessionView .isHidden = Global.is_active != 1
+                    self.statusSession.text = Global.is_active == 1 ? "Сеанс начат" : "Сеанс не начат";
                     self.adviceLabel.text = Global.is_active == 1 ? "Чтобы завершить сеанс покажите QR-код администратору" : "Чтобы начать сеанс покажите QR-код администратору";
                     if(Global.is_active == 1) {
                         Global.activesession = Global.sessioninfo["active"] as! [String : AnyObject]

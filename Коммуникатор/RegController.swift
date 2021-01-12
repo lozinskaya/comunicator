@@ -107,7 +107,7 @@ class RegController: UIViewController {
     }
     
     @IBAction func nogenderClick(_ sender: Any) {
-        gender = Settings.Gender.no;
+        gender = Settings.Gender.nosex;
         menButton.backgroundColor = unselectedColor;
         womanButton.backgroundColor = unselectedColor;
         nosexButton.backgroundColor = selectedColor;
@@ -145,6 +145,7 @@ class RegController: UIViewController {
                     } else {
                         let alert = UIAlertController(title: "Ошибка регистрации", message: "Произошла ошибка при регистрации.\nПроверьте данные и повторите попытку.", preferredStyle: UIAlertController.Style.alert)
                         alert.addAction(UIAlertAction(title: "Повторить попытку", style: UIAlertAction.Style.default, handler: nil))
+                        print(self.gender.rawValue)
                         self.present(alert, animated: true, completion: nil)
                         
                         if self.firstnameField.text == "" {
