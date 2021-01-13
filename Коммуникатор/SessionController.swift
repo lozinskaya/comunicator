@@ -52,7 +52,7 @@ class SessionController: UIViewController {
         super.viewDidLoad()
         qrView.load(url: WebFuncs.ActionUrl(action: "qrcode", params: ["code":Global.userinfo["code"] as! String]));
         timerAction()
-        timer = Timer.scheduledTimer(timeInterval: 30,target: self, selector: #selector(timerAction), userInfo: nil, repeats: true) 
+        timer = Timer.scheduledTimer(timeInterval: 2,target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
     }
     
     @objc func timerAction() {
@@ -77,8 +77,12 @@ class SessionController: UIViewController {
                         self.tariffLabel.text = "1 мин = " + (Global.activesession["tariff_sum"] as? String ?? "1") + " ₽"
                     }
                     else {
+                        let busy = (Global.sessioninfo["people_count"] as! Int) * 100 / (Global.sessioninfo["max_people"] as! Int)
+                        self.busyCafe.text = String(busy) + "%"
                         self.tariffLabel.text = "1 мин = 1 ₽"
                     }
+                    
+                    
                 }
             }
         }

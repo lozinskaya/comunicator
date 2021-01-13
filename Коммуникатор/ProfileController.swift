@@ -39,7 +39,9 @@ class ProfileController: UIViewController {
             }))
             
             alert.addAction(UIAlertAction(title: "+7 (912) 625-46-53", style: .default , handler:{ (UIAlertAction)in
-                print("User click number-tel")
+                if let url = URL(string: "tel://+7 (912) 625-46-53") {
+                    UIApplication.shared.open(url)
+                }
             }))
 
             alert.addAction(UIAlertAction(title: "Отменить", style: .cancel, handler:{ (UIAlertAction)in
