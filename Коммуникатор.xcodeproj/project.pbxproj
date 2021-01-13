@@ -10,6 +10,7 @@
 		C62A5996258DED1F00A45AAB /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62A5995258DED1F00A45AAB /* Global.swift */; };
 		C62A599B258DF06300A45AAB /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62A599A258DF06300A45AAB /* SessionController.swift */; };
 		C62A59A0258DF43700A45AAB /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62A599F258DF43700A45AAB /* ProfileController.swift */; };
+		C654E52D25AF347600B92CBD /* myEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654E52C25AF347600B92CBD /* myEventsViewController.swift */; };
 		C67A984D25AE26B900CF71C9 /* registerOnEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67A984C25AE26B900CF71C9 /* registerOnEventViewController.swift */; };
 		C69E348D257C0D51003114F3 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69E348C257C0D51003114F3 /* MainController.swift */; };
 		C69E3492257C177A003114F3 /* RegController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69E3491257C177A003114F3 /* RegController.swift */; };
@@ -58,6 +59,7 @@
 		C62A5995258DED1F00A45AAB /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		C62A599A258DF06300A45AAB /* SessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionController.swift; sourceTree = "<group>"; };
 		C62A599F258DF43700A45AAB /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		C654E52C25AF347600B92CBD /* myEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myEventsViewController.swift; sourceTree = "<group>"; };
 		C67A984C25AE26B900CF71C9 /* registerOnEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerOnEventViewController.swift; sourceTree = "<group>"; };
 		C69E348C257C0D51003114F3 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		C69E3491257C177A003114F3 /* RegController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegController.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				C6B8CACF25ADA18F00D25E85 /* NewPassViewController.swift */,
 				C6B8CAD425ADA4C500D25E85 /* SuccessChangePassViewController.swift */,
 				C67A984C25AE26B900CF71C9 /* registerOnEventViewController.swift */,
+				C654E52C25AF347600B92CBD /* myEventsViewController.swift */,
 			);
 			path = "Коммуникатор";
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				C6D48396257BF29200A031EC /* LoginController.swift in Sources */,
 				C6B8CAD025ADA18F00D25E85 /* NewPassViewController.swift in Sources */,
 				C6B8CABE25AD794E00D25E85 /* RegisterCardViewController.swift in Sources */,
+				C654E52D25AF347600B92CBD /* myEventsViewController.swift in Sources */,
 				C62A5996258DED1F00A45AAB /* Global.swift in Sources */,
 				C6E548E025AC8469000B04AF /* MainTableViewCell.swift in Sources */,
 				C6D79916255868CA00E6F1DF /* ViewController.swift in Sources */,
@@ -518,14 +522,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Коммуникатор/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.communicator.club;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -538,14 +546,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Коммуникатор/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.communicator.club;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -556,7 +568,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "КоммуникаторTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -566,6 +579,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.urfu.------------Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Коммуникатор.app/Коммуникатор";
@@ -577,7 +592,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "КоммуникаторTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -587,6 +603,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.urfu.------------Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Коммуникатор.app/Коммуникатор";
@@ -597,7 +615,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "КоммуникаторUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -606,6 +625,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.urfu.------------UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Коммуникатор";
@@ -616,7 +637,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "КоммуникаторUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -625,6 +647,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.urfu.------------UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Коммуникатор";
