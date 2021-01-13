@@ -30,6 +30,29 @@ class ProfileController: UIViewController {
         }
     }
     @IBAction func ClikConnectUs(_ sender: Any) {
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+            
+            alert.addAction(UIAlertAction(title: "Написать в VK", style: .default , handler:{ (UIAlertAction)in
+                if let url = URL(string: "https://m.vk.com/write-37741483?mvk_entrypoint=community_page") {
+                    UIApplication.shared.open(url)
+                }
+            }))
+            
+            alert.addAction(UIAlertAction(title: "+7 (912) 625-46-53", style: .default , handler:{ (UIAlertAction)in
+                print("User click number-tel")
+            }))
+
+            alert.addAction(UIAlertAction(title: "Отменить", style: .cancel, handler:{ (UIAlertAction)in
+                print("User click Отменить")
+            }))
+
+            
+            //uncomment for iPad Support
+            //alert.popoverPresentationController?.sourceView = self.view
+
+            self.present(alert, animated: true, completion: {
+                print("completion block")
+            })
     }
     
     @IBOutlet weak var balanceLabel: UILabel!

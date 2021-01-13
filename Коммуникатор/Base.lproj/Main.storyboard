@@ -42,7 +42,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="XU1-c2-q2M">
-                                <rect key="frame" x="138" y="148.66666666666666" width="138" height="110.99999999999997"/>
+                                <rect key="frame" x="138" y="104.66666666666669" width="138" height="111"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCw-yL-0XU">
                                 <rect key="frame" x="16" y="360" width="382" height="50"/>
@@ -155,7 +155,7 @@
             <objects>
                 <viewController id="leM-dQ-7ao" customClass="RegisterCardViewController" customModule="Коммуникатор" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XNp-18-0cX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Регистрация вашей карты" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E1m-TE-sna">
@@ -231,7 +231,7 @@
                                 <color key="textColor" name="TextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oQi-W4-Jbl">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oQi-W4-Jbl">
                                 <rect key="frame" x="16" y="565" width="382" height="50"/>
                                 <color key="backgroundColor" name="Color"/>
                                 <constraints>
@@ -327,11 +327,11 @@
             <objects>
                 <viewController id="Fia-k1-Sw8" customClass="LoginController" customModule="Коммуникатор" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Db6-Yi-dWX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="LoginButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3c2-bV-EJp">
-                                <rect key="frame" x="16" y="465" width="382" height="50"/>
+                                <rect key="frame" x="16" y="377" width="382" height="50"/>
                                 <color key="backgroundColor" name="Color"/>
                                 <accessibility key="accessibilityConfiguration" identifier="LoginButton"/>
                                 <constraints>
@@ -350,13 +350,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Войти" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X3a-E8-IN3">
-                                <rect key="frame" x="138" y="174" width="138" height="41"/>
+                                <rect key="frame" x="138" y="86" width="138" height="41"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="emailField" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="E-mail" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qwg-Wb-neh">
-                                <rect key="frame" x="16" y="257" width="382" height="50"/>
+                                <rect key="frame" x="16" y="169" width="382" height="50"/>
                                 <color key="backgroundColor" name="InputBackColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="7ge-fq-d7D"/>
@@ -371,7 +371,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="Пароль" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wdl-q5-sBb">
-                                <rect key="frame" x="16" y="332" width="382" height="50"/>
+                                <rect key="frame" x="16" y="244" width="382" height="50"/>
                                 <color key="backgroundColor" name="InputBackColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="SwD-Rv-JlP"/>
@@ -386,7 +386,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejT-nZ-03Y">
-                                <rect key="frame" x="142" y="398" width="130" height="33"/>
+                                <rect key="frame" x="142" y="310" width="130" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Забыли пароль?">
                                     <color key="titleColor" name="InputText"/>
@@ -430,11 +430,11 @@
             <objects>
                 <viewController id="XYQ-JP-fUo" customClass="ForgetPassViewController" customModule="Коммуникатор" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lhh-pQ-THo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="emailField" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="E-mail" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="48J-9l-JqS">
-                                <rect key="frame" x="16" y="290.33333333333331" width="382" height="50"/>
+                                <rect key="frame" x="16" y="202.33333333333334" width="382" height="50"/>
                                 <color key="backgroundColor" name="InputBackColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Djb-gC-lCR"/>
@@ -449,19 +449,19 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Восстановление пароля" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ux-EK-kVo">
-                                <rect key="frame" x="50" y="180" width="314" height="26.333333333333343"/>
+                                <rect key="frame" x="50" y="92" width="314" height="26.333333333333329"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Укажите E-mail, введенный вами при регистрации. Мы вышлем на него код для восстановления" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ad0-nq-VeC">
-                                <rect key="frame" x="16" y="222.33333333333334" width="382" height="36.000000000000028"/>
+                                <rect key="frame" x="16" y="134.33333333333334" width="382" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" name="TextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="LoginButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VeX-Vg-7pI">
-                                <rect key="frame" x="16" y="782" width="382" height="50"/>
+                                <rect key="frame" x="16" y="728" width="382" height="50"/>
                                 <color key="backgroundColor" name="Color"/>
                                 <accessibility key="accessibilityConfiguration" identifier="LoginButton"/>
                                 <constraints>
@@ -480,7 +480,7 @@
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пользователь с таким E-mail не найден" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0z-e9-r1e">
-                                <rect key="frame" x="49.666666666666657" y="356.33333333333331" width="315" height="21"/>
+                                <rect key="frame" x="49.666666666666657" y="268.33333333333331" width="315" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
@@ -522,11 +522,11 @@
             <objects>
                 <viewController storyboardIdentifier="regController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kUG-jJ-k5U" customClass="RegController" customModule="Коммуникатор" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1qv-Xf-xaU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1450"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1396"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lOB-lI-zrf">
-                                <rect key="frame" x="0.0" y="88" width="414" height="1348"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1382"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Rc-Pl-CaG">
                                         <rect key="frame" x="124.33333333333333" y="898" width="165.33333333333337" height="51"/>
@@ -1721,6 +1721,7 @@
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="QhQ-eJ-e8F"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="countRegisterEvents" destination="ZSC-O2-tdU" id="KkH-CC-kjf"/>
                         <outlet property="tableEvents" destination="7gX-QJ-hfq" id="hUV-6x-oJh"/>
                         <segue destination="zZL-fb-y8S" kind="show" identifier="showdetail" id="4Ks-6Y-U5U"/>
                     </connections>
@@ -2089,7 +2090,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="gpI-hz-ohd"/>
-        <segue reference="fFg-X2-zuw"/>
+        <segue reference="YLQ-LL-y1H"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="activAvatar" width="25" height="25"/>

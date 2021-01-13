@@ -13,6 +13,8 @@ class EventController: UIViewController {
     //массив данных
     var data = [["0","День кофе: пьем и не спим", "Собираемся, наливаем, выпиваем и уходим. Перед уходом платим, наличными конечно.", "7 января в 19:00", "До 60 человек","img_1"], ["1","День еды: собираемся, объедаемся и уходим", "Все как обычно, вы можете наесться за 10 минут – тогда ваш ужин обойдется вам в 10₽. Вам выгодно, а нам нет.", "7 января в 19:00", "До 60 человек","img_2"]]
     let idCell = "MailCell"
+    //Количество мероприятий на которые записан пользователь
+    @IBOutlet weak var countRegisterEvents: UILabel!
     @IBOutlet weak var tableEvents: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
