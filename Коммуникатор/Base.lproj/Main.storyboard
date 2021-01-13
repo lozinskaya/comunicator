@@ -1805,22 +1805,42 @@
                                     <action selector="registerOnEvent:" destination="zZL-fb-y8S" eventType="touchUpInside" id="htm-XB-P6I"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5F-qc-LvX">
+                                <rect key="frame" x="118" y="717" width="178" height="30"/>
+                                <state key="normal" title="Отменить запись">
+                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="CancelRegistration:" destination="zZL-fb-y8S" eventType="touchUpInside" id="fJp-38-DDM"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы и 1 ваш друг записаны" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKT-3e-roc">
+                                <rect key="frame" x="83" y="670" width="248" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="15B-EW-yaX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="15B-EW-yaX" firstAttribute="trailing" secondItem="hNk-x8-l2Y" secondAttribute="trailing" constant="16" id="0qc-FO-epK"/>
                             <constraint firstItem="73i-1r-zpL" firstAttribute="top" secondItem="15B-EW-yaX" secondAttribute="top" constant="7" id="22R-BV-Orm"/>
+                            <constraint firstItem="uKT-3e-roc" firstAttribute="leading" secondItem="15B-EW-yaX" secondAttribute="leading" constant="83" id="AkW-fg-qCs"/>
                             <constraint firstItem="7gn-eG-6T0" firstAttribute="leading" secondItem="5v1-jt-RSE" secondAttribute="trailing" constant="7" id="CYT-FR-aLo"/>
                             <constraint firstItem="qZi-Hb-TDc" firstAttribute="leading" secondItem="15B-EW-yaX" secondAttribute="leading" constant="16" id="CxI-5h-uUG"/>
                             <constraint firstItem="hNk-x8-l2Y" firstAttribute="centerX" secondItem="qZi-Hb-TDc" secondAttribute="centerX" id="D7J-Bp-dPV"/>
                             <constraint firstItem="ZCb-ix-n5e" firstAttribute="leading" secondItem="15B-EW-yaX" secondAttribute="leading" constant="16" id="FCk-69-edA"/>
+                            <constraint firstItem="15B-EW-yaX" firstAttribute="trailing" secondItem="uKT-3e-roc" secondAttribute="trailing" constant="83" id="I6e-iG-l66"/>
                             <constraint firstItem="15B-EW-yaX" firstAttribute="trailing" secondItem="73i-1r-zpL" secondAttribute="trailing" constant="16" id="Iap-Cc-vLH"/>
                             <constraint firstItem="15B-EW-yaX" firstAttribute="bottom" secondItem="qZi-Hb-TDc" secondAttribute="bottom" constant="56" id="KDb-Ec-LRk"/>
                             <constraint firstItem="paM-Zq-zh4" firstAttribute="top" secondItem="ZCb-ix-n5e" secondAttribute="bottom" constant="12" id="KiR-z4-BUK"/>
                             <constraint firstItem="5v1-jt-RSE" firstAttribute="leading" secondItem="15B-EW-yaX" secondAttribute="leading" constant="16" id="M0c-tg-pDI"/>
+                            <constraint firstItem="15B-EW-yaX" firstAttribute="bottom" secondItem="H5F-qc-LvX" secondAttribute="bottom" constant="66" id="P8f-Pe-sDo"/>
                             <constraint firstItem="5v1-jt-RSE" firstAttribute="top" secondItem="ZCb-ix-n5e" secondAttribute="bottom" constant="12" id="Q4n-nC-KBp"/>
                             <constraint firstItem="hNk-x8-l2Y" firstAttribute="leading" secondItem="15B-EW-yaX" secondAttribute="leading" constant="16" id="QGZ-iR-b34"/>
+                            <constraint firstItem="H5F-qc-LvX" firstAttribute="leading" secondItem="15B-EW-yaX" secondAttribute="leading" constant="118" id="UsU-6e-vqH"/>
+                            <constraint firstItem="15B-EW-yaX" firstAttribute="trailing" secondItem="H5F-qc-LvX" secondAttribute="trailing" constant="118" id="WEk-rz-QFe"/>
                             <constraint firstItem="Tue-Jl-hz0" firstAttribute="leading" secondItem="7gn-eG-6T0" secondAttribute="trailing" constant="48" id="ajv-m9-CHa"/>
                             <constraint firstItem="Tue-Jl-hz0" firstAttribute="top" secondItem="ZCb-ix-n5e" secondAttribute="bottom" constant="12" id="cOh-Lm-GN6"/>
                             <constraint firstItem="hNk-x8-l2Y" firstAttribute="top" secondItem="5v1-jt-RSE" secondAttribute="bottom" constant="20" id="dpI-xz-WqV"/>
@@ -1828,6 +1848,7 @@
                             <constraint firstItem="15B-EW-yaX" firstAttribute="trailing" secondItem="ZCb-ix-n5e" secondAttribute="trailing" constant="16" id="hQC-rL-TBe"/>
                             <constraint firstItem="paM-Zq-zh4" firstAttribute="leading" secondItem="Tue-Jl-hz0" secondAttribute="trailing" constant="7" id="sel-6d-x0R"/>
                             <constraint firstItem="ZCb-ix-n5e" firstAttribute="top" secondItem="73i-1r-zpL" secondAttribute="bottom" constant="16" id="siP-cy-jaX"/>
+                            <constraint firstItem="H5F-qc-LvX" firstAttribute="top" secondItem="uKT-3e-roc" secondAttribute="bottom" constant="26" id="usG-iE-j7q"/>
                             <constraint firstItem="73i-1r-zpL" firstAttribute="leading" secondItem="15B-EW-yaX" secondAttribute="leading" constant="16" id="z97-hf-ajE"/>
                         </constraints>
                     </view>
@@ -1835,6 +1856,7 @@
                         <barButtonItem key="backBarButtonItem" title="      " id="K4y-mp-zEt"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="afterRegistrCountPersons" destination="uKT-3e-roc" id="Wmr-zf-nuS"/>
                         <outlet property="descriptionCell" destination="hNk-x8-l2Y" id="JO4-uf-GhC"/>
                         <outlet property="imgCell" destination="ZCb-ix-n5e" id="LEp-pp-F0z"/>
                         <outlet property="labelCell" destination="73i-1r-zpL" id="elo-JV-Pub"/>

@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-final class registerOnEventViewController: UIViewController, UIViewControllerTransitioningDelegate {
+final class registerOnEventViewController: UIViewController, UIViewControllerTransitioningDelegate, UINavigationBarDelegate {
 
 lazy var backdropView: UIView = {
     let bdView = UIView(frame: self.view.bounds)
@@ -39,14 +39,6 @@ override func viewDidLoad() {
     view.addSubview(backdropView)
     view.addSubview(menuView)
     
-    //let navbar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
-    let main_label = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 21))
-    main_label.center = CGPoint(x: view.bounds.width/2, y: 21)
-    main_label.textAlignment = .center
-    main_label.text = "Запись"
-    main_label.textColor = .black
-    main_label.font = UIFont(name:"HelveticaNeue-Bold", size: 22.0)
-    
     let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
     label.center = CGPoint(x: view.bounds.width/2, y: 80)
     label.textAlignment = .center
@@ -65,22 +57,51 @@ override func viewDidLoad() {
     count.textColor = .black
     count.font = UIFont(name:"HelveticaNeue-Bold", size: 22.0)
     
-    let button_registr = UIButton(frame: CGRect(x: 0, y: 0, width: 300, height: 50))
-    button_registr.center = CGPoint(x: view.bounds.width/2, y: 204)
+    let button_registr = UIButton()
     button_registr.backgroundColor = UIColor(named: "Color")
     button_registr.setTitle("Записаться", for: .normal)
     button_registr.addTarget(self, action: #selector(buttonRegisterAction), for: .touchUpInside)
     button_registr.clipsToBounds = true
     button_registr.layer.cornerRadius = 14
+    
+    // Create the navigation bar
+    let navigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 63.5)) // Offset by 20 pixels vertically to take the status bar into account
 
-    menuView.addSubview(main_label)
+   navigationBar.backgroundColor = .white
+   navigationBar.delegate = self;
+   navigationBar.barTintColor = .white
+
+   // Create a navigation item with a title
+   let navigationItem = UINavigationItem()
+   navigationItem.title = "Запись"
+   navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name:"HelveticaNeue-Bold", size: 22.0),NSAttributedString.Key.foregroundColor: UIColor.black]
+
+    let rightButton = UIBarButtonItem(image: UIImage(named: "cancel"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(Progress.cancel))
+    rightButton.tintColor = .black
+    
+   // Create button for the navigation item
+   navigationItem.rightBarButtonItem = rightButton
+
+   // Assign the navigation item to the navigation bar
+   navigationBar.items = [navigationItem]
+
     menuView.addSubview(label)
     menuView.addSubview(count)
     menuView.addSubview(add_people)
     menuView.addSubview(button_registr)
+    menuView.addSubview(navigationBar)
+    
+    button_registr.translatesAutoresizingMaskIntoConstraints = false
+    let horizontalConstraintLeft = button_registr.leadingAnchor.constraint(equalTo: menuView.leadingAnchor, constant: 16)
+    let horizontalConstraintRight = button_registr.trailingAnchor.constraint(equalTo: menuView.trailingAnchor, constant: -16)
+    let verticalConstraint = button_registr.topAnchor.constraint(equalTo: menuView.topAnchor, constant: 201)
+    let heightConstraint = button_registr.heightAnchor.constraint(equalToConstant: 50)
+    NSLayoutConstraint.activate([horizontalConstraintLeft, horizontalConstraintRight, verticalConstraint, heightConstraint])
     
     menuView.backgroundColor = .white
     menuView.translatesAutoresizingMaskIntoConstraints = false
+    menuView.layer.cornerRadius = 13
+    menuView.layer.masksToBounds = true
     menuView.heightAnchor.constraint(equalToConstant: menuHeight).isActive = true
     menuView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     menuView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
@@ -88,6 +109,10 @@ override func viewDidLoad() {
     
     let tapGesture = UITapGestureRecognizer(target: self, action: #selector(registerOnEventViewController.handleTap(_:)))
     backdropView.addGestureRecognizer(tapGesture)
+}
+   
+@objc func cancel() {
+    self.dismiss(animated: true, completion: nil)
 }
     
 @objc func add_people_action(_ sender: UIStepper){

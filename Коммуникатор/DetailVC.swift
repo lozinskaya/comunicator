@@ -20,6 +20,17 @@ class DetailVC: UIViewController {
             vc.modalPresentationStyle = .custom
             present(vc, animated: true, completion: nil)
     }
+    //Количество человек зарегавшихся на меро с пользователем
+    @IBOutlet weak var afterRegistrCountPersons: UILabel!
+    //Кнопка отмены регистрации на мероприятие
+    @IBAction func CancelRegistration(_ sender: Any) {
+        let alert = UIAlertController(title: "Отмена записи", message: "Вы сможете записаться снова", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Не отменять", style: UIAlertAction.Style.default, handler: nil))
+        let cancelAlert = UIAlertAction(title: "Отменить", style: UIAlertAction.Style.default, handler: nil)
+        cancelAlert.setValue(UIColor.red, forKey: "titleTextColor")
+        alert.addAction(cancelAlert)
+        self.present(alert, animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
