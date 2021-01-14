@@ -127,15 +127,23 @@ class RegController: UIViewController {
                 debugPrint(result);
                 DispatchQueue.main.async {
                     if result["result"] as? String == WebFuncs.Answer.SUCCESS.rawValue {
-                        Global.user_id = result["account_id"] as! String
-                        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                        let confirmController = storyBoard.instantiateViewController(withIdentifier: "confirmController") as! ConfirmController;
-                        confirmController.modalPresentationStyle = .fullScreen;
-                                self.present(confirmController, animated: true, completion: nil)
+                        WebFuncs.Login(email: self.emailField.text!, pass: self.passField.text!) { result in
+                            DispatchQueue.main.async {
+                            if(result) {
+                                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                                let confirmController = storyBoard.instantiateViewController(withIdentifier: "confirmController") as! ConfirmController;
+                                confirmController.modalPresentationStyle = .fullScreen;
+                                        self.present(confirmController, animated: true, completion: nil)
+                            } else {
+                                let alert = UIAlertController(title: "Ошибка регистрации", message: "Произошла ошибка при регистрации.\nПроверьте данные и повторите попытку.", preferredStyle: UIAlertController.Style.alert)
+                                alert.addAction(UIAlertAction(title: "Повторить попытку", style: UIAlertAction.Style.default, handler: nil))
+                                self.present(alert, animated: true, completion: nil)
+                            }
+                            }
+                        }
                     } else {
                         let alert = UIAlertController(title: "Ошибка регистрации", message: "Произошла ошибка при регистрации.\nПроверьте данные и повторите попытку.", preferredStyle: UIAlertController.Style.alert)
                         alert.addAction(UIAlertAction(title: "Повторить попытку", style: UIAlertAction.Style.default, handler: nil))
-                        print(self.gender.rawValue)
                         self.present(alert, animated: true, completion: nil)
                         
                         if self.firstnameField.text == "" {

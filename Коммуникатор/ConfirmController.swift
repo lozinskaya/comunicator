@@ -42,10 +42,23 @@ class ConfirmController: UIViewController, UITextFieldDelegate {
                 otpbox4?.resignFirstResponder() /*After the otpbox4 is filled we capture the All the OTP textField and do the server call. If you want to capture the otpbox4 use string.*/
                 let otp = "\((otpbox1?.text)!)\((otpbox2?.text)!)\((otpbox3?.text)!)\((otpbox4?.text)!)\(string)"
                 WebFuncs.ConfirmReg(params: [
-                    "id": Global.user_id,
+                    "sessionkey": Global.sessionkey,
                     "code": otp
                 ]) { result in
-                    debugPrint(result)
+                    if let result = result {
+                        DispatchQueue.main.async {
+                            if result {
+                                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                                let mainController = storyBoard.instantiateViewController(withIdentifier: "mainController") as! MainController;
+                                mainController.modalPresentationStyle = .fullScreen;
+                                        self.present(mainController, animated: true, completion: nil)
+                            } else {
+                                let alert = UIAlertController(title: "Ошибка подтверждения", message: "Код неверный.", preferredStyle: UIAlertController.Style.alert)
+                                alert.addAction(UIAlertAction(title: "Повторить попытку", style: UIAlertAction.Style.default, handler: nil))
+                                self.present(alert, animated: true, completion: nil)
+                            }
+                        }
+                    }
                 }
             }
             textField.text? = string
