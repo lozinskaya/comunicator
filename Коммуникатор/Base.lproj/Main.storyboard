@@ -156,7 +156,7 @@
             <objects>
                 <viewController id="leM-dQ-7ao" customClass="RegisterCardViewController" customModule="Коммуникатор" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XNp-18-0cX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Регистрация вашей карты" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E1m-TE-sna">
@@ -328,7 +328,7 @@
             <objects>
                 <viewController id="Fia-k1-Sw8" customClass="LoginController" customModule="Коммуникатор" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Db6-Yi-dWX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="LoginButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3c2-bV-EJp">
@@ -431,7 +431,7 @@
             <objects>
                 <viewController id="XYQ-JP-fUo" customClass="ForgetPassViewController" customModule="Коммуникатор" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lhh-pQ-THo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="emailField" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="E-mail" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="48J-9l-JqS">
@@ -523,7 +523,7 @@
             <objects>
                 <viewController storyboardIdentifier="regController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kUG-jJ-k5U" customClass="RegController" customModule="Коммуникатор" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1qv-Xf-xaU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1396"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1450"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lOB-lI-zrf">
@@ -1778,7 +1778,7 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </tableView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <constraints>
                                     <constraint firstItem="bsS-fT-QBA" firstAttribute="leading" secondItem="hpn-iC-1xc" secondAttribute="leading" id="b8e-UM-YYE"/>
                                     <constraint firstItem="bsS-fT-QBA" firstAttribute="top" secondItem="hpn-iC-1xc" secondAttribute="top" id="cn4-qm-FyU"/>
@@ -1868,6 +1868,7 @@
                         <outlet property="segmentControl" destination="e1x-N9-O0H" id="aU2-y3-dAv"/>
                         <outlet property="tableEvents" destination="7gX-QJ-hfq" id="hUV-6x-oJh"/>
                         <outlet property="tableFinishedEvents" destination="l97-pm-3Jc" id="0Ey-f3-alQ"/>
+                        <outlet property="tableNews" destination="bsS-fT-QBA" id="qp6-5e-aBK"/>
                         <outlet property="titleFinishedEvents" destination="dBk-FM-zN8" id="qYa-wY-lKn"/>
                         <outlet property="titleFutureEvents" destination="VNf-3a-Gtm" id="j1f-6l-dfh"/>
                         <segue destination="zZL-fb-y8S" kind="show" identifier="showdetail" id="4Ks-6Y-U5U"/>

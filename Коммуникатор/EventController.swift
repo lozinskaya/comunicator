@@ -16,6 +16,10 @@ class EventController: UIViewController {
     
     //прошедшие мероприятия
     var dataFinishedEvents : [[String]] = []
+    
+    //новости
+    var dataNews = [["0","Название новости 1","Описание новости 1"],["1","Название новости 2","Описание новости 2"]]
+    
     let idCell = "MailCell"
     @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var sectionEvents: UIView!
@@ -41,6 +45,7 @@ class EventController: UIViewController {
     //Количество мероприятий на которые записан пользователь
     @IBOutlet weak var countRegisterEvents: UILabel!
     @IBOutlet weak var tableEvents: UITableView!
+    @IBOutlet weak var tableNews: UITableView!
     @IBOutlet weak var tableFinishedEvents: UITableView!
     
     override func viewDidLoad() {
@@ -81,12 +86,17 @@ class EventController: UIViewController {
                 
                     self.tableFinishedEvents.dataSource = self
                     self.tableFinishedEvents.delegate = self
+                    
+                    self.tableNews.dataSource = self
+                    self.tableNews.delegate = self
                 
                     self.tableEvents.reloadData()
                     self.tableFinishedEvents.reloadData()
+                    self.tableNews.reloadData()
 
                     self.tableEvents.register(UINib(nibName: "MainTableViewCell", bundle: nil ), forCellReuseIdentifier: self.idCell)
                     self.tableFinishedEvents.register(UINib(nibName: "MainTableViewCell", bundle: nil ), forCellReuseIdentifier: self.idCell)
+                    self.tableNews.register(UINib(nibName: "MainTableViewCell", bundle: nil ), forCellReuseIdentifier: self.idCell)
                 }
             }
         }
@@ -95,13 +105,23 @@ class EventController: UIViewController {
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
-        segmentControl.addTarget(self, action: <#T##Selector#>, for: .valueChanged)
+        segmentControl.addTarget(self, action: #selector(selectedValue), for: .valueChanged)
     }
-}
-
-func selectedValue(target: UISegmentedControl) {
-    if target == self.segmentControl {
-        
+    
+    @objc func selectedValue(target: UISegmentedControl) {
+        if target == self.segmentControl {
+            let segmentIndex = target.selectedSegmentIndex
+            
+            if (segmentIndex == 0) {
+                sectionEvents.isHidden = false
+                sectionNews.isHidden = true
+            }
+            else {
+                sectionEvents.isHidden = true
+                sectionNews.isHidden = false
+            }
+            
+        }
     }
 }
 
@@ -115,7 +135,7 @@ extension EventController: UITableViewDataSource, UITableViewDelegate{
         else if (tableView == self.tableFinishedEvents) {
             return self.dataFinishedEvents.count
         } else {
-            return 0
+            return self.dataNews.count
         }
     }
     
@@ -128,18 +148,30 @@ extension EventController: UITableViewDataSource, UITableViewDelegate{
             cell = tableEvents.dequeueReusableCell(withIdentifier: idCell) as! MainTableViewCell
             dataArray = self.data;
         }
+        else if (tableView == self.tableNews) {
+            cell = tableEvents.dequeueReusableCell(withIdentifier: idCell) as! MainTableViewCell
+            dataArray = self.dataNews;
+        }
         
         cell.titleEvent.text = dataArray[indexPath.row][1]
         cell.descriptionEvent.text = dataArray[indexPath.row][2]
-
-        cell.timeEvent.text = dataArray[indexPath.row][3]
-        cell.countPersonsEvent.text = dataArray[indexPath.row][4]
-        cell.ifUserReg.isHidden = true
-        
         cell.imgEvent.image = UIImage(named: "eventImg")
-        let image_url = dataArray[indexPath.row][5]
-        if image_url != "" {
-            cell.imgEvent.load(url: image_url.getCleanedURL()!)
+        cell.ifUserReg.isHidden = true
+
+        if (tableView != self.tableNews) {
+            cell.timeEvent.text = dataArray[indexPath.row][3]
+            cell.countPersonsEvent.text = dataArray[indexPath.row][4]
+        
+            let image_url = dataArray[indexPath.row][5]
+            if image_url != "" {
+                cell.imgEvent.load(url: image_url.getCleanedURL()!)
+            }
+        } else {
+            cell.imgTime.isHidden = true
+            cell.imgCountPersons.isHidden = true
+            cell.timeEvent.isHidden = true
+            cell.countPersonsEvent.isHidden = true
+            
         }
         
         return cell
