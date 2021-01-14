@@ -54,6 +54,7 @@ class EventController: UIViewController {
                     let data_future = data["future"] as? [[String: String]] ?? []
                     let dateFormatter = DateFormatter()
                     dateFormatter.dateFormat = "d MMMM в HH:mm"
+                    dateFormatter.locale = Locale(identifier: "ru_RU")
                     for row in data_future {
                         let date = Date(timeIntervalSince1970: Double(row["date_time"] ?? "0") ?? 0)
                         let event_date = dateFormatter.string(from: date)
