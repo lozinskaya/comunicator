@@ -16,6 +16,8 @@ class EventController: UIViewController {
     var dataFinishedEvents = [["0","День кофе: пьем и не спим", "Собираемся, наливаем, выпиваем и уходим. Перед уходом платим, наличными конечно.", "21 января в 19:00", "До 60 человек","img_1"], ["1","День еды: собираемся, объедаемся и уходим", "Все как обычно, вы можете наесться за 10 минут – тогда ваш ужин обойдется вам в 10₽. Вам выгодно, а нам нет.", "15 января в 19:00", "До 60 человек","img_2"]]
     let idCell = "MailCell"
     //Количество мероприятий на которые записан пользователь
+    @IBOutlet weak var sectionEvents: UIView!
+    @IBOutlet weak var sectionNews: UIView!
     @IBOutlet weak var titleFutureEvents: UIButton!
     @IBOutlet weak var titleFinishedEvents: UIButton!
     @IBAction func SelectFutureEvents(_ sender: Any) {
@@ -23,7 +25,6 @@ class EventController: UIViewController {
         tableFinishedEvents.isHidden = true
         titleFutureEvents.backgroundColor = UIColor(named: "Color-1")
         titleFutureEvents.setTitleColor(UIColor(named: "inputCode"), for: .normal)
-        //titleFutureEvents.titleLabel?.textColor = UIColor(named: "inputCode")
         titleFinishedEvents.backgroundColor = UIColor(named: "Default")
         titleFinishedEvents.setTitleColor(UIColor(named: "events"), for: .normal)
     }
@@ -31,10 +32,8 @@ class EventController: UIViewController {
         tableEvents.isHidden = true
         tableFinishedEvents.isHidden = false
         titleFutureEvents.backgroundColor = UIColor(named: "Default")
-        //titleFutureEvents.titleLabel?.textColor = UIColor(named: "events")
         titleFutureEvents.setTitleColor(UIColor(named: "events"), for: .normal)
         titleFinishedEvents.backgroundColor = UIColor(named: "Color-1")
-        //titleFinishedEvents.titleLabel?.textColor = UIColor(named: "inputCode")
         titleFinishedEvents.setTitleColor(UIColor(named: "inputCode"), for: .normal)
     }
     @IBOutlet weak var countRegisterEvents: UILabel!
