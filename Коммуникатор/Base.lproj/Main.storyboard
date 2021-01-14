@@ -1849,6 +1849,7 @@
                         <outlet property="countRegisterEvents" destination="ZSC-O2-tdU" id="KkH-CC-kjf"/>
                         <outlet property="sectionEvents" destination="hpn-iC-1xc" id="n5H-C5-LDV"/>
                         <outlet property="sectionNews" destination="hpn-iC-1xc" id="BGK-i7-loS"/>
+                        <outlet property="segmentControl" destination="e1x-N9-O0H" id="dQ0-a5-I5W"/>
                         <outlet property="tableEvents" destination="7gX-QJ-hfq" id="hUV-6x-oJh"/>
                         <outlet property="tableFinishedEvents" destination="l97-pm-3Jc" id="0Ey-f3-alQ"/>
                         <outlet property="titleFinishedEvents" destination="dBk-FM-zN8" id="qYa-wY-lKn"/>

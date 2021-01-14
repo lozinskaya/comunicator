@@ -16,6 +16,7 @@ class EventController: UIViewController {
     var dataFinishedEvents = [["0","День кофе: пьем и не спим", "Собираемся, наливаем, выпиваем и уходим. Перед уходом платим, наличными конечно.", "21 января в 19:00", "До 60 человек","img_1"], ["1","День еды: собираемся, объедаемся и уходим", "Все как обычно, вы можете наесться за 10 минут – тогда ваш ужин обойдется вам в 10₽. Вам выгодно, а нам нет.", "15 января в 19:00", "До 60 человек","img_2"]]
     let idCell = "MailCell"
     //Количество мероприятий на которые записан пользователь
+    @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var sectionEvents: UIView!
     @IBOutlet weak var sectionNews: UIView!
     @IBOutlet weak var titleFutureEvents: UIButton!
@@ -53,6 +54,22 @@ class EventController: UIViewController {
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         tableEvents.register(UINib(nibName: "MainTableViewCell", bundle: nil ), forCellReuseIdentifier: idCell)
         tableFinishedEvents.register(UINib(nibName: "MainTableViewCell", bundle: nil ), forCellReuseIdentifier: idCell)
+        
+        segmentControl.addTarget(self, action: #selector(selectedValue), for: .valueChanged)
+    }
+    
+    @objc func selectedValue(target: UISegmentedControl){
+        if target == self.segmentControl {
+            let segmentIndex = target.selectedSegmentIndex
+            if (segmentIndex == 0){
+                sectionEvents.isHidden = false
+                sectionNews.isHidden = true
+            }
+            else if (segmentIndex == 1) {
+                sectionEvents.isHidden = true
+                sectionNews.isHidden = false
+            }
+        }
     }
 }
 
