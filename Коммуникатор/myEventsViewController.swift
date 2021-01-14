@@ -10,15 +10,39 @@ import UIKit
 class myEventsViewController: UIViewController {
 
     //массив данных
-    var my_events = [["0","День кофе: пьем и не спим", "Собираемся, наливаем, выпиваем и уходим. Перед уходом платим, наличными конечно.", "7 января в 19:00", "До 60 человек","img_1"], ["1","День еды: собираемся, объедаемся и уходим", "Все как обычно, вы можете наесться за 10 минут – тогда ваш ужин обойдется вам в 10₽. Вам выгодно, а нам нет.", "7 января в 19:00", "До 60 человек","img_2"]]
+    var myEvents = [["0","День кофе: пьем и не спим", "Собираемся, наливаем, выпиваем и уходим. Перед уходом платим, наличными конечно.", "7 января в 19:00", "До 60 человек","img_1"], ["1","День еды: собираемся, объедаемся и уходим", "Все как обычно, вы можете наесться за 10 минут – тогда ваш ужин обойдется вам в 10₽. Вам выгодно, а нам нет.", "7 января в 19:00", "До 60 человек","img_2"]]
+    var myFinishedEvents = [["0","День кофе: пьем и не спим", "Собираемся, наливаем, выпиваем и уходим. Перед уходом платим, наличными конечно.", "12 января в 19:00", "До 60 человек","img_1"], ["1","День еды: собираемся, объедаемся и уходим", "Все как обычно, вы можете наесться за 10 минут – тогда ваш ужин обойдется вам в 10₽. Вам выгодно, а нам нет.", "21 января в 19:00", "До 60 человек","img_2"]]
     let idCell = "MailCell"
     @IBOutlet weak var myEventsTable: UITableView!
+    @IBOutlet weak var myFinishedEventsTable: UITableView!
+    @IBOutlet weak var segmentControl: UISegmentedControl!
     override func viewDidLoad() {
         super.viewDidLoad()
         myEventsTable.dataSource = self
         myEventsTable.delegate = self
+        
+        myFinishedEventsTable.dataSource = self
+        myFinishedEventsTable.delegate = self
 
         myEventsTable.register(UINib(nibName: "MainTableViewCell", bundle: nil ), forCellReuseIdentifier: idCell)
+        myFinishedEventsTable.register(UINib(nibName: "MainTableViewCell", bundle: nil ), forCellReuseIdentifier: idCell)
+        segmentControl.addTarget(self, action: #selector(selectedValue), for: .valueChanged)
+    }
+    
+    @objc func selectedValue(target: UISegmentedControl) {
+        if target == self.segmentControl {
+            let segmentIndex = target.selectedSegmentIndex
+            
+            if (segmentIndex == 0) {
+                myEventsTable.isHidden = false
+                myFinishedEventsTable.isHidden = true
+            }
+            else {
+                myEventsTable.isHidden = true
+                myFinishedEventsTable.isHidden = false
+            }
+            
+        }
     }
     
 
@@ -38,16 +62,27 @@ extension myEventsViewController: UITableViewDataSource, UITableViewDelegate{
     
     //количество создаваемых клеток
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.my_events.count
+        if (tableView == myEventsTable){
+            return self.myEvents.count
+        } else {
+            return self.myFinishedEvents.count
+        }
     }
     //создание клетки
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = myEventsTable.dequeueReusableCell(withIdentifier: idCell) as! MainTableViewCell
-        cell.titleEvent.text = self.my_events[indexPath.row][1]
-        cell.descriptionEvent.text = self.my_events[indexPath.row][2]
+        var cell = myEventsTable.dequeueReusableCell(withIdentifier: idCell) as! MainTableViewCell
+        var dataArray = self.myEvents
+        
+        if (tableView == self.myFinishedEventsTable){
+            cell = myFinishedEventsTable.dequeueReusableCell(withIdentifier: idCell) as! MainTableViewCell
+            dataArray = self.myFinishedEvents;
+        }
+        
+        cell.titleEvent.text = dataArray[indexPath.row][1]
+        cell.descriptionEvent.text = dataArray[indexPath.row][2]
         cell.imgEvent.image = UIImage(named: "eventImg")
-        cell.timeEvent.text = self.my_events[indexPath.row][3]
-        cell.countPersonsEvent.text = self.my_events[indexPath.row][4]
+        cell.timeEvent.text = dataArray[indexPath.row][3]
+        cell.countPersonsEvent.text = dataArray[indexPath.row][4]
         
         return cell
     }
@@ -63,7 +98,7 @@ extension myEventsViewController: UITableViewDataSource, UITableViewDelegate{
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? DetailVC {
-            destination.chooseCell = my_events[(myEventsTable.indexPathForSelectedRow?.row)!]
+            destination.chooseCell = myEvents[(myEventsTable.indexPathForSelectedRow?.row)!]
         }
     }
 }
