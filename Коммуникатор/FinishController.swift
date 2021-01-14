@@ -18,6 +18,12 @@ class FinishController: UIViewController {
         super.viewDidLoad()
     }
     
+    @IBAction func confirmFinish(_ sender: Any) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let mainController = storyBoard.instantiateViewController(withIdentifier: "mainController") as! MainController;
+        mainController.modalPresentationStyle = .fullScreen;
+                self.present(mainController, animated: true, completion: nil)
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         finishMoney.text = (Global.lastsession["sum"] as? String ?? "0") + " ₽"

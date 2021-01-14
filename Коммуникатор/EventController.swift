@@ -11,9 +11,11 @@ import UIKit
 class EventController: UIViewController {
    
     //будущие мероприятия
-    var data = [["0","День кофе: пьем и не спим", "Собираемся, наливаем, выпиваем и уходим. Перед уходом платим, наличными конечно.", "7 января в 19:00", "До 60 человек","img_1"], ["1","День еды: собираемся, объедаемся и уходим", "Все как обычно, вы можете наесться за 10 минут – тогда ваш ужин обойдется вам в 10₽. Вам выгодно, а нам нет.", "7 января в 19:00", "До 60 человек","img_2"]]
+    var allData : [String: AnyObject] = [:]
+    var data : [[String]] = []
+    
     //прошедшие мероприятия
-    var dataFinishedEvents = [["0","День кофе: пьем и не спим", "Собираемся, наливаем, выпиваем и уходим. Перед уходом платим, наличными конечно.", "21 января в 19:00", "До 60 человек","img_1"], ["1","День еды: собираемся, объедаемся и уходим", "Все как обычно, вы можете наесться за 10 минут – тогда ваш ужин обойдется вам в 10₽. Вам выгодно, а нам нет.", "15 января в 19:00", "До 60 человек","img_2"]]
+    var dataFinishedEvents : [[String]] = []
     let idCell = "MailCell"
     //Количество мероприятий на которые записан пользователь
     @IBOutlet weak var sectionEvents: UIView!
@@ -41,18 +43,51 @@ class EventController: UIViewController {
     @IBOutlet weak var tableFinishedEvents: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        WebFuncs.Events() { result in
+            if let data = result {
+                DispatchQueue.main.async {
+                self.allData = data
+                let data_past = data["past"] as? [[String: String]] ?? []
+                let data_future = data["future"] as? [[String: String]] ?? []
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "d MMMM в HH:mm"
+                for row in data_future {
+                    let date = Date(timeIntervalSince1970: Double(row["date_time"] ?? "0") ?? 0)
+                    let event_date = dateFormatter.string(from: date)
+                    var limit_persons = "∞"
+                    if row["limit_persons"] != "0" {
+                        limit_persons = "До \(row["limit_persons"] ?? "0") человек"
+                    }
+                    self.data.append([row["id"] ?? "", row["title"] ?? "", row["description"] ?? "", event_date, limit_persons, row["image_url"] ?? ""])
+                }
+                    
+                for row in data_past {
+                    let date = Date(timeIntervalSince1970: Double(row["date_time"] ?? "0") ?? 0)
+                    let event_date = dateFormatter.string(from: date)
+                    var limit_persons = "∞"
+                    if row["limit_persons"] != "0" {
+                        limit_persons = "До \(row["limit_persons"] ?? "0") человек"
+                    }
+                    self.dataFinishedEvents.append([row["id"] ?? "", row["title"] ?? "", row["description"] ?? "", event_date, limit_persons, row["image_url"] ?? ""])
+                }
+                
+                self.tableEvents.dataSource = self
+                    self.tableEvents.delegate = self
+                
+                    self.tableFinishedEvents.dataSource = self
+                    self.tableFinishedEvents.delegate = self
+                
+
+                    self.tableEvents.register(UINib(nibName: "MainTableViewCell", bundle: nil ), forCellReuseIdentifier: self.idCell)
+                    self.tableFinishedEvents.register(UINib(nibName: "MainTableViewCell", bundle: nil ), forCellReuseIdentifier: self.idCell)
+                }
+            }
+        }
         titleFutureEvents.setTitleColor(UIColor(named: "inputCode"), for: .normal)
         titleFinishedEvents.setTitleColor(UIColor(named: "events"), for: .normal)
-        tableEvents.dataSource = self
-        tableEvents.delegate = self
-        
-        tableFinishedEvents.dataSource = self
-        tableFinishedEvents.delegate = self
-        
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        tableEvents.register(UINib(nibName: "MainTableViewCell", bundle: nil ), forCellReuseIdentifier: idCell)
-        tableFinishedEvents.register(UINib(nibName: "MainTableViewCell", bundle: nil ), forCellReuseIdentifier: idCell)
     }
 }
 
@@ -72,27 +107,28 @@ extension EventController: UITableViewDataSource, UITableViewDelegate{
     
     //создание клетки
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell = tableFinishedEvents.dequeueReusableCell(withIdentifier: idCell) as! MainTableViewCell
+        var dataArray = self.dataFinishedEvents
+        
         if (tableView == self.tableEvents){
-            let cell = tableEvents.dequeueReusableCell(withIdentifier: idCell) as! MainTableViewCell
-            cell.titleEvent.text = self.data[indexPath.row][1]
-            cell.descriptionEvent.text = self.data[indexPath.row][2]
-            cell.imgEvent.image = UIImage(named: "eventImg")
-            cell.timeEvent.text = self.data[indexPath.row][3]
-            cell.countPersonsEvent.text = self.data[indexPath.row][4]
-            
-            return cell
+            cell = tableEvents.dequeueReusableCell(withIdentifier: idCell) as! MainTableViewCell
+            dataArray = self.data;
         }
-        else {
-            let cell = tableFinishedEvents.dequeueReusableCell(withIdentifier: idCell) as! MainTableViewCell
-            cell.titleEvent.text = self.dataFinishedEvents[indexPath.row][1]
-            cell.descriptionEvent.text = self.dataFinishedEvents[indexPath.row][2]
-            cell.imgEvent.image = UIImage(named: "eventImg")
-            cell.timeEvent.text = self.dataFinishedEvents[indexPath.row][3]
-            cell.countPersonsEvent.text = self.dataFinishedEvents[indexPath.row][4]
-            cell.ifUserReg.isHidden = true
-            
-            return cell
+        
+        cell.titleEvent.text = dataArray[indexPath.row][1]
+        cell.descriptionEvent.text = dataArray[indexPath.row][2]
+
+        cell.timeEvent.text = dataArray[indexPath.row][3]
+        cell.countPersonsEvent.text = dataArray[indexPath.row][4]
+        cell.ifUserReg.isHidden = true
+        
+        cell.imgEvent.image = UIImage(named: "eventImg")
+        let image_url = dataArray[indexPath.row][5]
+        if image_url != "" {
+            cell.imgEvent.load(url: image_url.getCleanedURL()!)
         }
+        
+        return cell
         
     }
     //высота клетки
