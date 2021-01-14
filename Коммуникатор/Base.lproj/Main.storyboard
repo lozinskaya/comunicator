@@ -2262,7 +2262,7 @@
             <color red="0.92549019607843142" green="0.91764705882352937" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="InputBackColor">
-            <color red="0.95300000905990601" green="0.95300000905990601" blue="0.95300000905990601" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="InputText">
             <color red="0.67843137254901964" green="0.67843137254901964" blue="0.69411764705882351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
