@@ -102,7 +102,9 @@
                 <outlet property="countPersonsEvent" destination="bSr-3K-cb0" id="YH5-59-05E"/>
                 <outlet property="descriptionEvent" destination="VjS-KS-y5M" id="Db9-9f-27d"/>
                 <outlet property="ifUserReg" destination="8tk-g3-aQC" id="h9Y-kZ-ASd"/>
+                <outlet property="imgCountPersons" destination="zP8-xI-kh3" id="b84-zp-w0F"/>
                 <outlet property="imgEvent" destination="shs-hn-crO" id="5le-b6-Ap9"/>
+                <outlet property="imgTime" destination="AOR-ly-uml" id="pc0-Dk-93f"/>
                 <outlet property="timeEvent" destination="3Ol-9A-vse" id="1sJ-qG-P1q"/>
                 <outlet property="titleEvent" destination="ese-5J-yOy" id="T57-zx-S5H"/>
             </connections>
