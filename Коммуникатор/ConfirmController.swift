@@ -55,9 +55,7 @@ class ConfirmController: UIViewController, UITextFieldDelegate {
                                 mainController.modalPresentationStyle = .fullScreen;
                                         self.present(mainController, animated: true, completion: nil)
                             } else {
-                                let alert = UIAlertController(title: "Ошибка подтверждения", message: "Код неверный.", preferredStyle: UIAlertController.Style.alert)
-                                alert.addAction(UIAlertAction(title: "Повторить попытку", style: UIAlertAction.Style.default, handler: nil))
-                                self.present(alert, animated: true, completion: nil)
+                                self.error.isHidden = false
                             }
                         }
                     }
