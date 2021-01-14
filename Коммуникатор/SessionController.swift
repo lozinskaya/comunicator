@@ -62,6 +62,7 @@ class SessionController: UIViewController {
                 DispatchQueue.main.async {
                     Global.sessioninfo = result;
                     Global.balance = Global.sessioninfo["balance"] as? String ?? "0"
+                    let did_active = Global.is_active
                     Global.is_active = Global.sessioninfo["is_active"] as? Int ?? 0
                     self.balanceLabel.text = Global.balance + " ₽"
                     self.activSessionView.isHidden = Global.is_active != 1
@@ -77,11 +78,18 @@ class SessionController: UIViewController {
                         self.tariffLabel.text = "1 мин = " + (Global.activesession["tariff_sum"] as? String ?? "1") + " ₽"
                     }
                     else {
+                        Global.lastsession = Global.sessioninfo["last"] as? [String : String] ?? [:]
                         let busy = (Global.sessioninfo["people_count"] as! Int) * 100 / (Global.sessioninfo["max_people"] as! Int)
                         self.busyCafe.text = String(busy) + "%"
                         self.tariffLabel.text = "1 мин = 1 ₽"
                     }
                     
+                    if(did_active) {
+                        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                        let finishController = storyBoard.instantiateViewController(withIdentifier: "finishController") as! FinishController;
+                        finishController.modalPresentationStyle = .fullScreen;
+                                self.present(finishController, animated: true, completion: nil)
+                    }
                     
                 }
             }
