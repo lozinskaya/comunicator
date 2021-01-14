@@ -41,7 +41,12 @@ class ConfirmController: UIViewController, UITextFieldDelegate {
             if textField == otpbox4 {
                 otpbox4?.resignFirstResponder() /*After the otpbox4 is filled we capture the All the OTP textField and do the server call. If you want to capture the otpbox4 use string.*/
                 let otp = "\((otpbox1?.text)!)\((otpbox2?.text)!)\((otpbox3?.text)!)\((otpbox4?.text)!)\(string)"
-                print(otp)
+                WebFuncs.ConfirmReg(params: [
+                    "id": Global.user_id,
+                    "code": otp
+                ]) { result in
+                    debugPrint(result)
+                }
             }
             textField.text? = string
             return false

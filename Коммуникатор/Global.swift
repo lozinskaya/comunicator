@@ -8,6 +8,7 @@
 import Foundation
 
 class Global {
+    static var user_id: String = ""
     static var userinfo: [String: AnyObject] = [:]
     static var sessioninfo: [String: AnyObject] = [:]
     static var activesession: [String: AnyObject] = [:]
