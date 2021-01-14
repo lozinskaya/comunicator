@@ -78,13 +78,13 @@ class SessionController: UIViewController {
                         self.tariffLabel.text = "1 мин = " + (Global.activesession["tariff_sum"] as? String ?? "1") + " ₽"
                     }
                     else {
-                        Global.lastsession = Global.sessioninfo["last"] as? [String : String] ?? [:]
+                        Global.lastsession = Global.sessioninfo["last"] as? [String : AnyObject] ?? [:]
                         let busy = (Global.sessioninfo["people_count"] as! Int) * 100 / (Global.sessioninfo["max_people"] as! Int)
                         self.busyCafe.text = String(busy) + "%"
                         self.tariffLabel.text = "1 мин = 1 ₽"
                     }
                     
-                    if(did_active) {
+                    if did_active == 1 && Global.is_active == 0 {
                         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                         let finishController = storyBoard.instantiateViewController(withIdentifier: "finishController") as! FinishController;
                         finishController.modalPresentationStyle = .fullScreen;
