@@ -41,43 +41,47 @@ class EventController: UIViewController {
     @IBOutlet weak var countRegisterEvents: UILabel!
     @IBOutlet weak var tableEvents: UITableView!
     @IBOutlet weak var tableFinishedEvents: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         WebFuncs.Events() { result in
             if let data = result {
                 DispatchQueue.main.async {
-                self.allData = data
-                let data_past = data["past"] as? [[String: String]] ?? []
-                let data_future = data["future"] as? [[String: String]] ?? []
-                let dateFormatter = DateFormatter()
-                dateFormatter.dateFormat = "d MMMM в HH:mm"
-                for row in data_future {
-                    let date = Date(timeIntervalSince1970: Double(row["date_time"] ?? "0") ?? 0)
-                    let event_date = dateFormatter.string(from: date)
-                    var limit_persons = "∞"
-                    if row["limit_persons"] != "0" {
-                        limit_persons = "До \(row["limit_persons"] ?? "0") человек"
+                    self.allData = data
+                    let data_past = data["past"] as? [[String: String]] ?? []
+                    let data_future = data["future"] as? [[String: String]] ?? []
+                    let dateFormatter = DateFormatter()
+                    dateFormatter.dateFormat = "d MMMM в HH:mm"
+                    for row in data_future {
+                        let date = Date(timeIntervalSince1970: Double(row["date_time"] ?? "0") ?? 0)
+                        let event_date = dateFormatter.string(from: date)
+                        var limit_persons = "∞"
+                        if row["limit_persons"] != "0" {
+                            limit_persons = "До \(row["limit_persons"] ?? "0") человек"
+                        }
+                        self.data.append([row["id"] ?? "", row["title"] ?? "", row["description"] ?? "", event_date, limit_persons, row["image_url"] ?? ""])
                     }
-                    self.data.append([row["id"] ?? "", row["title"] ?? "", row["description"] ?? "", event_date, limit_persons, row["image_url"] ?? ""])
-                }
+                        
+                    for row in data_past {
+                        let date = Date(timeIntervalSince1970: Double(row["date_time"] ?? "0") ?? 0)
+                        let event_date = dateFormatter.string(from: date)
+                        var limit_persons = "∞"
+                        if row["limit_persons"] != "0" {
+                            limit_persons = "До \(row["limit_persons"] ?? "0") человек"
+                        }
+                        self.dataFinishedEvents.append([row["id"] ?? "", row["title"] ?? "", row["description"] ?? "", event_date, limit_persons, row["image_url"] ?? ""])
+                    }
                     
-                for row in data_past {
-                    let date = Date(timeIntervalSince1970: Double(row["date_time"] ?? "0") ?? 0)
-                    let event_date = dateFormatter.string(from: date)
-                    var limit_persons = "∞"
-                    if row["limit_persons"] != "0" {
-                        limit_persons = "До \(row["limit_persons"] ?? "0") человек"
-                    }
-                    self.dataFinishedEvents.append([row["id"] ?? "", row["title"] ?? "", row["description"] ?? "", event_date, limit_persons, row["image_url"] ?? ""])
-                }
-                
-                self.tableEvents.dataSource = self
+                    
+                    self.tableEvents.dataSource = self
                     self.tableEvents.delegate = self
                 
                     self.tableFinishedEvents.dataSource = self
                     self.tableFinishedEvents.delegate = self
                 
+                    self.tableEvents.reloadData()
+                    self.tableFinishedEvents.reloadData()
 
                     self.tableEvents.register(UINib(nibName: "MainTableViewCell", bundle: nil ), forCellReuseIdentifier: self.idCell)
                     self.tableFinishedEvents.register(UINib(nibName: "MainTableViewCell", bundle: nil ), forCellReuseIdentifier: self.idCell)
