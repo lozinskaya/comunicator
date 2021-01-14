@@ -19,8 +19,11 @@ class FinishController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        finishMoney.text = "\(Global.lastsession["sum"] ?? "0") ₽"
-        finishTime.text = "\(Global.lastsession["duration"] ?? "0") мин"
+        debugPrint(Global.lastsession["sum"])
+        debugPrint(Global.lastsession["duration"])
+        finishMoney.text = "0 P"
+        //finishMoney.text = (Global.lastsession["sum"] as? String ?? "0") + " ₽"
+        //finishTime.text = (Global.lastsession["duration"] as? String ?? "0") + " мин"
     }
     
 }
