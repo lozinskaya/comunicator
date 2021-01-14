@@ -12,18 +12,32 @@ class EventController: UIViewController {
    
     //массив данных
     var data = [["0","День кофе: пьем и не спим", "Собираемся, наливаем, выпиваем и уходим. Перед уходом платим, наличными конечно.", "7 января в 19:00", "До 60 человек","img_1"], ["1","День еды: собираемся, объедаемся и уходим", "Все как обычно, вы можете наесться за 10 минут – тогда ваш ужин обойдется вам в 10₽. Вам выгодно, а нам нет.", "7 января в 19:00", "До 60 человек","img_2"]]
+    var dataFinishedEvents = [["0","День кофе: пьем и не спим", "Собираемся, наливаем, выпиваем и уходим. Перед уходом платим, наличными конечно.", "21 января в 19:00", "До 60 человек","img_1"], ["1","День еды: собираемся, объедаемся и уходим", "Все как обычно, вы можете наесться за 10 минут – тогда ваш ужин обойдется вам в 10₽. Вам выгодно, а нам нет.", "15 января в 19:00", "До 60 человек","img_2"]]
     let idCell = "MailCell"
     //Количество мероприятий на которые записан пользователь
+    @IBAction func SelectFutureEvents(_ sender: Any) {
+        tableEvents.isHidden = false
+        tableFinishedEvents.isHidden = true
+    }
+    @IBAction func SelectFinishedEvents(_ sender: Any) {
+        tableEvents.isHidden = true
+        tableFinishedEvents.isHidden = false
+    }
     @IBOutlet weak var countRegisterEvents: UILabel!
     @IBOutlet weak var tableEvents: UITableView!
+    @IBOutlet weak var tableFinishedEvents: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         tableEvents.dataSource = self
         tableEvents.delegate = self
         
+        tableFinishedEvents.dataSource = self
+        tableFinishedEvents.delegate = self
+        
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         tableEvents.register(UINib(nibName: "MainTableViewCell", bundle: nil ), forCellReuseIdentifier: idCell)
+        tableFinishedEvents.register(UINib(nibName: "MainTableViewCell", bundle: nil ), forCellReuseIdentifier: idCell)
     }
 }
 
@@ -31,18 +45,39 @@ extension EventController: UITableViewDataSource, UITableViewDelegate{
     
     //количество создаваемых клеток
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.data.count
+        if (tableView == self.tableEvents){
+            return self.data.count
+        }
+        else if (tableView == self.tableFinishedEvents) {
+            return self.dataFinishedEvents.count
+        } else {
+            return 0
+        }
     }
+    
     //создание клетки
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableEvents.dequeueReusableCell(withIdentifier: idCell) as! MainTableViewCell
-        cell.titleEvent.text = self.data[indexPath.row][1]
-        cell.descriptionEvent.text = self.data[indexPath.row][2]
-        cell.imgEvent.image = UIImage(named: "eventImg")
-        cell.timeEvent.text = self.data[indexPath.row][3]
-        cell.countPersonsEvent.text = self.data[indexPath.row][4]
+        if (tableView == self.tableEvents){
+            let cell = tableEvents.dequeueReusableCell(withIdentifier: idCell) as! MainTableViewCell
+            cell.titleEvent.text = self.data[indexPath.row][1]
+            cell.descriptionEvent.text = self.data[indexPath.row][2]
+            cell.imgEvent.image = UIImage(named: "eventImg")
+            cell.timeEvent.text = self.data[indexPath.row][3]
+            cell.countPersonsEvent.text = self.data[indexPath.row][4]
+            
+            return cell
+        }
+        else {
+            let cell = tableFinishedEvents.dequeueReusableCell(withIdentifier: idCell) as! MainTableViewCell
+            cell.titleEvent.text = self.dataFinishedEvents[indexPath.row][1]
+            cell.descriptionEvent.text = self.dataFinishedEvents[indexPath.row][2]
+            cell.imgEvent.image = UIImage(named: "eventImg")
+            cell.timeEvent.text = self.dataFinishedEvents[indexPath.row][3]
+            cell.countPersonsEvent.text = self.dataFinishedEvents[indexPath.row][4]
+            
+            return cell
+        }
         
-        return cell
     }
     //высота клетки
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -51,7 +86,9 @@ extension EventController: UITableViewDataSource, UITableViewDelegate{
     //вывод индекса выбранной строки
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("\(indexPath.row)")
-        performSegue(withIdentifier: "showdetail", sender: self)
+        if (tableView == self.tableEvents){
+            performSegue(withIdentifier: "showdetail", sender: self)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
