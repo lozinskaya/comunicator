@@ -17,7 +17,7 @@ class EventController: UIViewController {
     //прошедшие мероприятия
     var dataFinishedEvents : [[String]] = []
     let idCell = "MailCell"
-    //Количество мероприятий на которые записан пользователь
+    @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var sectionEvents: UIView!
     @IBOutlet weak var sectionNews: UIView!
     @IBOutlet weak var titleFutureEvents: UIButton!
@@ -38,6 +38,7 @@ class EventController: UIViewController {
         titleFinishedEvents.backgroundColor = UIColor(named: "Color-1")
         titleFinishedEvents.setTitleColor(UIColor(named: "inputCode"), for: .normal)
     }
+    //Количество мероприятий на которые записан пользователь
     @IBOutlet weak var countRegisterEvents: UILabel!
     @IBOutlet weak var tableEvents: UITableView!
     @IBOutlet weak var tableFinishedEvents: UITableView!
@@ -92,6 +93,14 @@ class EventController: UIViewController {
         titleFinishedEvents.setTitleColor(UIColor(named: "events"), for: .normal)
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        
+        segmentControl.addTarget(self, action: <#T##Selector#>, for: .valueChanged)
+    }
+}
+
+func selectedValue(target: UISegmentedControl) {
+    if target == self.segmentControl {
+        
     }
 }
 
