@@ -11,6 +11,7 @@ import UIKit
 class ConfirmController: UIViewController, UITextFieldDelegate {
 
     
+    @IBOutlet weak var error: UILabel!
     @IBOutlet weak var otpbox1: UITextField!
     @IBOutlet weak var otpbox2: UITextField!
     @IBOutlet weak var otpbox3: UITextField!

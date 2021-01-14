@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mxi-ak-6e7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mxi-ak-6e7">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -156,7 +156,7 @@
             <objects>
                 <viewController id="leM-dQ-7ao" customClass="RegisterCardViewController" customModule="Коммуникатор" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XNp-18-0cX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Регистрация вашей карты" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E1m-TE-sna">
@@ -328,7 +328,7 @@
             <objects>
                 <viewController id="Fia-k1-Sw8" customClass="LoginController" customModule="Коммуникатор" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Db6-Yi-dWX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="LoginButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3c2-bV-EJp">
@@ -431,7 +431,7 @@
             <objects>
                 <viewController id="XYQ-JP-fUo" customClass="ForgetPassViewController" customModule="Коммуникатор" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lhh-pQ-THo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="emailField" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="E-mail" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="48J-9l-JqS">
@@ -523,7 +523,7 @@
             <objects>
                 <viewController storyboardIdentifier="regController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kUG-jJ-k5U" customClass="RegController" customModule="Коммуникатор" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1qv-Xf-xaU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1450"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1396"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lOB-lI-zrf">
@@ -922,27 +922,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Подтвердить Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bng-cj-D8K">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Подтвердить Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bng-cj-D8K">
                                 <rect key="frame" x="80" y="136" width="254" height="27"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Введи код, отправленный на" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tr-9T-yn7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введи код, отправленный на" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tr-9T-yn7">
                                 <rect key="frame" x="77" y="180" width="260" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="goodbye.urfu@urfu.no" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="haa-NU-fl0">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="goodbye.urfu@urfu.no" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="haa-NU-fl0">
                                 <rect key="frame" x="108" y="208" width="198" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0qA-b0-I8R">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0qA-b0-I8R">
                                 <rect key="frame" x="67" y="272" width="49" height="44"/>
                                 <color key="backgroundColor" name="Color-1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="STe-93-Clz"/>
+                                </constraints>
                                 <color key="textColor" name="inputCode"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -953,9 +956,12 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RWn-rK-M3B">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RWn-rK-M3B">
                                 <rect key="frame" x="144" y="272" width="49" height="44"/>
                                 <color key="backgroundColor" name="Color-1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="TZ7-nh-qPi"/>
+                                </constraints>
                                 <color key="textColor" name="inputCode"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -966,9 +972,12 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x4a-la-2Yx">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x4a-la-2Yx">
                                 <rect key="frame" x="221" y="272" width="49" height="44"/>
                                 <color key="backgroundColor" name="Color-1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="RVo-j5-8lp"/>
+                                </constraints>
                                 <color key="textColor" name="inputCode"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -979,9 +988,12 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tl1-ms-sV6">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tl1-ms-sV6">
                                 <rect key="frame" x="298" y="272" width="49" height="44"/>
                                 <color key="backgroundColor" name="Color-1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="gV2-xd-htn"/>
+                                </constraints>
                                 <color key="textColor" name="inputCode"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -992,10 +1004,16 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Отправить еще раз через 0:59" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PcE-XS-QGX">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Отправить еще раз через 0:59" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PcE-XS-QGX">
                                 <rect key="frame" x="75" y="352" width="264" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="InputText"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Неверный код" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XeE-qD-W9g">
+                                <rect key="frame" x="16" y="381" width="382" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -1005,6 +1023,7 @@
                             <constraint firstItem="RWn-rK-M3B" firstAttribute="leading" secondItem="0qA-b0-I8R" secondAttribute="trailing" constant="28" id="0i0-0y-BXl"/>
                             <constraint firstItem="x4a-la-2Yx" firstAttribute="leading" secondItem="RWn-rK-M3B" secondAttribute="trailing" constant="28" id="1KO-i8-Qv3"/>
                             <constraint firstItem="Tl1-ms-sV6" firstAttribute="top" relation="lessThanOrEqual" secondItem="haa-NU-fl0" secondAttribute="bottom" constant="46" id="1LM-a3-8gX"/>
+                            <constraint firstItem="XeE-qD-W9g" firstAttribute="top" secondItem="PcE-XS-QGX" secondAttribute="bottom" constant="8" id="287-Qh-r03"/>
                             <constraint firstItem="PcE-XS-QGX" firstAttribute="top" secondItem="0qA-b0-I8R" secondAttribute="bottom" constant="36" id="3dD-SI-2VR"/>
                             <constraint firstItem="3tr-9T-yn7" firstAttribute="top" relation="lessThanOrEqual" secondItem="bng-cj-D8K" secondAttribute="bottom" constant="17" id="5gN-B6-mZ2"/>
                             <constraint firstItem="Tl1-ms-sV6" firstAttribute="width" secondItem="0qA-b0-I8R" secondAttribute="width" id="79u-ev-1vn"/>
@@ -1015,11 +1034,17 @@
                             <constraint firstItem="bng-cj-D8K" firstAttribute="top" relation="lessThanOrEqual" secondItem="pXU-je-fU0" secondAttribute="top" constant="92" id="IY9-Nu-Yca"/>
                             <constraint firstItem="pXU-je-fU0" firstAttribute="trailing" secondItem="bng-cj-D8K" secondAttribute="trailing" constant="80" id="Mo0-5j-Bbb"/>
                             <constraint firstItem="x4a-la-2Yx" firstAttribute="width" secondItem="0qA-b0-I8R" secondAttribute="width" id="O54-EP-ZDp"/>
+                            <constraint firstItem="pXU-je-fU0" firstAttribute="trailing" secondItem="XeE-qD-W9g" secondAttribute="trailing" constant="16" id="PUm-0U-l9F"/>
                             <constraint firstItem="pXU-je-fU0" firstAttribute="trailing" secondItem="3tr-9T-yn7" secondAttribute="trailing" constant="77" id="RzC-bj-PLF"/>
+                            <constraint firstItem="0qA-b0-I8R" firstAttribute="top" secondItem="dMf-XS-ElM" secondAttribute="top" constant="272" id="SUX-9b-gfd"/>
+                            <constraint firstItem="0qA-b0-I8R" firstAttribute="baseline" secondItem="RWn-rK-M3B" secondAttribute="baseline" id="Wh9-6b-cUi"/>
+                            <constraint firstItem="XeE-qD-W9g" firstAttribute="leading" secondItem="pXU-je-fU0" secondAttribute="leading" constant="16" id="Z6A-Fh-8dd"/>
+                            <constraint firstItem="0qA-b0-I8R" firstAttribute="baseline" secondItem="Tl1-ms-sV6" secondAttribute="baseline" id="a1C-tq-JRv"/>
                             <constraint firstItem="x4a-la-2Yx" firstAttribute="top" relation="lessThanOrEqual" secondItem="haa-NU-fl0" secondAttribute="bottom" constant="46" id="dhW-TJ-h5l"/>
                             <constraint firstItem="bng-cj-D8K" firstAttribute="leading" secondItem="pXU-je-fU0" secondAttribute="leading" constant="80" id="eYb-4S-ae1"/>
                             <constraint firstItem="Tl1-ms-sV6" firstAttribute="leading" secondItem="x4a-la-2Yx" secondAttribute="trailing" constant="28" id="hqh-5N-G7b"/>
                             <constraint firstItem="0qA-b0-I8R" firstAttribute="top" relation="lessThanOrEqual" secondItem="haa-NU-fl0" secondAttribute="bottom" constant="46" id="kwZ-1p-nKr"/>
+                            <constraint firstItem="0qA-b0-I8R" firstAttribute="baseline" secondItem="x4a-la-2Yx" secondAttribute="baseline" id="o14-ef-Nyl"/>
                             <constraint firstItem="RWn-rK-M3B" firstAttribute="top" relation="lessThanOrEqual" secondItem="haa-NU-fl0" secondAttribute="bottom" constant="46" id="q3P-hv-jBM"/>
                             <constraint firstItem="haa-NU-fl0" firstAttribute="top" relation="lessThanOrEqual" secondItem="3tr-9T-yn7" secondAttribute="bottom" constant="10" id="rIY-8m-Tic"/>
                             <constraint firstItem="3tr-9T-yn7" firstAttribute="leading" secondItem="pXU-je-fU0" secondAttribute="leading" constant="77" id="rwm-ZN-Z9Q"/>
@@ -1029,6 +1054,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="error" destination="XeE-qD-W9g" id="iFY-as-JzO"/>
                         <outlet property="otpbox1" destination="0qA-b0-I8R" id="MeY-2z-uiD"/>
                         <outlet property="otpbox2" destination="RWn-rK-M3B" id="RK0-3n-9hG"/>
                         <outlet property="otpbox3" destination="x4a-la-2Yx" id="6tp-bM-KF4"/>
@@ -2143,7 +2169,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gpI-hz-ohd"/>
+        <segue reference="qPB-eJ-hK6"/>
         <segue reference="YLQ-LL-y1H"/>
     </inferredMetricsTieBreakers>
     <resources>
