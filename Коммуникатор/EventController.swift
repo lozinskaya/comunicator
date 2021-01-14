@@ -16,19 +16,34 @@ class EventController: UIViewController {
     var dataFinishedEvents = [["0","День кофе: пьем и не спим", "Собираемся, наливаем, выпиваем и уходим. Перед уходом платим, наличными конечно.", "21 января в 19:00", "До 60 человек","img_1"], ["1","День еды: собираемся, объедаемся и уходим", "Все как обычно, вы можете наесться за 10 минут – тогда ваш ужин обойдется вам в 10₽. Вам выгодно, а нам нет.", "15 января в 19:00", "До 60 человек","img_2"]]
     let idCell = "MailCell"
     //Количество мероприятий на которые записан пользователь
+    @IBOutlet weak var titleFutureEvents: UIButton!
+    @IBOutlet weak var titleFinishedEvents: UIButton!
     @IBAction func SelectFutureEvents(_ sender: Any) {
         tableEvents.isHidden = false
         tableFinishedEvents.isHidden = true
+        titleFutureEvents.backgroundColor = UIColor(named: "Color-1")
+        titleFutureEvents.setTitleColor(UIColor(named: "inputCode"), for: .normal)
+        //titleFutureEvents.titleLabel?.textColor = UIColor(named: "inputCode")
+        titleFinishedEvents.backgroundColor = UIColor(named: "Default")
+        titleFinishedEvents.setTitleColor(UIColor(named: "events"), for: .normal)
     }
     @IBAction func SelectFinishedEvents(_ sender: Any) {
         tableEvents.isHidden = true
         tableFinishedEvents.isHidden = false
+        titleFutureEvents.backgroundColor = UIColor(named: "Default")
+        //titleFutureEvents.titleLabel?.textColor = UIColor(named: "events")
+        titleFutureEvents.setTitleColor(UIColor(named: "events"), for: .normal)
+        titleFinishedEvents.backgroundColor = UIColor(named: "Color-1")
+        //titleFinishedEvents.titleLabel?.textColor = UIColor(named: "inputCode")
+        titleFinishedEvents.setTitleColor(UIColor(named: "inputCode"), for: .normal)
     }
     @IBOutlet weak var countRegisterEvents: UILabel!
     @IBOutlet weak var tableEvents: UITableView!
     @IBOutlet weak var tableFinishedEvents: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        titleFutureEvents.setTitleColor(UIColor(named: "inputCode"), for: .normal)
+        titleFinishedEvents.setTitleColor(UIColor(named: "events"), for: .normal)
         tableEvents.dataSource = self
         tableEvents.delegate = self
         
@@ -75,6 +90,7 @@ extension EventController: UITableViewDataSource, UITableViewDelegate{
             cell.imgEvent.image = UIImage(named: "eventImg")
             cell.timeEvent.text = self.dataFinishedEvents[indexPath.row][3]
             cell.countPersonsEvent.text = self.dataFinishedEvents[indexPath.row][4]
+            cell.ifUserReg.isHidden = true
             
             return cell
         }

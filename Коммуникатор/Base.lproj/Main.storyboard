@@ -1733,25 +1733,47 @@
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="e1x-N9-O0H">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="e1x-N9-O0H">
                                 <rect key="frame" x="16" y="183" width="382" height="32"/>
                                 <segments>
                                     <segment title="Мероприятия"/>
                                     <segment title="Новости"/>
                                 </segments>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNf-3a-Gtm">
-                                <rect key="frame" x="20" y="233" width="99" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Предстоящие"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNf-3a-Gtm">
+                                <rect key="frame" x="16" y="233" width="112" height="30"/>
+                                <color key="backgroundColor" name="Color-1"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="112" id="A7H-Fp-PXV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <inset key="titleEdgeInsets" minX="2" minY="0.0" maxX="2" maxY="0.0"/>
+                                <state key="normal" title="Предстоящие">
+                                    <color key="titleColor" name="inputCode"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="SelectFutureEvents:" destination="R2S-uM-OMC" eventType="touchUpInside" id="Tyz-Yr-5tn"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBk-FM-zN8">
-                                <rect key="frame" x="163" y="233" width="88" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Прошедшие"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBk-FM-zN8">
+                                <rect key="frame" x="130" y="233" width="112" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <inset key="titleEdgeInsets" minX="2" minY="0.0" maxX="2" maxY="0.0"/>
+                                <state key="normal" title="Прошедшие">
+                                    <color key="titleColor" name="events"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="SelectFinishedEvents:" destination="R2S-uM-OMC" eventType="touchUpInside" id="0Ga-rj-Xh5"/>
                                 </connections>
@@ -1766,9 +1788,14 @@
                             <constraint firstItem="tnK-l5-q1h" firstAttribute="top" secondItem="fE7-vn-Yzv" secondAttribute="top" constant="36" id="6nG-NM-sHa"/>
                             <constraint firstItem="l97-pm-3Jc" firstAttribute="top" secondItem="7gX-QJ-hfq" secondAttribute="top" id="AyI-sm-kPL"/>
                             <constraint firstItem="zk5-Hk-CIH" firstAttribute="trailing" secondItem="ZSC-O2-tdU" secondAttribute="trailing" id="BFQ-om-bey"/>
+                            <constraint firstItem="VNf-3a-Gtm" firstAttribute="top" secondItem="e1x-N9-O0H" secondAttribute="bottom" constant="19" id="Dbl-eX-gIr"/>
                             <constraint firstItem="ZSC-O2-tdU" firstAttribute="leading" secondItem="Mwz-uJ-oPm" secondAttribute="trailing" constant="4" id="Dlv-QU-Rik"/>
                             <constraint firstItem="fE7-vn-Yzv" firstAttribute="trailing" secondItem="7gX-QJ-hfq" secondAttribute="trailing" constant="16" id="EhY-2l-4ce"/>
+                            <constraint firstItem="dBk-FM-zN8" firstAttribute="baseline" secondItem="VNf-3a-Gtm" secondAttribute="baseline" id="HTd-Z0-BYH"/>
+                            <constraint firstItem="fE7-vn-Yzv" firstAttribute="trailing" secondItem="dBk-FM-zN8" secondAttribute="trailing" constant="172" id="JAb-em-ozh"/>
+                            <constraint firstItem="VNf-3a-Gtm" firstAttribute="leading" secondItem="e1x-N9-O0H" secondAttribute="leading" id="JcV-dQ-Q3f"/>
                             <constraint firstItem="7gX-QJ-hfq" firstAttribute="leading" secondItem="fE7-vn-Yzv" secondAttribute="leading" constant="16" id="K4Y-Hi-qMH"/>
+                            <constraint firstItem="dBk-FM-zN8" firstAttribute="leading" secondItem="VNf-3a-Gtm" secondAttribute="trailing" constant="2" id="Klr-VY-fh8"/>
                             <constraint firstItem="tnK-l5-q1h" firstAttribute="top" secondItem="fE7-vn-Yzv" secondAttribute="top" constant="36" id="LX8-9d-dDl"/>
                             <constraint firstItem="tnK-l5-q1h" firstAttribute="leading" secondItem="fE7-vn-Yzv" secondAttribute="leading" constant="16" id="Lc1-1Q-PqZ"/>
                             <constraint firstItem="l97-pm-3Jc" firstAttribute="leading" secondItem="fE7-vn-Yzv" secondAttribute="leading" constant="16" id="Lwb-Nc-XTb"/>
@@ -1787,6 +1814,8 @@
                             <constraint firstItem="fE7-vn-Yzv" firstAttribute="trailing" secondItem="ZSC-O2-tdU" secondAttribute="trailing" constant="20" id="dez-J4-nLL"/>
                             <constraint firstItem="fE7-vn-Yzv" firstAttribute="trailing" secondItem="l97-pm-3Jc" secondAttribute="trailing" constant="16" id="fRw-Lu-qZS"/>
                             <constraint firstItem="fE7-vn-Yzv" firstAttribute="bottom" secondItem="7gX-QJ-hfq" secondAttribute="bottom" id="fRy-Zd-KNh"/>
+                            <constraint firstItem="dBk-FM-zN8" firstAttribute="width" secondItem="VNf-3a-Gtm" secondAttribute="width" id="iEN-Rw-cYG"/>
+                            <constraint firstItem="l97-pm-3Jc" firstAttribute="top" secondItem="VNf-3a-Gtm" secondAttribute="bottom" constant="21" id="mtz-lV-iDA"/>
                             <constraint firstItem="ZSC-O2-tdU" firstAttribute="top" secondItem="fE7-vn-Yzv" secondAttribute="top" constant="10" id="r2T-Ov-EpF"/>
                         </constraints>
                     </view>
@@ -1796,6 +1825,8 @@
                         <outlet property="countRegisterEvents" destination="ZSC-O2-tdU" id="KkH-CC-kjf"/>
                         <outlet property="tableEvents" destination="7gX-QJ-hfq" id="hUV-6x-oJh"/>
                         <outlet property="tableFinishedEvents" destination="l97-pm-3Jc" id="0Ey-f3-alQ"/>
+                        <outlet property="titleFinishedEvents" destination="dBk-FM-zN8" id="qYa-wY-lKn"/>
+                        <outlet property="titleFutureEvents" destination="VNf-3a-Gtm" id="j1f-6l-dfh"/>
                         <segue destination="zZL-fb-y8S" kind="show" identifier="showdetail" id="4Ks-6Y-U5U"/>
                     </connections>
                 </viewController>
@@ -2238,6 +2269,9 @@
         </namedColor>
         <namedColor name="TextColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.5725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="events">
+            <color red="0.50588235294117645" green="0.5490196078431373" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="inputCode">
             <color red="0.57647058823529407" green="0.50196078431372548" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -9,6 +9,7 @@ import UIKit
 
 class MainTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var ifUserReg: UILabel!
     @IBOutlet weak var titleEvent: UILabel!
     @IBOutlet weak var descriptionEvent: UILabel!
     @IBOutlet weak var imgEvent: UIImageView!
