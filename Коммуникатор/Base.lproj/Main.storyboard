@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mxi-ak-6e7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mxi-ak-6e7">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -1768,7 +1768,19 @@
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hpn-iC-1xc">
                                 <rect key="frame" x="0.0" y="233" width="414" height="580"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bsS-fT-QBA">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="580"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="bsS-fT-QBA" firstAttribute="leading" secondItem="hpn-iC-1xc" secondAttribute="leading" id="b8e-UM-YYE"/>
+                                    <constraint firstItem="bsS-fT-QBA" firstAttribute="top" secondItem="hpn-iC-1xc" secondAttribute="top" id="cn4-qm-FyU"/>
+                                    <constraint firstAttribute="trailing" secondItem="bsS-fT-QBA" secondAttribute="trailing" id="fr4-UF-Qxy"/>
+                                    <constraint firstAttribute="bottom" secondItem="bsS-fT-QBA" secondAttribute="bottom" id="nXt-rC-Vbj"/>
+                                </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="События" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnK-l5-q1h">
                                 <rect key="frame" x="16" y="124" width="382" height="41"/>
@@ -1847,11 +1859,12 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="countRegisterEvents" destination="ZSC-O2-tdU" id="KkH-CC-kjf"/>
-                        <outlet property="sectionEvents" destination="hpn-iC-1xc" id="n5H-C5-LDV"/>
-                        <outlet property="sectionNews" destination="hpn-iC-1xc" id="BGK-i7-loS"/>
+                        <outlet property="sectionEvents" destination="ZTI-DL-1jf" id="ucY-xy-ynx"/>
+                        <outlet property="sectionNews" destination="hpn-iC-1xc" id="dMv-RN-e7s"/>
                         <outlet property="segmentControl" destination="e1x-N9-O0H" id="dQ0-a5-I5W"/>
                         <outlet property="tableEvents" destination="7gX-QJ-hfq" id="hUV-6x-oJh"/>
                         <outlet property="tableFinishedEvents" destination="l97-pm-3Jc" id="0Ey-f3-alQ"/>
+                        <outlet property="tableNews" destination="bsS-fT-QBA" id="VSv-TK-eCy"/>
                         <outlet property="titleFinishedEvents" destination="dBk-FM-zN8" id="qYa-wY-lKn"/>
                         <outlet property="titleFutureEvents" destination="VNf-3a-Gtm" id="j1f-6l-dfh"/>
                         <segue destination="zZL-fb-y8S" kind="show" identifier="showdetail" id="4Ks-6Y-U5U"/>
