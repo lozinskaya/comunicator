@@ -24,6 +24,7 @@ class ConfirmController: UIViewController, UITextFieldDelegate {
         otpbox2?.delegate = self
         otpbox3?.delegate = self
         otpbox4?.delegate = self
+        userEmail.text = Global.userinfo["email"] as? String ?? ""
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range:NSRange, replacementString string: String) -> Bool {
