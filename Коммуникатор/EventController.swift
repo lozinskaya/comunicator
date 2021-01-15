@@ -51,13 +51,16 @@ class EventController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        reloadEvents()
         titleFutureEvents.setTitleColor(UIColor(named: "inputCode"), for: .normal)
         titleFinishedEvents.setTitleColor(UIColor(named: "events"), for: .normal)
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
         segmentControl.addTarget(self, action: #selector(selectedValue), for: .valueChanged)
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        reloadEvents()
     }
 
     @objc func reloadEvents() {
