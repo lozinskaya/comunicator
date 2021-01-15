@@ -67,8 +67,11 @@ class EventController: UIViewController {
                         if row["limit_persons"] != "0" {
                             limit_persons = "До \(row["limit_persons"] ?? "0") человек"
                         }
-                        let data_row = [row["id"] ?? "", row["title"] ?? "", row["description"] ?? "", event_date, limit_persons, row["image_url"] ?? "", row["is_member"] ?? "0"];
+                        let is_member = row["is_member"] ?? "0";
+                        let data_row = [row["id"] ?? "", row["title"] ?? "", row["description"] ?? "", event_date, limit_persons, row["image_url"] ?? "", is_member];
                         self.data.append(data_row)
+                        if(is_member == "1") 
+                            myEventsViewController.myEvents.append(data_row)
                     }
                         
                     for row in data_past {
@@ -78,9 +81,14 @@ class EventController: UIViewController {
                         if row["limit_persons"] != "0" {
                             limit_persons = "До \(row["limit_persons"] ?? "0") человек"
                         }
-                        let data_row = [row["id"] ?? "", row["title"] ?? "", row["description"] ?? "", event_date, limit_persons, row["image_url"] ?? "", row["is_member"] ?? "0"];
+
+                         let is_member = row["is_member"] ?? "0";
+                        let data_row = [row["id"] ?? "", row["title"] ?? "", row["description"] ?? "", event_date, limit_persons, row["image_url"] ?? "", is_member];
                         
                         self.dataFinishedEvents.append(data_row)
+
+                        if(is_member == "1") 
+                            myEventsViewController.myFinishedEvents.append(data_row)
                     }
                     
                     
