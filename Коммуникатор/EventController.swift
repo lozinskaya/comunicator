@@ -180,13 +180,12 @@ extension EventController: UITableViewDataSource, UITableViewDelegate{
         
         cell.titleEvent.text = dataArray[indexPath.row][1]
         cell.descriptionEvent.text = dataArray[indexPath.row][2]
-        cell.imgEvent.image = UIImage(named: "eventImg")
-
 
         if (tableView != self.tableNews) {
             cell.timeEvent.text = dataArray[indexPath.row][3]
             cell.countPersonsEvent.text = dataArray[indexPath.row][4]
         
+            cell.imgEvent.image = UIImage(named: "eventImg")
             let image_url = dataArray[indexPath.row][5]
             if image_url != "" {
                 cell.imgEvent.load(url: image_url.getCleanedURL()!)
@@ -197,7 +196,8 @@ extension EventController: UITableViewDataSource, UITableViewDelegate{
             cell.imgCountPersons.isHidden = true
             cell.timeEvent.isHidden = true
             cell.countPersonsEvent.isHidden = true
-            
+            cell.ifUserReg.isHidden = true
+            cell.imgEvent.image = UIImage(named: "eventImg")
         }
         
         return cell
