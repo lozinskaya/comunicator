@@ -38,6 +38,8 @@ class DetailVC: UIViewController {
             self.afterRegistrCountPersons.isHidden = true
             self.btnRegisterOnEvent.isHidden = false
             self.btnCancelReg.isHidden = true
+               WebFuncs.EventReg(params: ["event_id": chooseCell?[0] ?? "", "sessionkey": Global.sessionkey, "abort": 1]) { result in
+               }
             })
         cancelAlert.setValue(UIColor.red, forKey: "titleTextColor")
         alert.addAction(cancelAlert)
@@ -56,9 +58,8 @@ class DetailVC: UIViewController {
         descriptionCell.text = chooseCell?[2]
         timeCell.text = chooseCell?[3]
         personCell.text = chooseCell?[4]
-        
-        let result = true
-        if result {
+    
+        if chooseCell?[6] == "1" {
             afterRegistrCountPersons.isHidden = false
             //сюда count.text
             afterRegistrCountPersons.text = "Вы и " + String(1) + " ваш друг записаны"
