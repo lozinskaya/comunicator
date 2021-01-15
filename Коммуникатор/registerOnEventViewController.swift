@@ -109,6 +109,7 @@ override func viewDidLoad() {
     
     let tapGesture = UITapGestureRecognizer(target: self, action: #selector(registerOnEventViewController.handleTap(_:)))
     backdropView.addGestureRecognizer(tapGesture)
+    //performSegue(withIdentifier: "sendCount", sender: self)
 }
    
 @objc func cancel() {
@@ -121,6 +122,15 @@ override func viewDidLoad() {
     
 @objc func buttonRegisterAction(sender: UIButton!) {
   print("Button tapped")
+    let result = true
+    if result {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "ResultSuccess"), object: nil)
+        self.dismiss(animated: true, completion: nil)
+    } else {
+        let alert = UIAlertController(title: "Ошибка", message: "Не удалось записаться на мероприятия", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Повторить попытку", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
 }
 
 @objc func handleTap(_ sender: UITapGestureRecognizer) {
@@ -168,4 +178,11 @@ func animateTransition(using transitionContext: UIViewControllerContextTransitio
         })
     }
 }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let secondController = segue.destination as? DetailVC {
+            print("coonnnteec")
+            secondController.chooseCountPersons = count.text
+        }
+    }
 }
