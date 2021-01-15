@@ -104,7 +104,7 @@ extension myEventsViewController: UITableViewDataSource, UITableViewDelegate{
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? DetailVC {
-            destination.chooseCell = myEvents[(myEventsTable.indexPathForSelectedRow?.row)!]
+            destination.chooseCell = myEventsViewController.myEvents[(myEventsTable.indexPathForSelectedRow?.row)!]
         }
     }
 }
