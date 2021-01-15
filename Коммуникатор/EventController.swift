@@ -70,8 +70,9 @@ class EventController: UIViewController {
                         let is_member = row["is_member"] ?? "0";
                         let data_row = [row["id"] ?? "", row["title"] ?? "", row["description"] ?? "", event_date, limit_persons, row["image_url"] ?? "", is_member];
                         self.data.append(data_row)
-                        if(is_member == "1") 
+                        if(is_member == "1") {
                             myEventsViewController.myEvents.append(data_row)
+                        }
                     }
                         
                     for row in data_past {
@@ -87,8 +88,9 @@ class EventController: UIViewController {
                         
                         self.dataFinishedEvents.append(data_row)
 
-                        if(is_member == "1") 
+                        if(is_member == "1") {
                             myEventsViewController.myFinishedEvents.append(data_row)
+                        }
                     }
                     
                     self.countRegisterEvents.text = data["count_regs"] as? String ?? ""
