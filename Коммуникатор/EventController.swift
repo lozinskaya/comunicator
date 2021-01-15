@@ -91,6 +91,7 @@ class EventController: UIViewController {
                             myEventsViewController.myFinishedEvents.append(data_row)
                     }
                     
+                    self.countRegisterEvents.text = data["count_regs"] ?? ""
                     
                     self.tableEvents.dataSource = self
                     self.tableEvents.delegate = self
