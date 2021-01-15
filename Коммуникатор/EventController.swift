@@ -68,7 +68,7 @@ class EventController: UIViewController {
                             limit_persons = "До \(row["limit_persons"] ?? "0") человек"
                         }
                         let data_row = [row["id"] ?? "", row["title"] ?? "", row["description"] ?? "", event_date, limit_persons, row["image_url"] ?? "", row["is_member"] ?? "0"];
-                        self.data.append(data_row])
+                        self.data.append(data_row)
                     }
                         
                     for row in data_past {
