@@ -51,7 +51,6 @@ class EventController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        reloadEvents()
         titleFutureEvents.setTitleColor(UIColor(named: "inputCode"), for: .normal)
         titleFinishedEvents.setTitleColor(UIColor(named: "events"), for: .normal)
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
@@ -60,8 +59,12 @@ class EventController: UIViewController {
         segmentControl.addTarget(self, action: #selector(selectedValue), for: .valueChanged)
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        reloadEvents()
+    }
+
     @objc func reloadEvents() {
-                WebFuncs.Events() { result in
+            WebFuncs.Events() { result in
             if let data = result {
                 DispatchQueue.main.async {
                     self.allData = data
@@ -70,6 +73,10 @@ class EventController: UIViewController {
                     let dateFormatter = DateFormatter()
                     dateFormatter.dateFormat = "d MMMM в HH:mm"
                     dateFormatter.locale = Locale(identifier: "ru_RU")
+                    self.data = []
+                    self.dataFinishedEvents = []
+                    myEventsViewController.myFinishedEvents = []
+                    myEventsViewController.myEvents = []
                     for row in data_future {
                         let date = Date(timeIntervalSince1970: Double(row["date_time"] ?? "0") ?? 0)
                         let event_date = dateFormatter.string(from: date)
