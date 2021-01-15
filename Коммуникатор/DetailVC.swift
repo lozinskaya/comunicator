@@ -38,7 +38,7 @@ class DetailVC: UIViewController {
             self.afterRegistrCountPersons.isHidden = true
             self.btnRegisterOnEvent.isHidden = false
             self.btnCancelReg.isHidden = true
-               WebFuncs.EventReg(params: ["event_id": chooseCell?[0] ?? "", "sessionkey": Global.sessionkey, "abort": 1]) { result in
+            WebFuncs.EventReg(params: ["event_id": self.chooseCell?[0] ?? "", "sessionkey": Global.sessionkey, "abort": String(1)]) { result in
                }
             })
         cancelAlert.setValue(UIColor.red, forKey: "titleTextColor")
