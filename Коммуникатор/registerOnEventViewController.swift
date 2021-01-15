@@ -16,6 +16,8 @@ lazy var backdropView: UIView = {
     return bdView
 }()
 
+var chooseCell: Array<String>?
+
 let menuView = UIView()
 let menuHeight = UIScreen.main.bounds.height / 3
 var isPresenting = false
@@ -121,14 +123,15 @@ override func viewDidLoad() {
     
 @objc func buttonRegisterAction(sender: UIButton!) {
   print("Button tapped")
-    let result = true
-    if result {
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "ResultSuccess"), object: nil)
-        self.dismiss(animated: true, completion: nil)
-    } else {
-        let alert = UIAlertController(title: "Ошибка", message: "Не удалось записаться на мероприятия", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Повторить попытку", style: UIAlertAction.Style.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+    WebFuncs.EventReg(params: ["event_id": chooseCell?[0], "sessionkey": Global.sessionkey, "count": count.text]) { result in
+        if result {
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "ResultSuccess"), object: nil)
+            self.dismiss(animated: true, completion: nil)
+        } else {
+            let alert = UIAlertController(title: "Ошибка", message: "Не удалось записаться на мероприятия", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Повторить попытку", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
 }
 
