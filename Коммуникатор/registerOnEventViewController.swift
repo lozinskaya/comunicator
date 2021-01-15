@@ -109,7 +109,6 @@ override func viewDidLoad() {
     
     let tapGesture = UITapGestureRecognizer(target: self, action: #selector(registerOnEventViewController.handleTap(_:)))
     backdropView.addGestureRecognizer(tapGesture)
-    //performSegue(withIdentifier: "sendCount", sender: self)
 }
    
 @objc func cancel() {
@@ -136,6 +135,15 @@ override func viewDidLoad() {
 @objc func handleTap(_ sender: UITapGestureRecognizer) {
     dismiss(animated: true, completion: nil)
 }
+    
+/*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "sendCount" {
+        if let secondController = segue.destination as? DetailVC {
+            print("coonnnteec")
+            secondController.chooseCountPersons = count.text
+        }
+    }
+}*/
 }
 
 extension registerOnEventViewController: UIViewControllerAnimatedTransitioning {
@@ -178,11 +186,4 @@ func animateTransition(using transitionContext: UIViewControllerContextTransitio
         })
     }
 }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let secondController = segue.destination as? DetailVC {
-            print("coonnnteec")
-            secondController.chooseCountPersons = count.text
-        }
-    }
 }

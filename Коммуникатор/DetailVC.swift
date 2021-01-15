@@ -60,7 +60,7 @@ class DetailVC: UIViewController {
         afterRegistrCountPersons.isHidden = false
         btnRegisterOnEvent.isHidden = true
         btnCancelReg.isHidden = false
-        afterRegistrCountPersons.text = "Вы и" + String(6) + "ваш друг записаны"
+        afterRegistrCountPersons.text = "Вы и " + String(1) + " ваш друг записаны"
     }
     /*
     // MARK: - Navigation
