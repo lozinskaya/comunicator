@@ -63,19 +63,19 @@ extension myEventsViewController: UITableViewDataSource, UITableViewDelegate{
     //количество создаваемых клеток
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if (tableView == myEventsTable){
-            return self.myEvents.count
+            return myEventsViewController.myEvents.count
         } else {
-            return self.myFinishedEvents.count
+            return myEventsViewController.myFinishedEvents.count
         }
     }
     //создание клетки
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = myEventsTable.dequeueReusableCell(withIdentifier: idCell) as! MainTableViewCell
-        var dataArray = self.myEvents
+        var dataArray = myEventsViewController.myEvents
         
         if (tableView == self.myFinishedEventsTable){
             cell = myFinishedEventsTable.dequeueReusableCell(withIdentifier: idCell) as! MainTableViewCell
-            dataArray = self.myFinishedEvents;
+            dataArray = myEventsViewController.myFinishedEvents;
         }
         
         cell.titleEvent.text = dataArray[indexPath.row][1]
