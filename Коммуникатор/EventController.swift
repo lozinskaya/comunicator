@@ -51,16 +51,13 @@ class EventController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        reloadEvents()
         titleFutureEvents.setTitleColor(UIColor(named: "inputCode"), for: .normal)
         titleFinishedEvents.setTitleColor(UIColor(named: "events"), for: .normal)
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
         segmentControl.addTarget(self, action: #selector(selectedValue), for: .valueChanged)
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        reloadEvents()
     }
 
     @objc func reloadEvents() {
@@ -81,7 +78,7 @@ class EventController: UIViewController {
                             limit_persons = "До \(row["limit_persons"] ?? "0") человек"
                         }
                         let is_member = row["is_member"] ?? "0";
-                        let data_row = [row["id"] ?? "", row["title"] ?? "", row["description"] ?? "", event_date, limit_persons, row["image_url"] ?? "", is_member];
+                        let data_row = [row["id"] ?? "", row["title"] ?? "", row["description"] ?? "", event_date, limit_persons, row["image_url"] ?? "", is_member, row["extra_count"] ?? "0"];
                         self.data.append(data_row)
                         if(is_member == "1") {
                             myEventsViewController.myEvents.append(data_row)
@@ -97,7 +94,7 @@ class EventController: UIViewController {
                         }
 
                          let is_member = row["is_member"] ?? "0";
-                        let data_row = [row["id"] ?? "", row["title"] ?? "", row["description"] ?? "", event_date, limit_persons, row["image_url"] ?? "", is_member];
+                        let data_row = [row["id"] ?? "", row["title"] ?? "", row["description"] ?? "", event_date, limit_persons, row["image_url"] ?? "", is_member, row["extra_count"] ?? "0"];
                         
                         self.dataFinishedEvents.append(data_row)
 
