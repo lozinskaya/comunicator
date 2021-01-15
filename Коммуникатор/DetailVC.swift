@@ -63,8 +63,9 @@ class DetailVC: UIViewController {
             afterRegistrCountPersons.isHidden = false
             //сюда count.text
             afterRegistrCountPersons.text = "Вы записаны"
-            if chooseCell?[7] != "0"
+            if chooseCell?[7] != "0" {
                 afterRegistrCountPersons.text = "Вы и ваши друзья (\(chooseCell?[7] ?? "0")) записаны"
+            }
             btnRegisterOnEvent.isHidden = true
             btnCancelReg.isHidden = false
         } else {
