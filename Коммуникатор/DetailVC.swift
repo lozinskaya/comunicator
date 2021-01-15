@@ -49,6 +49,10 @@ class DetailVC: UIViewController {
 
         labelCell.text = chooseCell?[1]
         imgCell.image = UIImage(named: "eventImg")
+        let image_url = chooseCell?[5] ?? ""
+        if image_url != "" {
+            imgCell.load(url: image_url.getCleanedURL()!)
+        }
         descriptionCell.text = chooseCell?[2]
         timeCell.text = chooseCell?[3]
         personCell.text = chooseCell?[4]

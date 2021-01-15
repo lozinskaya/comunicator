@@ -10,8 +10,8 @@ import UIKit
 class myEventsViewController: UIViewController {
 
     //массив данных
-    var myEvents = [["0","День кофе: пьем и не спим", "Собираемся, наливаем, выпиваем и уходим. Перед уходом платим, наличными конечно.", "7 января в 19:00", "До 60 человек","img_1"], ["1","День еды: собираемся, объедаемся и уходим", "Все как обычно, вы можете наесться за 10 минут – тогда ваш ужин обойдется вам в 10₽. Вам выгодно, а нам нет.", "7 января в 19:00", "До 60 человек","img_2"]]
-    var myFinishedEvents = [["0","День кофе: пьем и не спим", "Собираемся, наливаем, выпиваем и уходим. Перед уходом платим, наличными конечно.", "12 января в 19:00", "До 60 человек","img_1"], ["1","День еды: собираемся, объедаемся и уходим", "Все как обычно, вы можете наесться за 10 минут – тогда ваш ужин обойдется вам в 10₽. Вам выгодно, а нам нет.", "21 января в 19:00", "До 60 человек","img_2"]]
+    static var myEvents : [[String]] = []
+    static var myFinishedEvents : [[String]] = []
     let idCell = "MailCell"
     @IBOutlet weak var myEventsTable: UITableView!
     @IBOutlet weak var myFinishedEventsTable: UITableView!
@@ -80,9 +80,15 @@ extension myEventsViewController: UITableViewDataSource, UITableViewDelegate{
         
         cell.titleEvent.text = dataArray[indexPath.row][1]
         cell.descriptionEvent.text = dataArray[indexPath.row][2]
-        cell.imgEvent.image = UIImage(named: "eventImg")
+
         cell.timeEvent.text = dataArray[indexPath.row][3]
         cell.countPersonsEvent.text = dataArray[indexPath.row][4]
+
+        cell.imgEvent.image = UIImage(named: "eventImg")
+        let image_url = dataArray[indexPath.row][5]
+        if image_url != "" {
+            cell.imgEvent.load(url: image_url.getCleanedURL()!)
+        }
         
         return cell
     }
