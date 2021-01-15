@@ -93,7 +93,7 @@ class EventController: UIViewController {
                         }
                     }
                     
-                    self.countRegisterEvents.text = data["count_regs"] ?? ""
+                    self.countRegisterEvents.text = data["count_regs"] as? String ?? ""
                     
                     self.tableEvents.dataSource = self
                     self.tableEvents.delegate = self
