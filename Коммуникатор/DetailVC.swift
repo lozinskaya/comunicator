@@ -63,9 +63,10 @@ class DetailVC: UIViewController {
         if chooseCell?[6] == "1" {
             afterRegistrCountPersons.isHidden = false
             //сюда count.text
-            afterRegistrCountPersons.text = "Вы записаны"
             if chooseCell?[7] != "0" {
                 afterRegistrCountPersons.text = "Вы и ваши друзья (\(chooseCell?[7] ?? "0")) записаны"
+            } else {
+                afterRegistrCountPersons.text = "Вы записаны"
             }
             btnRegisterOnEvent.isHidden = true
             btnCancelReg.isHidden = false
@@ -76,13 +77,17 @@ class DetailVC: UIViewController {
         }
     }
     
-    @objc func ifResultSuccess() {
+    @objc func ifResultSuccess(notification: NSNotification) {
            print("Received Notification")
         afterRegistrCountPersons.isHidden = false
         btnRegisterOnEvent.isHidden = true
         btnCancelReg.isHidden = false
         //сюда count.text
-        afterRegistrCountPersons.text = "Вы и " + String(1) + " ваш друг записаны"
+        if (("(\(notification.object ?? "0"))") != "0") {
+            afterRegistrCountPersons.text = "Вы и ваши друзья (\(notification.object ?? "0")) записаны"
+        } else {
+            afterRegistrCountPersons.text = "Вы записаны"
+        }
     }
     /*
     // MARK: - Navigation

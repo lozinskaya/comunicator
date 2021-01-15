@@ -100,7 +100,7 @@ extension myEventsViewController: UITableViewDataSource, UITableViewDelegate{
     //вывод индекса выбранной строки
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("\(indexPath.row)")
-        performSegue(withIdentifier: "showdetail", sender: self)
+        performSegue(withIdentifier: "showdetaillll", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
