@@ -60,7 +60,7 @@ class EventController: UIViewController {
         segmentControl.addTarget(self, action: #selector(selectedValue), for: .valueChanged)
     }
 
-    @obj func reloadEvents() {
+    @objc func reloadEvents() {
                 WebFuncs.Events() { result in
             if let data = result {
                 DispatchQueue.main.async {
