@@ -51,7 +51,17 @@ class EventController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        WebFuncs.Events() { result in
+        reloadEvents()
+        titleFutureEvents.setTitleColor(UIColor(named: "inputCode"), for: .normal)
+        titleFinishedEvents.setTitleColor(UIColor(named: "events"), for: .normal)
+        self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        
+        segmentControl.addTarget(self, action: #selector(selectedValue), for: .valueChanged)
+    }
+
+    @obj func reloadEvents() {
+                WebFuncs.Events() { result in
             if let data = result {
                 DispatchQueue.main.async {
                     self.allData = data
@@ -114,12 +124,6 @@ class EventController: UIViewController {
                 }
             }
         }
-        titleFutureEvents.setTitleColor(UIColor(named: "inputCode"), for: .normal)
-        titleFinishedEvents.setTitleColor(UIColor(named: "events"), for: .normal)
-        self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        
-        segmentControl.addTarget(self, action: #selector(selectedValue), for: .valueChanged)
     }
     
     @objc func selectedValue(target: UISegmentedControl) {
