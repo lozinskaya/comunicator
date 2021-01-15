@@ -84,10 +84,11 @@ extension myEventsViewController: UITableViewDataSource, UITableViewDelegate{
         cell.timeEvent.text = dataArray[indexPath.row][3]
         cell.countPersonsEvent.text = dataArray[indexPath.row][4]
 
-        cell.imgEvent.image = UIImage(named: "eventImg")
         let image_url = dataArray[indexPath.row][5]
         if image_url != "" {
             cell.imgEvent.load(url: image_url.getCleanedURL()!)
+        } else {
+            cell.imgEvent.image = UIImage(named: "eventImg")
         }
         
         return cell

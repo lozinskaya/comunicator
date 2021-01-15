@@ -50,10 +50,11 @@ class DetailVC: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(ifResultSuccess), name: NSNotification.Name(rawValue: "ResultSuccess"), object: nil)
 
         labelCell.text = chooseCell?[1]
-        imgCell.image = UIImage(named: "eventImg")
         let image_url = chooseCell?[5] ?? ""
         if image_url != "" {
             imgCell.load(url: image_url.getCleanedURL()!)
+        } else {
+            imgCell.image = UIImage(named: "eventImg")
         }
         descriptionCell.text = chooseCell?[2]
         timeCell.text = chooseCell?[3]
