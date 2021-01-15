@@ -52,8 +52,19 @@ class DetailVC: UIViewController {
         descriptionCell.text = chooseCell?[2]
         timeCell.text = chooseCell?[3]
         personCell.text = chooseCell?[4]
-        print("----")
-        print(chooseCountPersons)
+        
+        let result = true
+        if result {
+            afterRegistrCountPersons.isHidden = false
+            //сюда count.text
+            afterRegistrCountPersons.text = "Вы и " + String(1) + " ваш друг записаны"
+            btnRegisterOnEvent.isHidden = true
+            btnCancelReg.isHidden = false
+        } else {
+            afterRegistrCountPersons.isHidden = true
+            btnRegisterOnEvent.isHidden = false
+            btnCancelReg.isHidden = true
+        }
     }
     
     @objc func ifResultSuccess() {
@@ -61,6 +72,7 @@ class DetailVC: UIViewController {
         afterRegistrCountPersons.isHidden = false
         btnRegisterOnEvent.isHidden = true
         btnCancelReg.isHidden = false
+        //сюда count.text
         afterRegistrCountPersons.text = "Вы и " + String(1) + " ваш друг записаны"
     }
     /*

@@ -123,7 +123,7 @@ override func viewDidLoad() {
     
 @objc func buttonRegisterAction(sender: UIButton!) {
   print("Button tapped")
-    WebFuncs.EventReg(params: ["event_id": chooseCell?[0] ?? "", "sessionkey": Global.sessionkey, "count": String(count.text!)]) { result in
+    WebFuncs.EventReg(params: ["event_id": chooseCell?[0] ?? "", "sessionkey": Global.sessionkey, "count": count.text!]) { result in
         DispatchQueue.main.async {
             if result! {
                 NotificationCenter.default.post(name: NSNotification.Name(rawValue: "ResultSuccess"), object: nil)
