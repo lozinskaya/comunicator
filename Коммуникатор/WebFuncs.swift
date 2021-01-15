@@ -134,4 +134,16 @@ class WebFuncs {
             }
         }
     }
+    
+    static func EventReg(params: [String: String], completion: @escaping (Bool?) ->()) {
+        JSONRequest(action: "event_reg", params: params) { data in
+            if let result = data {
+                if result["result"] as? String == WebFuncs.Answer.SUCCESS.rawValue {
+                    completion(true);
+                } else {
+                    completion(false);
+                }
+            }
+        }
+    }
 }
