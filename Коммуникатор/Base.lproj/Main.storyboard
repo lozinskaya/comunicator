@@ -2005,7 +2005,7 @@
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы и 1 ваш друг записаны" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKT-3e-roc">
-                                <rect key="frame" x="83" y="670" width="248" height="21"/>
+                                <rect key="frame" x="16" y="670" width="382" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -2025,12 +2025,12 @@
                         <constraints>
                             <constraint firstItem="15B-EW-yaX" firstAttribute="trailing" secondItem="hNk-x8-l2Y" secondAttribute="trailing" constant="16" id="0qc-FO-epK"/>
                             <constraint firstItem="73i-1r-zpL" firstAttribute="top" secondItem="15B-EW-yaX" secondAttribute="top" constant="7" id="22R-BV-Orm"/>
-                            <constraint firstItem="uKT-3e-roc" firstAttribute="leading" secondItem="15B-EW-yaX" secondAttribute="leading" constant="83" id="AkW-fg-qCs"/>
+                            <constraint firstItem="uKT-3e-roc" firstAttribute="leading" secondItem="15B-EW-yaX" secondAttribute="leading" constant="16" id="AkW-fg-qCs"/>
                             <constraint firstItem="7gn-eG-6T0" firstAttribute="leading" secondItem="5v1-jt-RSE" secondAttribute="trailing" constant="7" id="CYT-FR-aLo"/>
                             <constraint firstItem="qZi-Hb-TDc" firstAttribute="leading" secondItem="15B-EW-yaX" secondAttribute="leading" constant="16" id="CxI-5h-uUG"/>
                             <constraint firstItem="hNk-x8-l2Y" firstAttribute="centerX" secondItem="qZi-Hb-TDc" secondAttribute="centerX" id="D7J-Bp-dPV"/>
                             <constraint firstItem="ZCb-ix-n5e" firstAttribute="leading" secondItem="15B-EW-yaX" secondAttribute="leading" constant="16" id="FCk-69-edA"/>
-                            <constraint firstItem="15B-EW-yaX" firstAttribute="trailing" secondItem="uKT-3e-roc" secondAttribute="trailing" constant="83" id="I6e-iG-l66"/>
+                            <constraint firstItem="15B-EW-yaX" firstAttribute="trailing" secondItem="uKT-3e-roc" secondAttribute="trailing" constant="16" id="I6e-iG-l66"/>
                             <constraint firstItem="15B-EW-yaX" firstAttribute="trailing" secondItem="73i-1r-zpL" secondAttribute="trailing" constant="16" id="Iap-Cc-vLH"/>
                             <constraint firstItem="15B-EW-yaX" firstAttribute="bottom" secondItem="qZi-Hb-TDc" secondAttribute="bottom" constant="56" id="KDb-Ec-LRk"/>
                             <constraint firstItem="paM-Zq-zh4" firstAttribute="top" secondItem="ZCb-ix-n5e" secondAttribute="bottom" constant="12" id="KiR-z4-BUK"/>
