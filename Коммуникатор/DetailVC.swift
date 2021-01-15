@@ -21,6 +21,7 @@ class DetailVC: UIViewController {
     //Нажатие кнопки записаться
     @IBAction func registerOnEvent(_ sender: Any) {
         let vc = registerOnEventViewController()
+            vc.chooseCell = chooseCell
             vc.modalPresentationStyle = .custom
             present(vc, animated: true, completion: nil)
     }
