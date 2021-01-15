@@ -1921,6 +1921,7 @@
                         <outlet property="myEventsTable" destination="8IT-3a-zqC" id="zQa-nM-lvi"/>
                         <outlet property="myFinishedEventsTable" destination="UBO-AU-2L3" id="Umu-ym-Rtd"/>
                         <outlet property="segmentControl" destination="Hj0-Yh-taK" id="dgg-1U-DTC"/>
+                        <segue destination="zZL-fb-y8S" kind="show" identifier="showdetaillll" id="R7j-J2-fpl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="quI-ne-032" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2294,6 +2295,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="R7j-J2-fpl"/>
         <segue reference="qPB-eJ-hK6"/>
         <segue reference="fFg-X2-zuw"/>
     </inferredMetricsTieBreakers>

@@ -18,7 +18,7 @@ class EventController: UIViewController {
     var dataFinishedEvents : [[String]] = []
     
     //новости
-    var dataNews = [["0","Название новости 1","Описание новости 1"],["1","Название новости 2","Описание новости 2"]]
+    var dataNews = [["0","Вирус не пройдет!","Для нас очень важно здоровье наших посетителей. Поэтому в антикафе появился новый аппарат по обеззараживанию воздуха, кроме того, на входе и на каждом столике для вашего удобства размещены антисептики, а все сотрудники работают в масках.","news_1"],["1","Геймеры, ликуйте!","Прекрасная новость для заядлых геймеров. В нашем антикафе теперь можно будет сыграть не только в настольные игры. Да, мы приобрели приставку Sony PlayStation 4. Совсем скоро она появится в большом зале, а отпразднуем мы это гейм-турниром!","news_2"], ["3","Да будет музыка!","Друзья! Мы всегда очень благодарны за вашу обратную связь и стараемся максимально к ней прислушиваться. В нашем антикафе появилась возможность, которую ждали многие. Теперь вы можете заказать у администратора музыку, которая будет играть в заведении.","news_3"]]
     
     let idCell = "MailCell"
     @IBOutlet weak var segmentControl: UISegmentedControl!
@@ -185,10 +185,12 @@ extension EventController: UITableViewDataSource, UITableViewDelegate{
             cell.timeEvent.text = dataArray[indexPath.row][3]
             cell.countPersonsEvent.text = dataArray[indexPath.row][4]
         
-            cell.imgEvent.image = UIImage(named: "eventImg")
             let image_url = dataArray[indexPath.row][5]
             if image_url != "" {
                 cell.imgEvent.load(url: image_url.getCleanedURL()!)
+            }
+            else {
+                cell.imgEvent.image = UIImage(named: "eventImg")
             }
             cell.ifUserReg.isHidden = dataArray[indexPath.row][6] == "0"
         } else {
@@ -197,7 +199,7 @@ extension EventController: UITableViewDataSource, UITableViewDelegate{
             cell.timeEvent.isHidden = true
             cell.countPersonsEvent.isHidden = true
             cell.ifUserReg.isHidden = true
-            cell.imgEvent.image = UIImage(named: "eventImg")
+            cell.imgEvent.image = UIImage(named: dataArray[indexPath.row][3])
         }
         
         return cell
