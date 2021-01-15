@@ -128,7 +128,7 @@ class WebFuncs {
     }
     
     static func Events(completion: @escaping ([String:AnyObject]?) ->()) {
-        JSONRequest(action: "events", params: [:]) { data in
+        JSONRequest(action: "events", params: ["sessionkey": Global.sessionkey]) { data in
             if let result = data {
                 completion(result)
             }
