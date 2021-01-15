@@ -156,7 +156,9 @@ extension EventController: UITableViewDataSource, UITableViewDelegate{
         cell.titleEvent.text = dataArray[indexPath.row][1]
         cell.descriptionEvent.text = dataArray[indexPath.row][2]
         cell.imgEvent.image = UIImage(named: "eventImg")
-        cell.ifUserReg.isHidden = true
+
+        cell.ifUserReg.isHidden = dataArray[indexPath.row][6] == "0"
+
 
         if (tableView != self.tableNews) {
             cell.timeEvent.text = dataArray[indexPath.row][3]
