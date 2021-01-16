@@ -1,0 +1,494 @@
+  body {
+    font-family: 'Inter', sans-serif;
+
+    min-height: 100vh;
+  }
+
+  h3 {
+    font-weight: 600;
+  }
+
+  .centered {
+    margin: 0;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .screen {
+    min-height: 100vh;
+  }
+
+
+  .menu {
+    width: 25%;
+    padding: 0 10%;
+    min-height: 100px;
+    float: left;
+    margin-top: 112px;
+  }
+
+  .menu a {
+    color: #AEAEB2;
+    font-size: 16px;
+  }
+
+  .menu .active a {
+    color: black;
+  }
+
+  .nav-item {
+    display: flex;
+    margin: 15px 0;
+  }
+
+  .content {
+    width: 75%;
+    min-height: 100px;
+    float: right;
+    padding-right: 165px;
+  }
+
+  .title {
+    font-size: 55px;
+    margin-top: 112px;
+  }
+
+  .title h1{
+    font-weight: 700;
+  }
+
+  .nav-tabs .nav-link.active {
+    color: #000000;
+    font-size: 20px;
+    background-color: inherit;
+    border: 0px;
+    border-bottom: 2px solid #938079;
+  }
+
+  .nav-tabs .nav-link {
+    color: #8E8E93;
+    font-size: 20px;
+    background-color: inherit;
+    border: 0px;
+  }
+
+  .content .nav-link {
+    padding-left: 0px;
+    padding-right: 0px;
+    font-weight: 700;
+  }
+
+  .content .nav-item {
+    margin-right: 36px;
+  }
+
+  .nav-tabs {
+    border-bottom: 0px;
+  }
+
+  .table thead th {
+    border-bottom: 0px;
+    font-weight: 500;
+  }
+
+  .table td, .table th {
+    border-top: 0px;
+  }
+
+  thead {
+    color: #8E8E93;
+    font-size: 14px;
+  }
+
+  tbody tr td:last-child img {
+    display: none;
+  }
+
+  tbody tr:hover {
+    background: #F3F3F3;
+    border-radius: 12px;
+  }
+
+  tbody tr:hover td:last-child img {
+    display: block;
+  }
+
+  tbody .usrtbl td.addBalance:hover {
+    text-decoration: underline;
+  }
+
+  .dateFiltr {
+    display: flex;
+  }
+
+  .form-group {
+    margin-bottom: 0px;
+  }
+
+.add-balance  .form-group, .idModalAddCard .form-group {
+    border: 1px solid #F3F3F3;
+    border-radius: 12px;
+  }
+
+  #idModalEditUser .form-group, #idModalEditEvent .form-group {
+    margin-bottom: 24px;
+  }
+
+  #idModalEditUser .form-group:last-child, #idModalEditEvent .form-group:last-child {
+    margin-bottom: 0px;
+  }
+
+  .dateFiltr .form-control {
+    border-radius: 14px;
+    border: 4px solid #F3F3F3;
+    background: #F3F3F3;
+    transition: none;
+  }
+
+  .dateFiltr .form-control:hover {
+    background-color: #E5E5EA;
+    border: 4px solid #E5E5EA;
+  }
+
+  .dateFiltr .form-control:focus {
+    background-color: #fff;
+    border-radius: 14px;
+    border: 4px solid #CEBBB4;
+    box-shadow: none;
+  }
+
+  .dateFiltr .form-group {
+    display: flex;
+    align-items: center;
+  }
+
+  .dateFiltr .form-group:nth-child(2) {
+    margin-left: 9px;
+    margin-right: 9px;
+  }
+
+  .dateFiltr .form-group:last-child .form-control {
+    border: 0px;
+    background: none;
+    margin-left: 30px;
+  }
+
+  .container-filter {
+    margin-top: 24px;
+  }
+
+  .filter-buttons {
+    justify-content: space-between;
+    display: flex;
+  }
+
+  .filter-buttons .btn {
+    margin: 16px 0px;
+  }
+
+  .filter-buttons .btn-primary {
+    color: #fff;
+    background-color: #938079;
+    border: none;
+    border-radius: 12px;
+  }
+
+  .filter-buttons .btn-primary a{
+    color: #fff;
+  }
+
+  .container-filter .heading {
+    color: #8E8E93;
+  }
+
+  .pagination .page-item {
+    margin: 0 20px;
+  }
+
+  .pagination .page-item:nth-child(1) {
+    margin-left: 0px;
+  }
+
+  .page-item .page-link {
+    color: black;
+    border: 0px;
+  }
+
+  .page-item .page-link:hover {
+    background: #F3F3F3;
+  }
+
+  .page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: #CEBBB4;
+  }
+
+  .page-item .page-link {
+    border-radius: 12px;
+  }
+
+  .page-item:first-child .page-link {
+    margin-left: 0;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+  }
+
+  .page-item:last-child .page-link {
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+
+  .container-search {
+    margin: 24px 0;
+    display: flex;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 4px solid #CEBBB4;
+    border-radius: 14px;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  }
+
+
+  .container-search button {
+    background: none;
+  }
+
+  .container-search .form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: none;
+    outline: 0;
+    box-shadow: none;
+  }
+
+  .container-search .form-control {
+    width: 100%;
+    border: 0px solid #ced4da;
+    border-radius: 16px;
+  }
+
+  .container-search .btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow: none;
+  }
+
+  .container-search .btn:nth-child(1) {
+    padding-right: 0px;
+  }
+
+  .big-icon {
+    width: 7em;
+    height: 7em;
+    margin: 0 auto 1.5rem;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center;
+  }
+
+  .icon.error {
+    background-image: url(../img/error.svg);
+  }
+
+  .icon.success {
+    background-image: url(../img/done.svg);
+  }
+
+  .lk-scan {
+    padding: 2rem 0;
+  }
+
+  .scan-info {
+    margin: 1.5em 0;
+  }
+
+  .scan-info tr td {
+    border-top: none;
+  }
+
+  .scan-info tbody tr td {
+    border-bottom: 1px solid #ddd;
+    border-top: none;
+    padding-left: 0;
+  }
+
+  tbody tr {
+  border-bottom: 1px solid #E5E5EA;
+  }
+
+  .scan-info .label-col {
+    color: #8E8E93;
+  }
+
+  .number-choice .number {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0 1em;
+  }
+
+  .number-choice {
+      margin: 2.5rem 0;
+  }
+
+.number-choice button.form-control {
+    width: 50px;
+    border-radius: 100%;
+    font-weight: 700;
+    font-size: 1.8em;
+    padding: 0;
+    text-align: center;
+    color: black;
+  }
+
+  .number-choice button[disabled] {
+    color: #8E8E93;
+  }
+
+  .modal-content {
+      border: none;
+      border-radius: 12px;
+  }
+
+  .modal-body .form-control {
+      background-color: #F3F3F3;
+      border-radius: 14px;
+      border: 4px solid #F3F3F3;
+      color: #AEAEB2;
+  }
+
+
+   .add-balance .modal-body .form-control, .idModalAddCard .modal-body .form-control {
+      background-color: #FFFFFF;
+      border: none;
+  }
+
+  .modal-body .form-control:focus {
+      background-color: #fff;
+      border: 4px solid #CEBBB4;
+      color: #495057;
+  }
+
+  .modal-body {
+      color: #AEAEB2;
+  }
+
+  .delete-event .modal-body {
+    color: inherit;
+  }
+
+  .modal-title h6{
+      color: #AEAEB2;
+  }
+
+  .modal-footer .btn-secondary{
+    background: #FFFFFF;
+    color: #AEAEB2;
+    border-radius: 12px;
+    border: none;
+  }
+
+  .modal-footer .btn-primary, .form-group .btn-primary {
+    background: #938079;
+    border-radius: 12px;
+    color: #FFFFFF;
+    border: none;
+  }
+
+  .btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {
+      box-shadow: 0 0 0 0.2rem #CEBBB4;
+  }
+
+  .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+      color: #fff;
+      background: #938079;
+  }
+
+  .modal-footer {
+      justify-content: space-between;
+  }
+
+  .modal-content {
+      padding: 50px;
+  }
+
+  .add-balance label, .idModalAddCard label{
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+  }
+
+  .add-balance input, .idModalAddCard input{
+      text-align: center;
+  }
+
+  .add-balance .modal-body .form-control:focus, .idModalAddCard .modal-body .form-control:focus {
+    border: none;
+  }
+
+  #idModalEditUser .modal-body .form-control:focus, .add-balance .modal-body .form-control:focus, .idModalAddCard .modal-body .form-control:focus, #idModalEditEvent .modal-body .form-control:focus{
+    box-shadow: none;
+  }
+
+  #addBalance {
+    font-size: 34px;
+    font-weight: 700;
+    color: #000000;
+  }
+
+  #addCard {
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+  }
+
+  .add-balance input::placeholder {
+    color: black !important;
+  }
+
+  .idModalAddCard input::placeholder {
+    color: #D1D1D6 !important;
+  }
+
+  .modal h4 {
+    font-weight: 700;
+  }
+
+  .container-history {
+    flex-direction: column;
+  }
+
+  .history-title {
+    text-align: left;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .container-history .table {
+    margin-bottom: 0px;
+    margin-left: 0px;
+  }
+
+  #clear {
+    display: none;
+  }
+
+  .usrtbl td img, .usrtbl td.addBalance, .usrtbl td.add_card, #myInput, #clear {
+    cursor: pointer;
+  }
+
+  input[type="file"] {
+      display: none;
+  }
+
+  .inputFileName {
+    display: none;
+  }
+
+  .selected {
+    display: block;
+  }
